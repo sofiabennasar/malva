@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Archivo } from "next/font/google";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -33,8 +34,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <header className="sticky top-0 z-50 bg-paper border-b border-linen">
           <nav className="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-            <Link href="/" className="font-fraunces text-3xl italic text-ink">
-              malva<span className="text-clay">.</span>
+            <Link href="/" className="block">
+              <Image src="/logo.svg" alt="Malva" width={120} height={32} priority />
             </Link>
             <div className="font-archivo flex gap-12 text-sm font-semibold tracking-wide uppercase">
               <Link href="/" className="text-slate hover:text-clay transition">
