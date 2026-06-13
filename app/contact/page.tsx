@@ -18,9 +18,7 @@ export default function Contact() {
         message: formData.get("message"),
       };
 
-      // Simulate API call - in production, this would send to an email service
       await new Promise((resolve) => setTimeout(resolve, 1000));
-
       console.log("Form submission:", data);
       setFormStatus("success");
       e.currentTarget.reset();
@@ -35,52 +33,61 @@ export default function Contact() {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">Contactanos</h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            ¿Listo para iniciar tu proyecto? Nos encantaría escuchar sobre tu idea.
+      <section className="bg-paper py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="font-fraunces text-6xl italic text-ink mb-6">
+            Contactanos
+          </h1>
+          <p className="font-archivo text-lg leading-relaxed text-slate max-w-2xl">
+            ¿Listo para iniciar tu proyecto? Nos encantaría escuchar tu idea
+            y ayudarte a hacerla realidad.
           </p>
         </div>
       </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-12">
-          {/* Contact Info */}
-          <div className="md:col-span-1 space-y-8">
+      {/* Form & Info */}
+      <section className="bg-linen py-24 px-6">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-16">
+          {/* Info */}
+          <div className="space-y-12">
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Email</h3>
-              <a href="mailto:hello@estudiomalva.com" className="text-gray-600 hover:text-gray-900 transition">
+              <p className="font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-3">
+                Email
+              </p>
+              <a
+                href="mailto:hello@estudiomalva.com"
+                className="font-archivo text-ink hover:text-clay transition"
+              >
                 hello@estudiomalva.com
               </a>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Ubicación</h3>
-              <p className="text-gray-600">
-                Buenos Aires, Argentina
+              <p className="font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-3">
+                Ubicación
+              </p>
+              <p className="font-archivo text-ink">
+                Salta, Argentina
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">Redes Sociales</h3>
-              <div className="flex gap-4">
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition text-sm font-semibold">
+              <p className="font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-4">
+                Redes
+              </p>
+              <div className="flex gap-6">
+                <a href="#" className="font-archivo text-sm text-slate hover:text-clay transition">
                   Instagram
                 </a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition text-sm font-semibold">
+                <a href="#" className="font-archivo text-sm text-slate hover:text-clay transition">
                   LinkedIn
-                </a>
-                <a href="#" className="text-gray-600 hover:text-gray-900 transition text-sm font-semibold">
-                  Behance
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="md:col-span-2 space-y-6">
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="md:col-span-2 space-y-8">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+              <label htmlFor="name" className="block font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-4">
                 Nombre
               </label>
               <input
@@ -88,13 +95,12 @@ export default function Contact() {
                 id="name"
                 name="name"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 transition"
-                placeholder="Tu nombre"
+                className="w-full px-0 py-3 border-b border-slate bg-transparent font-archivo text-ink focus:outline-none focus:border-clay transition"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+              <label htmlFor="email" className="block font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-4">
                 Email
               </label>
               <input
@@ -102,13 +108,12 @@ export default function Contact() {
                 id="email"
                 name="email"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 transition"
-                placeholder="tu@email.com"
+                className="w-full px-0 py-3 border-b border-slate bg-transparent font-archivo text-ink focus:outline-none focus:border-clay transition"
               />
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
+              <label htmlFor="subject" className="block font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-4">
                 Asunto
               </label>
               <input
@@ -116,71 +121,77 @@ export default function Contact() {
                 id="subject"
                 name="subject"
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 transition"
-                placeholder="¿En qué podemos ayudarte?"
+                className="w-full px-0 py-3 border-b border-slate bg-transparent font-archivo text-ink focus:outline-none focus:border-clay transition"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+              <label htmlFor="message" className="block font-archivo font-semibold text-xs tracking-widest uppercase text-slate mb-4">
                 Mensaje
               </label>
               <textarea
                 id="message"
                 name="message"
                 required
-                rows={6}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 transition resize-none"
-                placeholder="Cuéntanos sobre tu proyecto..."
+                rows={5}
+                className="w-full px-0 py-3 border-b border-slate bg-transparent font-archivo text-ink focus:outline-none focus:border-clay transition resize-none"
               />
             </div>
 
-            <button
-              type="submit"
-              disabled={formStatus === "loading"}
-              className="w-full px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 disabled:bg-gray-600 transition font-semibold"
-            >
-              {formStatus === "loading" && "Enviando..."}
-              {formStatus === "success" && "¡Mensaje enviado!"}
-              {formStatus === "error" && "Error al enviar"}
-              {formStatus === "idle" && "Enviar Mensaje"}
-            </button>
+            <div className="pt-8">
+              <button
+                type="submit"
+                disabled={formStatus === "loading"}
+                className="font-archivo font-semibold text-sm tracking-wide uppercase px-6 py-3 bg-clay text-paper hover:bg-slate disabled:bg-slate transition"
+              >
+                {formStatus === "loading" && "Enviando..."}
+                {formStatus === "success" && "¡Enviado!"}
+                {formStatus === "error" && "Error al enviar"}
+                {formStatus === "idle" && "Enviar"}
+              </button>
 
-            {formStatus === "success" && (
-              <p className="text-green-600 text-sm">
-                Gracias por contactarnos. Nos comunicaremos pronto.
-              </p>
-            )}
+              {formStatus === "success" && (
+                <p className="font-archivo text-sm text-clay mt-4">
+                  Gracias. Nos comunicaremos pronto.
+                </p>
+              )}
+            </div>
           </form>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="bg-gray-50 py-20 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Preguntas Frecuentes</h2>
-          <div className="space-y-8">
+      <section className="bg-paper py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="font-fraunces text-4xl italic text-ink mb-16">
+            Preguntas Frecuentes
+          </h2>
+          <div className="space-y-12">
             {[
               {
-                q: "¿Cuáles son tus horarios de atención?",
-                a: "Respondemos consultas de lunes a viernes de 9 a 18 horas. Intentamos responder dentro de 24 horas."
+                q: "¿Cuáles son tus horarios?",
+                a: "Respondemos consultas de lunes a viernes. Intentamos responder en 24 horas."
               },
               {
-                q: "¿Cuál es el proceso para empezar un proyecto?",
-                a: "Comenzamos con una consulta inicial para entender tu proyecto, objetivos y presupuesto. Luego presentamos una propuesta personalizada."
+                q: "¿Cuál es el proceso?",
+                a: "Comenzamos con una consulta para entender tu proyecto. Luego presentamos una propuesta."
               },
               {
-                q: "¿Ofrecen servicios de revisión de trabajos existentes?",
-                a: "Sí, hacemos auditorías de diseño y proporciones mejoras para proyectos existentes."
+                q: "¿Hacen auditorías?",
+                a: "Sí. Hacemos auditorías de diseño y mejoras para proyectos existentes."
               },
               {
-                q: "¿Cuál es el costo promedio de un proyecto?",
-                a: "Los precios varían según el alcance. Ofrecemos opciones desde presupuestos pequeños hasta proyectos completos."
+                q: "¿Cuánto cuesta?",
+                a: "Los precios varían según el alcance. Contacta para una propuesta personalizada."
               }
             ].map((item, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-lg">
-                <h3 className="font-bold text-gray-900 mb-2">{item.q}</h3>
-                <p className="text-gray-600">{item.a}</p>
+              <div key={idx} className="border-t border-bone pt-8">
+                <h3 className="font-archivo font-semibold text-slate mb-4">
+                  {item.q}
+                </h3>
+                <p className="font-archivo text-ink leading-relaxed">
+                  {item.a}
+                </p>
               </div>
             ))}
           </div>
