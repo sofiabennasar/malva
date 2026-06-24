@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Estudio Malva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    :root { --linen:  #F7F4EE; --bone:   #EDE7DD; --sand:   #D6CABA; --clay:   #B5573C; --moss:   #5E6149; --slate:  #4A4843; --ink:    #1C1A17; --serif:  'Fraunces', Georgia, serif; --sans:   'Archivo', system-ui, sans-serif; --mono:   'JetBrains Mono', monospace; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--moss); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .page { padding: 72px; display: flex; flex-direction: column; gap: 24px; }
+    .header-card { background: var(--linen); display: grid; grid-template-columns: 1fr 1fr; padding: 36px 52px; align-items: center; min-height: 80px; }
+    .header-logo { font-family: var(--serif); font-weight: 300; letter-spacing: 0.02em; line-height: 1.1; }
+    .header-logo a { color: var(--ink); }
+    .logo-estudio { font-size: 33px; display: block; }
+    .logo-malva { font-size: 33px; display: block; }
+    .logo-malva .dot { color: var(--clay); }
+    .header-back { display: flex; justify-content: flex-end; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); opacity: 0.7; transition: opacity 0.15s; }
+    .header-back:hover { opacity: 1; }
+    .header-back::before { content: '←'; font-size: 12px; }
+    .contact-card { background: var(--linen); display: grid; grid-template-columns: 1fr 1fr; min-height: 70vh; }
+    .contact-form-side { padding: 72px 64px; display: flex; flex-direction: column; justify-content: space-between; }
+    .contact-heading { font-family: var(--serif); font-size: clamp(32px, 4vw, 56px); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 48px; }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; flex: 1; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-field { display: flex; flex-direction: column; gap: 8px; }
+    .form-field label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); }
+    .form-field input, .form-field textarea, .form-field select { font-family: var(--sans); font-size: 13px; color: var(--ink); background: transparent; border: none; border-bottom: 1px solid var(--sand); padding: 10px 0; outline: none; transition: border-color 0.2s; width: 100%; }
+    .form-field input:focus, .form-field textarea:focus, .form-field select:focus { border-bottom-color: var(--ink); }
+    .form-field input::placeholder, .form-field textarea::placeholder { color: var(--sand); }
+    .form-field textarea { resize: none; height: 100px; }
+    .form-field select { appearance: none; cursor: pointer; color: var(--slate); }
+    .form-field select option { color: var(--ink); }
+    .form-submit { font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 32px; background: var(--ink); color: var(--linen); border: none; cursor: pointer; transition: background 0.2s; align-self: flex-start; margin-top: 8px; }
+    .form-submit:hover { background: var(--clay); }
+    .form-success { display: none; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--moss); margin-top: 24px; }
+    .contact-info-side { background: var(--ink); padding: 72px 64px; display: flex; flex-direction: column; justify-content: flex-end; gap: 48px; }
+    .contact-info-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); margin-bottom: 12px; }
+    .contact-info-value { font-family: var(--sans); font-size: 14px; color: rgba(247,244,238,0.75); line-height: 1.8; transition: color 0.15s; }
+    .contact-info-value:hover { color: var(--linen); }
+    .contact-tagline { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2vw, 28px); font-weight: 300; color: var(--linen); line-height: 1.3; margin-bottom: auto; }
+    .contact-tagline span { color: var(--clay); }
+    footer { background: var(--linen); border-top: 1px solid var(--sand); padding: 48px 48px 36px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: start; }
+    .footer-brand { font-family: var(--serif); font-size: 18px; font-weight: 300; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 12px; }
+    .footer-tagline-small { font-size: 13px; color: var(--slate); line-height: 1.6; max-width: 220px; }
+    .footer-nav-title { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); margin-bottom: 16px; }
+    .footer-nav-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-nav-links a { font-size: 13px; color: var(--ink); opacity: 0.65; transition: opacity 0.15s; }
+    .footer-nav-links a:hover { opacity: 1; }
+    .footer-bottom { grid-column: 1 / -1; border-top: 1px solid var(--bone); padding-top: 24px; margin-top: 16px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--slate); opacity: 0.6; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-card">
+      <div class="header-logo">
+        <a href="index.html"><span class="logo-estudio">estudio</span><span class="logo-malva">malva<span class="dot">.</span></span></a>
+      </div>
+      <a href="index.html" class="header-back">Home</a>
+    </div>
+    <div class="contact-card">
+      <div class="contact-form-side">
+        <h1 class="contact-heading">Get in<br />touch.</h1>
+        <form class="contact-form" onsubmit="handleContact(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <label>First name</label>
+              <input type="text" placeholder="Sofia" required />
+            </div>
+            <div class="form-field">
+              <label>Last name</label>
+              <input type="text" placeholder="Bennasar" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Email</label>
+            <input type="email" placeholder="you@email.com" required />
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label>Category</label>
+              <select id="category-select">
+                <option value="">Select a category</option>
+                <option value="baskets">Baskets</option>
+                <option value="fiber">Fiber + Textile</option>
+                <option value="ceramics">Ceramics</option>
+                <option value="wood">Wood</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>Product</label>
+              <input type="text" id="product-input" placeholder="e.g. Throw 001" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Message</label>
+            <textarea placeholder="Tell us what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message</button>
+          <p class="form-success" id="form-success">Thank you — we'll be in touch soon.</p>
+        </form>
+      </div>
+      <div class="contact-info-side">
+        <p class="contact-tagline">We source directly.<br /><span>No middlemen, no compromise.</span></p>
+        <div>
+          <p class="contact-info-label">Email</p>
+          <a href="mailto:hola@estudiomalva.com" class="contact-info-value">hola@estudiomalva.com</a>
+        </div>
+        <div>
+          <p class="contact-info-label">Instagram</p>
+          <a href="#" class="contact-info-value">@estudiomalva</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <p class="footer-brand">Estudio Malva</p>
+      <p class="footer-tagline-small">Handmade objects sourced directly from artisan communities across Argentina.</p>
+    </div>
+    <div>
+      <p class="footer-nav-title">Explore</p>
+      <ul class="footer-nav-links">
+        <li><a href="index.html#journal">The Journal</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-nav-title">Contact</p>
+      <ul class="footer-nav-links">
+        <li><a href="mailto:hola@estudiomalva.com">hola@estudiomalva.com</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Estudio Malva · Argentina</span>
+      <span class="footer-copy">Made with intention</span>
+    </div>
+  </footer>
+  <script>
+    function handleContact(e) {
+      e.preventDefault();
+      e.target.querySelector('.form-submit').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+    }
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    const product = params.get('product');
+    if (category) {
+      const select = document.getElementById('category-select');
+      if (select) select.value = category;
+    }
+    if (product) {
+      const input = document.getElementById('product-input');
+      if (input) input.value = product;
+    }
+  </script>
+</body>
+</html>

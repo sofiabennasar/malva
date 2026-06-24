@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — Estudio Malva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Tokens ─────────────────────────────────────── */
+    :root {
+      --linen:  #F7F4EE;
+      --bone:   #EDE7DD;
+      --sand:   #D6CABA;
+      --clay:   #B5573C;
+      --moss:   #5E6149;
+      --slate:  #4A4843;
+      --ink:    #1C1A17;
+      --paper:  #FFFFFF;
+      --serif:  'Fraunces', Georgia, serif;
+      --sans:   'Archivo', system-ui, sans-serif;
+      --mono:   'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--moss);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: var(--ink); color: var(--linen); }
+
+    /* ─── Page wrapper ───────────────────────────────– */
+    .page {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* ─── Card 1: Hero (text left, image right) ─────── */
+    .card-hero {
+      background: var(--linen);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .card-hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 52px 64px;
+    }
+    .card-hero-logo {
+      font-family: var(--serif);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .logo-estudio { font-size: 33px; display: block; }
+    .logo-malva   { font-size: 33px; display: block; }
+    .logo-malva .dot { color: var(--clay); }
+    .card-hero-text {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .opening-rule {
+      width: 32px;
+      height: 1px;
+      background: var(--clay);
+      margin-bottom: 4px;
+    }
+    .opening-statement {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.4vw, 34px);
+      font-weight: 300;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .opening-body {
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--slate);
+    }
+    .card-hero-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sand);
+    }
+    .card-hero-image {
+      background: var(--sand);
+      position: relative;
+      overflow: hidden;
+    }
+    .card-hero-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    /* ─── Card 3: Tagline ────────────────────────────– */
+    .card-tagline {
+      background: var(--ink);
+      padding: 80px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 32px;
+      min-height: 280px;
+    }
+    .tagline-text {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(26px, 3.2vw, 48px);
+      font-weight: 300;
+      color: var(--linen);
+      line-height: 1.3;
+      max-width: 700px;
+    }
+    .tagline-text span { color: var(--clay); }
+    .tagline-sub {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(247,244,238,0.4);
+    }
+
+    /* ─── Card 4: Photo + Back link ─────────────────– */
+    .card-bottom {
+      background: var(--linen);
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      min-height: 360px;
+    }
+    .card-bottom-image {
+      background: var(--bone);
+      position: relative;
+      overflow: hidden;
+    }
+    .card-bottom-image img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .card-bottom-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 48px 48px;
+      gap: 16px;
+    }
+    .nav-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+
+    /* ─── Footer ──────────────────────────────────────── */
+    footer {
+      background: var(--linen);
+      border-top: 1px solid var(--sand);
+      padding: 48px 48px 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .footer-tagline-small {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.6;
+      max-width: 220px;
+    }
+    .footer-nav-title {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 16px;
+    }
+    .footer-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-nav-links a {
+      font-size: 13px;
+      color: var(--ink);
+      opacity: 0.65;
+      transition: opacity 0.15s;
+    }
+    .footer-nav-links a:hover { opacity: 1; }
+    .footer-bottom {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--bone);
+      padding-top: 24px;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--slate);
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+
+    /* ─── Responsive ──────────────────────────────────– */
+    @media (max-width: 900px) {
+      .page { padding: 12px; gap: 10px; }
+      .card-hero { grid-template-columns: 1fr; }
+      .card-hero-image { min-height: 60vw; }
+      .card-hero-left { padding: 40px 28px; gap: 40px; }
+      .card-tagline { padding: 56px 32px; }
+      .card-bottom { grid-template-columns: 1fr; }
+      .card-bottom-image { min-height: 280px; }
+      .card-bottom-nav { padding: 36px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- ── Card 1: Text left, image right ───────────– -->
+    <div class="card-hero">
+      <div class="card-hero-left">
+        <a href="index.html" class="card-hero-logo">
+          <span class="logo-estudio">estudio</span>
+          <span class="logo-malva">malva<span class="dot">.</span></span>
+        </a>
+        <div class="card-hero-text">
+          <div class="opening-rule"></div>
+          <p class="opening-statement">Estudio Malva sources handmade objects directly from artisan communities across Argentina.</p>
+          <p class="opening-body">Founded by Mora and Sofia, two Argentinian creatives building a direct bridge between Buenos Aires and Los Angeles, we work closely with independent makers to uncover exceptional materials, traditional techniques, and timeless forms.</p>
+          <p class="opening-body">The result is a curated collection of pieces that honor their origins while feeling at home in contemporary spaces.</p>
+        </div>
+        <span class="card-hero-label">Our Story</span>
+      </div>
+      <div class="card-hero-image">
+        <img src="Story 1.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- ── Card 3: Tagline ───────────────────────────– -->
+    <div class="card-tagline">
+      <p class="tagline-text">Rooted in origin.<br /><span>Designed for contemporary living.</span></p>
+      <p class="tagline-sub">Made in Argentina</p>
+    </div>
+
+    <!-- ── Card 4: Photo + Back ──────────────────────– -->
+    <div class="card-bottom">
+      <div class="card-bottom-image">
+        <img src="story 2.jpg" alt="" />
+      </div>
+      <div class="card-bottom-nav">
+        <a href="products.html" class="btn">See Products</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-brand-col">
+      <p class="footer-brand">Estudio Malva</p>
+      <p class="footer-tagline-small">Handmade objects sourced directly from artisan communities across Argentina.</p>
+    </div>
+    <div>
+      <p class="footer-nav-title">Explore</p>
+      <ul class="footer-nav-links">
+        <li><a href="index.html#journal">The Journal</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-nav-title">Contact</p>
+      <ul class="footer-nav-links">
+        <li><a href="mailto:hola@estudiomalva.com">hola@estudiomalva.com</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Estudio Malva · Argentina</span>
+      <span class="footer-copy">Made with intention</span>
+    </div>
+  </footer>
+
+</body>
+</html>

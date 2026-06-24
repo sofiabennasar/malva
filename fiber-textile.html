@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fiber + Textile — Estudio Malva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    :root { --linen:  #F7F4EE; --bone:   #EDE7DD; --sand:   #D6CABA; --clay:   #B5573C; --moss:   #5E6149; --slate:  #4A4843; --ink:    #1C1A17; --serif:  'Fraunces', Georgia, serif; --sans:   'Archivo', system-ui, sans-serif; --mono:   'JetBrains Mono', monospace; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--moss); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    .page { padding: 72px; display: flex; flex-direction: column; gap: 24px; }
+    .header-card { background: var(--linen); display: grid; grid-template-columns: 1fr 1fr; padding: 36px 52px; align-items: center; }
+    .header-logo { font-family: var(--serif); font-weight: 300; letter-spacing: 0.02em; line-height: 1.1; }
+    .header-logo a { color: var(--ink); }
+    .logo-estudio { font-size: 33px; display: block; }
+    .logo-malva { font-size: 33px; display: block; }
+    .logo-malva .dot { color: var(--clay); }
+    .header-back { display: flex; justify-content: flex-end; align-items: center; gap: 8px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); opacity: 0.7; transition: opacity 0.15s; }
+    .header-back:hover { opacity: 1; }
+    .header-back::before { content: '←'; font-size: 12px; }
+    .hero-card { background: var(--linen); padding: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; height: 55vh; }
+    .hero-photo { background: var(--sand); overflow: hidden; }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: bottom center; display: block; }
+    .hero-right { display: flex; flex-direction: column; gap: 16px; }
+    .hero-text { padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0; }
+    .hero-text-top { display: flex; flex-direction: column; gap: 20px; }
+    .hero-category { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); }
+    .hero-title { font-family: var(--serif); font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.1; color: var(--ink); }
+    .hero-title em { font-style: italic; color: var(--slate); }
+    .hero-desc { font-size: 13px; line-height: 1.8; color: var(--slate); }
+    .hero-text-bottom { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); opacity: 0.45; padding-top: 40px; }
+    .section-label { background: var(--linen); padding: 32px 52px; display: flex; align-items: center; justify-content: space-between; }
+    .section-label-text { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--clay); }
+    .section-label-count { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; color: var(--slate); opacity: 0.5; }
+    .cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .product-card { background: var(--linen); display: flex; flex-direction: column; }
+    .card-photo { height: 75vh; min-height: 600px; overflow: hidden; background: var(--bone); position: relative; }
+    .carousel-slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.5s ease; }
+    .carousel-slide.active { opacity: 1; }
+    .carousel-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 2; }
+    .carousel-dot { width: 6px; height: 6px; border-radius: 50%; border: 1px solid var(--linen); background: transparent; cursor: pointer; padding: 0; transition: background 0.2s; }
+    .carousel-dot.active { background: var(--linen); }
+    .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; background: transparent; border: 1px solid rgba(247,244,238,0.6); color: var(--linen); width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; transition: background 0.2s; }
+    .carousel-arrow:hover { background: rgba(247,244,238,0.2); }
+    .carousel-arrow.prev { left: 16px; }
+    .carousel-arrow.next { right: 16px; }
+    .card-body { padding: 12px 20px 16px; display: flex; flex-direction: column; gap: 0; flex: 1; }
+    .card-name { font-family: var(--serif); font-size: clamp(16px, 1.5vw, 22px); font-weight: 300; line-height: 1.1; color: var(--ink); margin-bottom: 12px; }
+    .card-specs { display: flex; flex-direction: column; border-top: 1px solid var(--bone); margin-bottom: 12px; }
+    .spec-row { display: grid; grid-template-columns: 120px 1fr; padding: 14px 0; border-bottom: 1px solid var(--bone); align-items: baseline; }
+    .spec-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); opacity: 0.55; }
+    .spec-value { font-size: 13px; line-height: 1.5; color: var(--ink); }
+    .card-cta { margin-top: auto; }
+    .btn-inquire { display: inline-block; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 32px; border: 1px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; transition: background 0.2s, color 0.2s; }
+    .btn-inquire:hover { background: var(--ink); color: var(--linen); }
+    footer { background: var(--linen); border-top: 1px solid var(--sand); padding: 48px 48px 36px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; align-items: start; }
+    .footer-brand { font-family: var(--serif); font-size: 18px; font-weight: 300; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 12px; }
+    .footer-tagline-small { font-size: 13px; color: var(--slate); line-height: 1.6; max-width: 220px; }
+    .footer-nav-title { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate); margin-bottom: 16px; }
+    .footer-nav-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-nav-links a { font-size: 13px; color: var(--ink); opacity: 0.65; transition: opacity 0.15s; }
+    .footer-nav-links a:hover { opacity: 1; }
+    .footer-bottom { grid-column: 1 / -1; border-top: 1px solid var(--bone); padding-top: 24px; margin-top: 16px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; color: var(--slate); opacity: 0.6; text-transform: uppercase; }
+    @media (max-width: 900px) { .page { padding: 12px; gap: 12px; } .header-card { grid-template-columns: 1fr; gap: 24px; padding: 28px; } .header-back { justify-content: flex-start; } .hero-card { grid-template-columns: 1fr; height: auto; padding: 12px; } .hero-text { padding: 24px 16px; } .cards-grid { grid-template-columns: 1fr; } .card-photo { height: 80vw; min-height: 320px; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header-card">
+      <div class="header-logo">
+        <a href="index.html"><span class="logo-estudio">estudio</span><span class="logo-malva">malva<span class="dot">.</span></span></a>
+      </div>
+      <a href="products.html" class="header-back">All Products</a>
+    </div>
+    <div class="hero-card">
+      <div class="hero-photo">
+        <img src="fiber-hero.jpg" alt="Fiber + Textile — Estudio Malva" />
+      </div>
+      <div class="hero-right">
+        <div class="hero-text">
+          <div class="hero-text-top">
+            <span class="hero-category">Fiber + Textile · Initial Edition</span>
+            <h1 class="hero-title">Made<br /><em>slowly</em></h1>
+            <p class="hero-desc">Llama weaving, brushed llama, and hand-knotted rugs. Each piece made by hand in the north of Argentina, carrying the knowledge of generations.</p>
+          </div>
+          <span class="hero-text-bottom">Argentina · 2026</span>
+        </div>
+      </div>
+    </div>
+    <div class="section-label">
+      <span class="section-label-text">Fiber + Textile · Initial Edition</span>
+      <span class="section-label-count">8 pieces</span>
+    </div>
+    <div class="cards-grid">
+      <div class="product-card"><div class="card-photo"><img src="llama-1.jpg" alt="Throw 001" class="carousel-slide active" style="object-position: center center;" /><img src="llama-1b.jpg" alt="Throw 001 detail" class="carousel-slide" style="object-position: center center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Throw 001</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Llama</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Naturally colored llama fiber, hand-spun and woven using traditional techniques.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Throw+001" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="llama-2.jpg" alt="Throw 002" class="carousel-slide active" style="object-position: center center;" /><img src="llama-2b.jpg" alt="Throw 002 detail" class="carousel-slide" style="object-position: center center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Throw 002</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Llama</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Naturally colored llama fiber, hand-spun and woven using traditional techniques.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Throw+002" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="llama-3.jpg" alt="Throw 003" class="carousel-slide active" style="object-position: center center;" /><img src="llama-3b.jpg" alt="Throw 003 detail" class="carousel-slide" style="object-position: center center;" /><img src="llama-3c.jpg" alt="Throw 003 detail 2" class="carousel-slide" style="object-position: center center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Throw 003</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Chaguar</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Chaguar is an ancient South American textile fiber hand-harvested from wild Argentine plants, which artisans strip, naturally dye, and hand-spin into remarkably strong, lightweight woven or knotted fabrics using generational techniques.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Throw+003" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="rug-1.jpg" alt="Rug 001" class="carousel-slide active" style="object-position: left center;" /><img src="rug-1b.jpg" alt="Rug 001 detail" class="carousel-slide" style="object-position: bottom center;" /><img src="rug-1c.jpg" alt="Rug 001 detail 2" class="carousel-slide" style="object-position: bottom center;" /><img src="rug-1d.jpg" alt="Rug 001 detail 3" class="carousel-slide" style="object-position: bottom center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button><button class="carousel-dot"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Rug 001</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Wool</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">The wool is dyed with pigments derived from native plants, roots, and minerals. It is woven on traditional looms.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Rug+001" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="brushed-1.jpg" alt="Quilt 001" class="carousel-slide active" style="object-position: bottom center;" /><img src="brushed-1b.jpg" alt="Quilt 001 detail" class="carousel-slide" style="object-position: bottom center;" /><img src="brushed-1c.jpg" alt="Quilt 001 detail 2" class="carousel-slide" style="object-position: bottom center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Quilt 001</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Brushed llama</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Undyed llama fiber from the Argentine Andes, traditionally woven and hand-brushed for a remarkably soft finish.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Quilt+001" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="brushed-2.jpg" alt="Quilt 002" class="carousel-slide active" style="object-position: bottom center;" /><img src="brushed-2b.jpg" alt="Quilt 002 detail" class="carousel-slide" style="object-position: bottom center;" /><img src="brushed-2c.jpg" alt="Quilt 002 detail 2" class="carousel-slide" style="object-position: bottom center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Quilt 002</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Brushed llama</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Undyed llama fiber from the Argentine Andes, traditionally woven and hand-brushed for a remarkably soft finish.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Quilt+002" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="bag-1.jpg" alt="Bag 001" class="carousel-slide active" style="object-position: center center;" /><img src="bag-1b.jpg" alt="Bag 001 detail" class="carousel-slide" style="object-position: center center;" /><img src="bag-1c.jpg" alt="Bag 001 detail 2" class="carousel-slide" style="object-position: center center;" /><img src="bag-1d.jpg" alt="Bag 001 detail 3" class="carousel-slide" style="object-position: bottom center;" /><img src="bag-1e.jpg" alt="Bag 001 detail 4" class="carousel-slide" style="object-position: center center;" /><img src="bag-1f.jpg" alt="Bag 001 detail 5" class="carousel-slide" style="object-position: center center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button><button class="carousel-dot"></button><button class="carousel-dot"></button><button class="carousel-dot"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Bag 001</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Chaguar</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Chaguar is an ancient South American textile fiber hand-harvested from wild Argentine plants, which artisans strip, naturally dye, and hand-spin into remarkably strong, lightweight woven or knotted fabrics using generational techniques.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Bag+001" class="btn-inquire">Inquire</a></div></div></div>
+      <div class="product-card"><div class="card-photo"><img src="bag-2.jpg" alt="Bag 002" class="carousel-slide active" style="object-position: center;" /><img src="bag-2b.jpg" alt="Bag 002 detail" class="carousel-slide" style="object-position: center center;" /><button class="carousel-arrow prev">←</button><button class="carousel-arrow next">→</button><div class="carousel-dots"><button class="carousel-dot active"></button><button class="carousel-dot"></button></div></div><div class="card-body"><h2 class="card-name">Bag 002</h2><div class="card-specs"><div class="spec-row"><span class="spec-label">Material</span><span class="spec-value">Chaguar + Alpaca</span></div><div class="spec-row"><span class="spec-label">Size</span><span class="spec-value">TBD</span></div><div class="spec-row"><span class="spec-label">Technique</span><span class="spec-value">Chaguar is an ancient South American textile fiber hand-harvested from wild Argentine plants, which artisans strip, naturally dye, and hand-spin into remarkably strong, lightweight woven or knotted fabrics using generational techniques.<br /><br />Alpaca silver is a durable, silvery metal alloy of copper, zinc, and nickel that is traditionally cut, formed, textured, and polished by hand by Andean artisans using metalworking techniques.</span></div></div><div class="card-cta"><a href="contact.html?category=fiber&product=Bag+002" class="btn-inquire">Inquire</a></div></div></div>
+    </div>
+  </div>
+  <footer>
+    <div><p class="footer-brand">Estudio Malva</p><p class="footer-tagline-small">Handmade objects sourced directly from artisan communities across Argentina.</p></div>
+    <div><p class="footer-nav-title">Explore</p><ul class="footer-nav-links"><li><a href="index.html#journal">The Journal</a></li><li><a href="products.html">Products</a></li></ul></div>
+    <div><p class="footer-nav-title">Contact</p><ul class="footer-nav-links"><li><a href="mailto:hola@estudiomalva.com">hola@estudiomalva.com</a></li><li><a href="#">Instagram</a></li></ul></div>
+    <div class="footer-bottom"><span class="footer-copy">© 2026 Estudio Malva · Argentina</span><span class="footer-copy">Made with intention</span></div>
+  </footer>
+  <script>
+    document.querySelectorAll('.card-photo').forEach(card => { const slides = card.querySelectorAll('.carousel-slide'); const dots = card.querySelectorAll('.carousel-dot'); let current = 0; function goTo(i) { slides.forEach(s => s.classList.remove('active')); dots.forEach(d => d.classList.remove('active')); current = (i + slides.length) % slides.length; slides[current].classList.add('active'); dots[current].classList.add('active'); } dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i))); card.querySelector('.prev').addEventListener('click', () => goTo(current - 1)); card.querySelector('.next').addEventListener('click', () => goTo(current + 1)); });
+  </script>
+</body>
+</html>

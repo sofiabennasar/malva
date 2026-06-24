@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estudio Malva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ─── Tokens ─────────────────────────────────────── */
+    :root {
+      --linen:  #F7F4EE;
+      --bone:   #EDE7DD;
+      --sand:   #D6CABA;
+      --clay:   #B5573C;
+      --moss:   #5E6149;
+      --slate:  #4A4843;
+      --ink:    #1C1A17;
+      --paper:  #FFFFFF;
+
+      --serif:  'Fraunces', Georgia, serif;
+      --sans:   'Archivo', system-ui, sans-serif;
+      --mono:   'JetBrains Mono', monospace;
+    }
+
+    /* ─── Reset ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--linen);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ─── Utilities ───────────────────────────────────── */
+    .label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+    }
+    .btn {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover { background: var(--ink); color: var(--linen); }
+    .btn--light {
+      border-color: var(--linen);
+      color: var(--linen);
+    }
+    .btn--light:hover { background: var(--linen); color: var(--ink); }
+
+    /* ─── Nav ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 48px;
+      mix-blend-mode: normal;
+    }
+    nav.scrolled {
+      background: rgba(94, 97, 73, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: background 0.3s;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      line-height: 1;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    nav.scrolled .nav-logo {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .nav-logo .dot {
+      color: var(--clay);
+    }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--linen);
+      opacity: 0.75;
+      transition: opacity 0.15s;
+    }
+    .nav-links a:hover { opacity: 1; }
+
+    /* ─── Hero ────────────────────────────────────────── */
+    .hero {
+      background: var(--moss);
+      padding: 72px 72px 72px;
+    }
+    .hero-card {
+      background: var(--linen);
+      display: flex;
+      flex-direction: column;
+      padding: 16px 16px 0;
+    }
+    /* Image gallery: 1 big left + 1 smaller right (3/4 height) */
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4px;
+      height: 66vh;
+      min-height: 400px;
+      align-items: end;
+    }
+    .hero-gallery-main {
+      height: 100%;
+      background: var(--sand);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-gallery-sm {
+      height: 75%;
+      background: var(--bone);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-gallery-main .slide,
+    .hero-gallery-sm .slide {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      transition: opacity 1.4s ease;
+    }
+    .hero-gallery-main .slide.active,
+    .hero-gallery-sm .slide.active {
+      opacity: 1;
+    }
+    .hero-bar {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      min-height: 150px;
+      margin-top: 16px;
+    }
+    .hero-bar-logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px 32px;
+      font-family: var(--serif);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+    .logo-estudio {
+      font-size: 33px;
+      letter-spacing: 0.02em;
+    }
+    .logo-malva {
+      font-size: 33px;
+    }
+    .logo-malva .dot { color: var(--clay); }
+    .hero-bar-divider { display: none; }
+    .hero-bar-content {
+      padding: 28px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      align-items: flex-end;
+    }
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(17px, 1.6vw, 24px);
+      font-weight: 300;
+      line-height: 1.25;
+      color: var(--ink);
+      text-align: right;
+    }
+    .hero-body {
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--slate);
+      max-width: 480px;
+      text-align: right;
+    }
+
+    /* ─── Values ──────────────────────────────────────── */
+    .values {
+      background: var(--moss);
+      padding: 0 72px 72px;
+    }
+    .values-card {
+      background: var(--linen);
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 260px);
+    }
+    .vc {
+      position: relative;
+    }
+    .vc--photo {
+      background: var(--sand);
+      overflow: hidden;
+    }
+    .vc--value {
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .value-num {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+    .value-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .value-body {
+      font-size: 12px;
+      line-height: 1.8;
+      color: var(--slate);
+    }
+
+    /* ─── Making / Section 3 ─────────────────────────── */
+    .making {
+      background: var(--moss);
+      padding: 0 72px 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .making-left {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .making-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      flex: 1;
+    }
+    .making-photo {
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+    .making-photo:nth-child(1) { background: var(--sand); }
+    .making-photo:nth-child(2) { background: var(--bone); }
+    .making-photo:nth-child(3) { background: var(--slate); }
+    .making-text {
+      padding: 4px 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .making-status {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--linen);
+      line-height: 1.65;
+    }
+
+    /* Wave card (right side, dark) */
+    .making-right {
+      display: flex;
+    }
+    .wave-card {
+      background: var(--ink);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 52px 48px 24px;
+      width: 100%;
+      flex: 1;
+    }
+    .wave-card-body {}
+    .wave-accent {
+      width: 36px;
+      height: 2px;
+      background: var(--clay);
+      margin-bottom: 28px;
+    }
+    .wave-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 16px;
+    }
+    .wave-title {
+      font-family: var(--serif);
+      font-size: clamp(30px, 3.2vw, 48px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--linen);
+      margin-bottom: 20px;
+    }
+    .wave-title em { font-style: italic; color: var(--sand); }
+    .wave-body {
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(247, 244, 238, 0.55);
+      max-width: 340px;
+      margin-bottom: 36px;
+    }
+    .wave-coming-soon {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--clay);
+      border: 1px solid var(--clay);
+      padding: 14px 32px;
+      display: inline-block;
+      background: transparent;
+      cursor: pointer;
+      -webkit-appearance: none;
+      line-height: normal;
+    }
+
+    /* ─── Footer ──────────────────────────────────────── */
+    footer {
+      background: var(--linen);
+      border-top: 1px solid var(--sand);
+      padding: 48px 48px 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+    .footer-tagline-small {
+      font-size: 13px;
+      color: var(--slate);
+      line-height: 1.6;
+      max-width: 220px;
+    }
+    .footer-nav-title {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--slate);
+      margin-bottom: 16px;
+    }
+    .footer-nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-nav-links a {
+      font-size: 13px;
+      color: var(--ink);
+      opacity: 0.65;
+      transition: opacity 0.15s;
+    }
+    .footer-nav-links a:hover { opacity: 1; }
+    .footer-bottom {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--bone);
+      padding-top: 24px;
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--slate);
+      opacity: 0.6;
+      text-transform: uppercase;
+    }
+
+    /* ─── Newsletter Modal ───────────────────────────── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(28,26,23,0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-card {
+      background: var(--linen);
+      padding: 56px 52px 48px;
+      max-width: 480px;
+      width: 90%;
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+    .modal-overlay.open .modal-card {
+      transform: translateY(0);
+    }
+    .modal-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: none;
+      border: none;
+      font-size: 14px;
+      color: var(--slate);
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.15s;
+    }
+    .modal-close:hover { opacity: 1; }
+    .modal-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--clay);
+      margin-bottom: 20px;
+    }
+    .modal-title {
+      font-family: var(--serif);
+      font-size: clamp(28px, 3vw, 40px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+    .modal-body {
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--slate);
+      margin-bottom: 32px;
+    }
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .modal-input {
+      font-family: var(--sans);
+      font-size: 13px;
+      padding: 14px 18px;
+      border: 1px solid var(--sand);
+      background: transparent;
+      color: var(--ink);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .modal-input:focus { border-color: var(--ink); }
+    .modal-input::placeholder { color: var(--sand); }
+    .modal-submit {
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      background: var(--ink);
+      color: var(--linen);
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .modal-submit:hover { background: var(--clay); }
+    .modal-fine {
+      font-family: var(--mono);
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-top: 16px;
+    }
+    .modal-success {
+      display: none;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--moss);
+      margin-top: 20px;
+    }
+
+    /* ─── Scroll animation ────────────────────────────── */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    [data-reveal].visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── Responsive ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .nav-links { display: none; }
+
+      .hero { padding: 72px 12px 12px; }
+      .hero-card { padding: 10px 10px 0; }
+      .hero-gallery { height: auto; grid-template-columns: 1fr; grid-template-rows: 52vw 28vw 28vw; min-height: unset; }
+      .hero-gallery-main { grid-row: auto; }
+      .hero-bar { grid-template-columns: 1fr; margin-top: 10px; }
+      .hero-bar-divider { width: 100%; height: 1px; align-self: auto; }
+      .hero-bar-logo { padding: 20px 20px 12px; }
+      .hero-bar-content { padding: 12px 20px 28px; }
+
+      .values { padding: 72px 24px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .value-item {
+        border-right: none;
+        border-bottom: 1px solid var(--sand);
+        padding: 36px 0;
+      }
+      .value-item:last-child { border-bottom: none; }
+      .value-item:not(:first-child) { padding-left: 0; }
+
+      .journal { grid-template-columns: 1fr; }
+      .journal-gallery { height: 320px; }
+      .journal-content { padding: 48px 32px; }
+
+      .new-wave { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
+      .new-wave-visual { height: 240px; }
+
+      footer { grid-template-columns: 1fr 1fr; padding: 40px 24px 28px; }
+      .footer-brand-col { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-card">
+      <div class="hero-gallery">
+        <div class="hero-gallery-main">
+          <img src="HERO 1.jpg" alt="" class="slide active" />   <!-- Main panel, option 1 -->
+          <img src="HERO 3.jpg" alt="" class="slide" />          <!-- Main panel, option 2 -->
+        </div>
+        <div class="hero-gallery-sm">
+          <img src="HERO 2.jpg" alt="" class="slide active" style="object-position:center top;" />   <!-- Secondary panel, option 1 -->
+          <img src="HERO 4.jpg" alt="" class="slide" style="object-position:center top;" />          <!-- Secondary panel, option 2 -->
+        </div>
+      </div>
+
+      <div class="hero-bar">
+        <div class="hero-bar-logo">
+          <span class="logo-estudio">estudio</span>
+          <span class="logo-malva">malva<span class="dot">.</span></span>
+        </div>
+        <div class="hero-bar-divider"></div>
+        <div class="hero-bar-content">
+          <h1 class="hero-title">Raw Textures. Modern Spaces.</h1>
+          <p class="hero-body">At Estudio Malva, we believe a home should be shaped by stories. We travel directly to remote artisan communities across Argentina to bring you singular, handmade objects. No middlemen, no compromise.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Values ───────────────────────────────────────── -->
+  <section class="values" id="story">
+    <div class="values-card">
+
+      <!-- Row 1 -->
+      <div class="vc vc--photo" style="grid-column:1; grid-row:1"><img src="VALUES 1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:left bottom;display:block;" /></div>
+      <div class="vc" style="grid-column:2; grid-row:1"></div>
+      <div class="vc vc--value" style="grid-column:3; grid-row:1">
+        <p class="value-num">01</p>
+        <h3 class="value-title">Direct<br />Alliance</h3>
+        <p class="value-body">By bypassing traditional supply chains entirely, we cultivate deep, face-to-face relationships inside the remote workshops and family homes where these objects are born.</p>
+      </div>
+      <div class="vc" style="grid-column:4; grid-row:1"></div>
+      <div class="vc" style="grid-column:5; grid-row:1"></div>
+
+      <!-- Row 2 -->
+      <div class="vc" style="grid-column:1; grid-row:2"></div>
+      <div class="vc" style="grid-column:2; grid-row:2"></div>
+      <div class="vc" style="grid-column:3; grid-row:2"></div>
+      <div class="vc vc--photo" style="grid-column:4; grid-row:2"><img src="VALUES 2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+      <div class="vc vc--value" style="grid-column:5; grid-row:2">
+        <p class="value-num">02</p>
+        <h3 class="value-title">Absolute<br />Equity</h3>
+        <p class="value-body">We honor the autonomy of the makers to set their own pricing, ensuring direct, fair compensation that respects the true value of their craft.</p>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="vc vc--value" style="grid-column:1; grid-row:3">
+        <p class="value-num">03</p>
+        <h3 class="value-title">Culture<br />Preserved</h3>
+        <p class="value-body">By protecting generational techniques at risk of disappearing, we bring time-honored crafts into contemporary spaces to keep local heritage vibrant and self-sustaining.</p>
+      </div>
+      <div class="vc" style="grid-column:2; grid-row:3"></div>
+      <div class="vc vc--photo" style="grid-column:3; grid-row:3"><img src="VALUES 3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:left bottom;display:block;" /></div>
+      <div class="vc" style="grid-column:4; grid-row:3"></div>
+      <div class="vc" style="grid-column:5; grid-row:3; display:flex; align-items:flex-end; padding:36px 32px;">
+        <a href="our-story.html" class="btn">The Journal</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Making in Progress + Wave ────────────────────── -->
+  <section class="making" id="journal">
+
+    <!-- Left: 3 vertical photos + text -->
+    <div class="making-left">
+      <div class="making-photos">
+        <div class="making-photo"><img src="Product 1.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="making-photo"><img src="product 2.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+        <div class="making-photo"><img src="product 3.jpg" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" /></div>
+      </div>
+      <div class="making-text">
+        <p class="making-status">Currently in development. Our initial editions are coming soon.</p>
+        <a href="products.html" class="btn btn--light">See products</a>
+      </div>
+    </div>
+
+    <!-- Right: Wave card (dark), centered -->
+    <div class="making-right">
+      <div class="wave-card">
+        <div class="wave-card-body">
+          <div class="wave-accent"></div>
+          <p class="wave-label">Evolving the Craft</p>
+          <h2 class="wave-title">Generation <em>Next</em></h2>
+          <p class="wave-body">Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.</p>
+          <button class="wave-coming-soon" onclick="document.getElementById('newsletter-modal').classList.add('open')">Coming Soon</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-brand-col">
+      <p class="footer-brand">Estudio Malva</p>
+      <p class="footer-tagline-small">Handmade objects sourced directly from artisan communities across Argentina.</p>
+    </div>
+
+    <div>
+      <p class="footer-nav-title">Explore</p>
+      <ul class="footer-nav-links">
+        <li><a href="#journal">The Journal</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-nav-title">Contact</p>
+      <ul class="footer-nav-links">
+        <li><a href="mailto:hola@estudiomalva.com">hola@estudiomalva.com</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Estudio Malva · Argentina</span>
+      <span class="footer-copy">Made with intention</span>
+    </div>
+  </footer>
+
+  <!-- ── Newsletter Modal ──────────────────────────────── -->
+  <div id="newsletter-modal" class="modal-overlay" onclick="if(event.target===this)this.classList.remove('open')">
+    <div class="modal-card">
+      <button class="modal-close" onclick="document.getElementById('newsletter-modal').classList.remove('open')">✕</button>
+      <p class="modal-label">Estudio Malva</p>
+      <h2 class="modal-title">Be the first<br />to know.</h2>
+      <p class="modal-body">Sign up for our newsletter and get early access to new collections, artisan stories, and exclusive editions — straight from the source.</p>
+      <form class="modal-form" onsubmit="handleSignup(event)">
+        <input type="email" class="modal-input" placeholder="Your email address" required />
+        <button type="submit" class="modal-submit">Notify me</button>
+      </form>
+      <p class="modal-fine">No spam. Unsubscribe any time.</p>
+      <p class="modal-success" id="modal-success">You're on the list — thank you.</p>
+    </div>
+  </div>
+
+  <script>
+    // Sticky nav
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 120);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Newsletter modal
+    function handleSignup(e) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById('modal-success').style.display = 'block';
+      document.querySelector('.modal-fine').style.display = 'none';
+    }
+
+    // Hero carousel (auto-play crossfade)
+    const mainSlides = document.querySelectorAll('.hero-gallery-main .slide');
+    const smSlides   = document.querySelectorAll('.hero-gallery-sm .slide');
+    let currentSlide = 0;
+    setInterval(() => {
+      mainSlides[currentSlide].classList.remove('active');
+      smSlides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % mainSlides.length;
+      mainSlides[currentSlide].classList.add('active');
+      smSlides[currentSlide].classList.add('active');
+    }, 4500);
+  </script>
+
+</body>
+</html>
