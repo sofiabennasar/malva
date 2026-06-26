@@ -1,174 +1,121 @@
 import Link from "next/link";
+import HeroGallery from "./components/HeroGallery";
+import NewsletterModal from "./components/NewsletterModal";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <>
+      {/* ── Hero ─────────────────────────────────────────── */}
+      <section style={{ background: 'var(--moss)', padding: '72px 72px 0' }}>
+        <div style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
 
-      {/* ─── HERO ────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col">
+          <HeroGallery />
 
-        {/* Full-bleed image area */}
-        <div className="relative flex-1 bg-sand overflow-hidden min-h-[70vh]">
-          {/* Replace this div with <Image> once real photography is ready */}
-          <div className="absolute inset-0 grid grid-cols-3 grid-rows-2 gap-px">
-            <div className="bg-clay col-span-2 row-span-2"></div>
-            <div className="bg-moss"></div>
-            <div className="bg-slate"></div>
-          </div>
-
-          {/* Floating label — top-left */}
-          <div className="absolute top-8 left-8 z-10">
-            <p className="font-archivo text-xs tracking-widest uppercase text-paper opacity-70">
-              Salta · AR
-            </p>
-          </div>
-
-          {/* Floating label — bottom-right */}
-          <div className="absolute bottom-8 right-8 z-10">
-            <p className="font-archivo text-xs tracking-widest uppercase text-paper opacity-70">
-              Hecho a mano
-            </p>
-          </div>
-        </div>
-
-        {/* Tagline + intro */}
-        <div className="bg-linen px-8 py-16 md:px-20 md:py-20">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-end">
-            <div>
-              <h1 className="font-fraunces text-5xl md:text-6xl italic leading-tight text-ink">
-                Raw Textures.<br />
-                <span className="text-clay">Modern</span> Spaces.
+          <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', minHeight: 150, marginTop: 16 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '28px 32px', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
+              <span style={{ fontSize: 33 }}>estudio</span>
+              <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
+            </div>
+            <div style={{ padding: '28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12, alignItems: 'flex-end' }}>
+              <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right' }}>
+                Raw Textures. Modern Spaces.
               </h1>
-            </div>
-            <div>
-              <p className="font-archivo text-base leading-relaxed text-slate mb-10">
-                Sourced straight from the hands that shape them. At Estudio Malva, we
-                believe a home should be shaped by stories. We travel directly to remote
-                artisan communities across Argentina to bring you singular, handmade objects.
-                No middlemen, no compromise. By working face-to-face with independent makers,
-                we ensure every piece honors generational heritage while securing direct,
-                sustainable livelihoods for the communities keeping these traditions alive.
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', maxWidth: 480, textAlign: 'right' }}>
+                At Estudio Malva, we believe a home should be shaped by stories. We travel directly to remote artisan communities across Argentina to bring you singular, handmade objects. No middlemen, no compromise.
               </p>
-              <Link
-                href="/about"
-                className="inline-block font-archivo font-semibold text-xs tracking-widest uppercase px-6 py-3 bg-clay text-paper hover:bg-ink transition"
-              >
-                Explore the Journey
-              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ─── CORE VALUES ─────────────────────────────────────────────────── */}
-      <section className="bg-paper py-24 px-8 md:px-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="border-b border-bone pb-6 mb-16">
-            <p className="font-archivo text-xs tracking-widest uppercase text-clay">
-              01 · Cómo Trabajamos
+      {/* ── Values ───────────────────────────────────────── */}
+      <section style={{ background: 'var(--moss)', padding: '0 72px 72px' }} id="story">
+        <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
+
+          {/* Row 1 */}
+          <div style={{ gridColumn: 1, gridRow: 1, background: 'var(--sand)' }} />
+          <div style={{ gridColumn: 2, gridRow: 1 }} />
+          <div style={{ gridColumn: 3, gridRow: 1, padding: '36px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>01</p>
+            <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Direct<br />Alliance</h3>
+            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By bypassing traditional supply chains entirely, we cultivate deep, face-to-face relationships inside the remote workshops and family homes where these objects are born.</p>
+          </div>
+          <div style={{ gridColumn: 4, gridRow: 1 }} />
+          <div style={{ gridColumn: 5, gridRow: 1 }} />
+
+          {/* Row 2 */}
+          <div style={{ gridColumn: 1, gridRow: 2 }} />
+          <div style={{ gridColumn: 2, gridRow: 2 }} />
+          <div style={{ gridColumn: 3, gridRow: 2 }} />
+          <div style={{ gridColumn: 4, gridRow: 2, background: 'var(--bone)' }} />
+          <div style={{ gridColumn: 5, gridRow: 2, padding: '36px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>02</p>
+            <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Absolute<br />Equity</h3>
+            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We honor the autonomy of the makers to set their own pricing, ensuring direct, fair compensation that respects the true value of their craft.</p>
+          </div>
+
+          {/* Row 3 */}
+          <div style={{ gridColumn: 1, gridRow: 3, padding: '36px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>03</p>
+            <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Culture<br />Preserved</h3>
+            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By protecting generational techniques at risk of disappearing, we bring time-honored crafts into contemporary spaces to keep local heritage vibrant and self-sustaining.</p>
+          </div>
+          <div style={{ gridColumn: 2, gridRow: 3 }} />
+          <div style={{ gridColumn: 3, gridRow: 3, background: 'var(--slate)' }} />
+          <div style={{ gridColumn: 4, gridRow: 3 }} />
+          <div style={{ gridColumn: 5, gridRow: 3, display: 'flex', alignItems: 'flex-end', padding: '36px 32px' }}>
+            <Link
+              href="/about"
+              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer' }}
+            >
+              The Journal
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── Making in Progress + Wave ────────────────────── */}
+      <section style={{ background: 'var(--moss)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
+
+        {/* Left: 3 vertical photos + text */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, flex: 1 }}>
+            <div style={{ minHeight: 500, background: 'var(--sand)', position: 'relative', overflow: 'hidden' }} />
+            <div style={{ minHeight: 500, background: 'var(--bone)', position: 'relative', overflow: 'hidden' }} />
+            <div style={{ minHeight: 500, background: 'var(--slate)', position: 'relative', overflow: 'hidden' }} />
+          </div>
+          <div style={{ padding: '4px 0 24px', display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'flex-start' }}>
+            <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 15, color: 'var(--linen)', lineHeight: 1.65 }}>
+              Currently in development. Our initial editions are coming soon.
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-12">
-
-            <div className="flex flex-col">
-              <h3 className="font-fraunces text-2xl italic text-ink mb-6">
-                Direct Alliance
-              </h3>
-              <p className="font-archivo text-sm leading-relaxed text-slate">
-                By bypassing traditional supply chains entirely, we cultivate deep,
-                face-to-face relationships inside the remote workshops and family homes
-                where these objects are born.
-              </p>
-            </div>
-
-            <div className="flex flex-col md:border-l md:border-bone md:pl-12">
-              <h3 className="font-fraunces text-2xl italic text-ink mb-6">
-                Absolute Equity
-              </h3>
-              <p className="font-archivo text-sm leading-relaxed text-slate">
-                Guided by a non-negotiable commitment to financial transparency, we honor
-                the autonomy of the makers to set their own pricing, ensuring immediate
-                compensation that respects the true value of their craft.
-              </p>
-            </div>
-
-            <div className="flex flex-col md:border-l md:border-bone md:pl-12">
-              <h3 className="font-fraunces text-2xl italic text-ink mb-6">
-                Culture Preserved
-              </h3>
-              <p className="font-archivo text-sm leading-relaxed text-slate">
-                By partnering to protect generational techniques at risk of being lost to
-                mass production, we bring these time-honored crafts into contemporary
-                spaces to keep local heritage vibrant, relevant, and self-sustaining.
-              </p>
-            </div>
-
+            <Link
+              href="/portfolio"
+              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--linen)', color: 'var(--linen)', background: 'transparent' }}
+            >
+              See products
+            </Link>
           </div>
         </div>
-      </section>
 
-      {/* ─── JOURNAL + NEW WAVE ──────────────────────────────────────────── */}
-      <section className="bg-linen py-24 px-8 md:px-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="border-b border-bone pb-6 mb-16">
-            <p className="font-archivo text-xs tracking-widest uppercase text-clay">
-              02 · El Estudio
+        {/* Right: Wave card (dark) */}
+        <div style={{ display: 'flex' }}>
+          <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '52px 48px 24px', width: '100%', flex: 1 }}>
+            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 28 }} />
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 16 }}>
+              Evolving the Craft
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-
-            {/* Journal / samples */}
-            <div className="flex flex-col">
-              <div className="grid grid-cols-2 gap-2 mb-8">
-                {/* Placeholder tiles — replace with real photos */}
-                <div className="bg-sand h-48"></div>
-                <div className="bg-clay h-48"></div>
-                <div className="bg-slate h-36 col-span-2"></div>
-              </div>
-
-              <p className="font-archivo text-xs tracking-widest uppercase text-slate mb-4">
-                The Journal · Samples in Progress
-              </p>
-              <p className="font-archivo text-sm leading-relaxed text-slate mb-8">
-                Currently in development. Our initial editions are coming soon.
-              </p>
-              <Link
-                href="/portfolio"
-                className="inline-block font-archivo font-semibold text-xs tracking-widest uppercase px-6 py-3 border-2 border-ink text-ink hover:bg-ink hover:text-paper transition w-fit"
-              >
-                See Products
-              </Link>
-            </div>
-
-            {/* New Wave panel */}
-            <div className="bg-moss text-paper p-12 flex flex-col justify-between min-h-[480px]">
-              <div>
-                <p className="font-archivo text-xs tracking-widest uppercase text-paper opacity-60 mb-8">
-                  Evolving the Craft
-                </p>
-                <h3 className="font-fraunces text-4xl italic leading-tight mb-8">
-                  The New Wave Collection
-                </h3>
-                <p className="font-archivo text-sm leading-relaxed opacity-80">
-                  Discover the innovative creations of a new generation of artisans,
-                  blending time-honored heritage with recycled plastic to rewrite the
-                  rules of traditional design.
-                </p>
-              </div>
-              <Link
-                href="/portfolio"
-                className="inline-block font-archivo font-semibold text-xs tracking-widest uppercase px-6 py-3 border border-paper text-paper hover:bg-paper hover:text-moss transition w-fit mt-10"
-              >
-                Discover More
-              </Link>
-            </div>
-
+            <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(30px, 3.2vw, 48px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--linen)', marginBottom: 20 }}>
+              Generation <em style={{ fontStyle: 'italic', color: 'var(--sand)' }}>Next</em>
+            </h2>
+            <p style={{ fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 340, marginBottom: 36 }}>
+              Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
+            </p>
+            <NewsletterModal />
           </div>
         </div>
-      </section>
 
-    </div>
+      </section>
+    </>
   );
 }
