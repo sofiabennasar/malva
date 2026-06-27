@@ -48,7 +48,7 @@ export default function HeroGallery() {
     <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '66vh', minHeight: 400, alignItems: 'end' }}>
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
-        <img src="/hero-1.jpg" alt="" style={{ ...rotatedSlide(0), objectPosition: 'center center' }} />
+        <img src="/hero-1.jpg" alt="" style={{ ...rotatedSlide(0), objectPosition: 'right center' }} />
         <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectFit: 'contain', objectPosition: 'center center' }} />
       </div>
       {/* Secondary panel */}
