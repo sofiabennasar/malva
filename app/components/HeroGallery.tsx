@@ -25,14 +25,14 @@ export default function HeroGallery() {
   });
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '66vh', minHeight: 400, alignItems: 'end' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '90vh', minHeight: 560, alignItems: 'end' }}>
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-1.jpg" alt="" style={slideStyle(0)} />
         <img src="/hero-3.jpg" alt="" style={slideStyle(1)} />
       </div>
       {/* Secondary panel */}
-      <div style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ height: '85%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-2.jpg" alt="" style={{ ...slideStyle(0), objectPosition: 'center top' }} />
         <img src="/hero-4.jpg" alt="" style={{ ...slideStyle(1), objectPosition: 'center top' }} />
       </div>
