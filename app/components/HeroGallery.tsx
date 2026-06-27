@@ -18,23 +18,23 @@ export default function HeroGallery() {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
-    objectPosition: 'center',
+    objectPosition: 'center top',
     display: 'block',
     opacity: active === i ? 1 : 0,
     transition: 'opacity 1.4s ease',
   });
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '90vh', minHeight: 560, alignItems: 'end' }}>
-      {/* Main panel */}
-      <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+    <div style={{ display: 'flex', gap: 4, height: '66vh', minHeight: 400, alignItems: 'flex-end' }}>
+      {/* Main panel — width constrained to portrait proportions */}
+      <div style={{ width: '42%', height: '100%', flexShrink: 0, background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-1.jpg" alt="" style={slideStyle(0)} />
         <img src="/hero-3.jpg" alt="" style={slideStyle(1)} />
       </div>
       {/* Secondary panel */}
-      <div style={{ height: '85%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
-        <img src="/hero-2.jpg" alt="" style={{ ...slideStyle(0), objectPosition: 'center top' }} />
-        <img src="/hero-4.jpg" alt="" style={{ ...slideStyle(1), objectPosition: 'center top' }} />
+      <div style={{ width: '26%', height: '75%', flexShrink: 0, background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
+        <img src="/hero-2.jpg" alt="" style={slideStyle(0)} />
+        <img src="/hero-4.jpg" alt="" style={slideStyle(1)} />
       </div>
     </div>
   );
