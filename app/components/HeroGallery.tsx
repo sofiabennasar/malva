@@ -12,29 +12,49 @@ export default function HeroGallery() {
     return () => clearInterval(id);
   }, []);
 
-  const slideStyle = (i: number): React.CSSProperties => ({
+  // Rotating a landscape image -90deg to appear portrait.
+  // Before rotation: element is width=66vh × height=70vw
+  // After -90deg: visually appears as 70vw wide × 66vh tall — covers the container.
+  const rotatedSlide = (i: number): React.CSSProperties => ({
     position: 'absolute',
-    inset: 0,
-    width: '100%',
-    height: '100%',
+    top: '50%',
+    left: '50%',
+    width: '66vh',
+    height: '70vw',
     objectFit: 'cover',
-    objectPosition: 'center top',
+    objectPosition: 'center',
     display: 'block',
     opacity: active === i ? 1 : 0,
     transition: 'opacity 1.4s ease',
+    transform: 'translate(-50%, -50%) rotate(-90deg)',
+  });
+
+  // Secondary panel is 75% height of 66vh = ~49.5vh tall, width ~28vw
+  const rotatedSlideSm = (i: number): React.CSSProperties => ({
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    width: '50vh',
+    height: '35vw',
+    objectFit: 'cover',
+    objectPosition: 'center',
+    display: 'block',
+    opacity: active === i ? 1 : 0,
+    transition: 'opacity 1.4s ease',
+    transform: 'translate(-50%, -50%) rotate(-90deg)',
   });
 
   return (
-    <div style={{ display: 'flex', gap: 4, height: '66vh', minHeight: 400, alignItems: 'flex-end' }}>
-      {/* Main panel — width constrained to portrait proportions */}
-      <div style={{ width: '42%', height: '100%', flexShrink: 0, background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
-        <img src="/hero-1.jpg" alt="" style={slideStyle(0)} />
-        <img src="/hero-3.jpg" alt="" style={slideStyle(1)} />
+    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '66vh', minHeight: 400, alignItems: 'end' }}>
+      {/* Main panel */}
+      <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+        <img src="/hero-1.jpg" alt="" style={rotatedSlide(0)} />
+        <img src="/hero-3.jpg" alt="" style={rotatedSlide(1)} />
       </div>
       {/* Secondary panel */}
-      <div style={{ width: '26%', height: '75%', flexShrink: 0, background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
-        <img src="/hero-2.jpg" alt="" style={slideStyle(0)} />
-        <img src="/hero-4.jpg" alt="" style={slideStyle(1)} />
+      <div style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
+        <img src="/hero-2.jpg" alt="" style={rotatedSlideSm(0)} />
+        <img src="/hero-4.jpg" alt="" style={rotatedSlideSm(1)} />
       </div>
     </div>
   );
