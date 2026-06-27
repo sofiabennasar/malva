@@ -34,8 +34,8 @@ export default function TheJournal() {
           </span>
         </div>
 
-        <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden', minHeight: 520 }}>
-          <img src="/story-1.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+          <img src="/story-1.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
       </div>
 
