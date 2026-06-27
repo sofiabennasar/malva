@@ -1,0 +1,73 @@
+import Link from "next/link";
+
+export const metadata = {
+  title: "Our Story — Estudio Malva",
+};
+
+export default function TheJournal() {
+  return (
+    <div style={{ background: 'var(--moss)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
+
+      {/* ── Card 1: Text left, image right ───────────── */}
+      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 64px' }}>
+          <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
+            <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
+            <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
+          </Link>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
+            <div style={{ width: 32, height: 1, background: 'var(--clay)', marginBottom: 4 }} />
+            <p style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(22px, 2.4vw, 34px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', marginBottom: 8 }}>
+              Estudio Malva sources handmade objects directly from artisan communities across Argentina.
+            </p>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--slate)' }}>
+              Founded by Mora and Sofia, two Argentinian creatives building a direct bridge between Buenos Aires and Los Angeles, we work closely with independent makers to uncover exceptional materials, traditional techniques, and timeless forms.
+            </p>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--slate)' }}>
+              The result is a curated collection of pieces that honor their origins while feeling at home in contemporary spaces.
+            </p>
+          </div>
+
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sand)' }}>
+            Our Story
+          </span>
+        </div>
+
+        <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden', minHeight: 520 }}>
+          {/* Story 1 image — placeholder until photo is uploaded */}
+        </div>
+      </div>
+
+      {/* ── Card 2: Tagline ──────────────────────────── */}
+      <div style={{ background: 'var(--ink)', padding: '80px 64px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 32, minHeight: 280 }}>
+        <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 'clamp(26px, 3.2vw, 48px)', fontWeight: 300, color: 'var(--linen)', lineHeight: 1.3, maxWidth: 700 }}>
+          Rooted in origin.<br />
+          <span style={{ color: 'var(--clay)' }}>Designed for contemporary living.</span>
+        </p>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(247,244,238,0.4)' }}>
+          Made in Argentina
+        </p>
+      </div>
+
+      {/* ── Card 3: Photo + CTA ──────────────────────── */}
+      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
+        <div style={{ background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
+          {/* Story 2 image — placeholder until photo is uploaded */}
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '48px 48px', gap: 16 }}>
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: 8 }}>
+            Explore
+          </p>
+          <Link
+            href="/portfolio"
+            style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent' }}
+          >
+            See Products
+          </Link>
+        </div>
+      </div>
+
+    </div>
+  );
+}
