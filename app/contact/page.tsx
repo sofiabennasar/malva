@@ -21,24 +21,24 @@ function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div style={{ background: 'var(--moss)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <div className="pg" style={{ background: 'var(--moss)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
 
       {/* Header */}
-      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 52px', alignItems: 'center' }}>
+      <div className="hdr" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 52px', alignItems: 'center' }}>
         <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
         </Link>
-        <Link href="/" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.7 }}>
+        <Link href="/" className="hdr-back" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.7 }}>
           ← Home
         </Link>
       </div>
 
       {/* Contact card */}
-      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '70vh' }}>
+      <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '70vh' }}>
 
         {/* Form side */}
-        <div style={{ padding: '72px 64px', display: 'flex', flexDirection: 'column' }}>
+        <div className="contact-side" style={{ padding: '72px 64px', display: 'flex', flexDirection: 'column' }}>
           <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)', marginBottom: 48 }}>
             Get in<br />touch.
           </h1>
@@ -115,7 +115,7 @@ function ContactForm() {
         </div>
 
         {/* Info side */}
-        <div style={{ background: 'var(--ink)', padding: '72px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 48 }}>
+        <div className="contact-side" style={{ background: 'var(--ink)', padding: '72px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 48 }}>
           <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 'clamp(20px, 2vw, 28px)', fontWeight: 300, color: 'var(--linen)', lineHeight: 1.3, marginBottom: 'auto' }}>
             We source directly.<br /><span style={{ color: 'var(--clay)' }}>No middlemen, no compromise.</span>
           </p>

@@ -113,13 +113,13 @@ export default function FiberTextile() {
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
         </Link>
-        <Link href="/products" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.7 }}>
+        <Link href="/products" className="hdr-back" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.7 }}>
           ← All Products
         </Link>
       </div>
 
       {/* Hero */}
-      <div style={{ background: 'var(--linen)', padding: 16, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, height: '55vh' }}>
+      <div className="two-col hero-h" style={{ background: 'var(--linen)', padding: 16, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, height: '55vh' }}>
         <div style={{ background: 'var(--sand)', overflow: 'hidden' }}>
           <img src="/fiber-hero.jpg" alt="Fiber + Textile — Estudio Malva" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom center', display: 'block' }} />
         </div>
@@ -142,7 +142,7 @@ export default function FiberTextile() {
       </div>
 
       {/* Section label */}
-      <div style={{ background: 'var(--linen)', padding: '32px 52px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      <div className="sec-label" style={{ background: 'var(--linen)', padding: '32px 52px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
           Fiber + Textile · Initial Edition
         </span>
@@ -152,7 +152,7 @@ export default function FiberTextile() {
       </div>
 
       {/* Product cards */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
         {products.map((p) => (
           <div key={p.name} style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column' }}>
             <ProductCarousel slides={p.slides} />

@@ -10,7 +10,7 @@ export default function ProductCarousel({ slides }: { slides: Slide[] }) {
   const goTo = (i: number) => setCurrent((i + slides.length) % slides.length);
 
   return (
-    <div style={{ height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative' }}>
+    <div className="card-photo-h" style={{ height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative' }}>
       {slides.map((slide, i) => (
         <img
           key={i}
