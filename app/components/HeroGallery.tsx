@@ -18,6 +18,8 @@ export default function HeroGallery() {
     width: '100%',
     height: '100%',
     objectFit: 'cover',
+    objectPosition: 'center',
+    display: 'block',
     opacity: active === i ? 1 : 0,
     transition: 'opacity 1.4s ease',
   });
@@ -26,14 +28,13 @@ export default function HeroGallery() {
     <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '66vh', minHeight: 400, alignItems: 'end' }}>
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
-        {/* Replace with <img src="/images/hero-1.jpg" style={slideStyle(0)} alt="" /> when photos are ready */}
-        <div style={{ ...slideStyle(0), background: 'var(--sand)' }} />
-        <div style={{ ...slideStyle(1), background: 'var(--clay)', opacity: active === 1 ? 0.6 : 0 }} />
+        <img src="/hero-1.jpg" alt="" style={slideStyle(0)} />
+        <img src="/hero-3.jpg" alt="" style={slideStyle(1)} />
       </div>
       {/* Secondary panel */}
       <div style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
-        <div style={{ ...slideStyle(0), background: 'var(--bone)' }} />
-        <div style={{ ...slideStyle(1), background: 'var(--slate)', opacity: active === 1 ? 0.5 : 0 }} />
+        <img src="/hero-2.jpg" alt="" style={{ ...slideStyle(0), objectPosition: 'center top' }} />
+        <img src="/hero-4.jpg" alt="" style={{ ...slideStyle(1), objectPosition: 'center top' }} />
       </div>
     </div>
   );
