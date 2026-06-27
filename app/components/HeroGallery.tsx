@@ -45,14 +45,14 @@ export default function HeroGallery() {
   });
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '66vh', minHeight: 400, alignItems: 'end' }}>
+    <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 4, height: '66vh', minHeight: 400, alignItems: 'end' }}>
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-1.jpg" alt="" style={{ ...rotatedSlide(0), objectPosition: 'right center' }} />
         <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectFit: 'contain', objectPosition: 'center center' }} />
       </div>
       {/* Secondary panel */}
-      <div style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
+      <div className="hero-gallery-secondary" style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-2.jpg" alt="" style={rotatedSlideSm(0)} />
         <img src="/hero-4.jpg" alt="" style={rotatedSlideSm(1)} />
       </div>

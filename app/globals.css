@@ -15,3 +15,61 @@
 html { scroll-behavior: smooth; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
+
+@media (max-width: 768px) {
+  /* Page outer wrapper */
+  .pg { padding: 12px !important; gap: 12px !important; }
+
+  /* Header card: 2-col → stack, hide back link text stays visible */
+  .hdr { grid-template-columns: 1fr !important; padding: 28px 24px !important; gap: 16px !important; }
+  .hdr-back { justify-content: flex-start !important; }
+
+  /* Any 2-col grid → 1-col */
+  .two-col { grid-template-columns: 1fr !important; }
+
+  /* Hero cards with fixed height → auto */
+  .hero-h { height: auto !important; }
+
+  /* Product photo heights */
+  .card-photo-h { height: 80vw !important; min-height: 320px !important; }
+
+  /* Section label padding */
+  .sec-label { padding: 20px 24px !important; }
+
+  /* Journal card 1 image: restore natural height */
+  .journal-img { min-height: 280px !important; }
+
+  /* Contact form padding */
+  .contact-side { padding: 40px 28px !important; }
+
+  /* Products page header info: left-align */
+  .hdr-info { align-items: flex-start !important; }
+  .hdr-info h1 { text-align: left !important; }
+
+  /* Homepage hero section */
+  .home-hero-section { padding: 12px !important; }
+  .home-hero-card { padding: 8px 8px 0 !important; }
+  .home-hero-bar { grid-template-columns: 1fr !important; }
+  .home-hero-bar-right { align-items: flex-start !important; }
+  .home-hero-bar-right h1 { text-align: left !important; }
+
+  /* Homepage values grid → simple single column */
+  .values-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .values-grid > div { grid-column: auto !important; grid-row: auto !important; }
+
+  /* Homepage making section */
+  .making-section { padding: 0 12px 12px !important; grid-template-columns: 1fr !important; }
+  .making-photos { grid-template-columns: repeat(3, 1fr) !important; }
+  .making-photos > div { min-height: 200px !important; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr !important; gap: 24px !important; padding: 36px 24px 28px !important; }
+  .footer-bottom-row { padding-top: 16px !important; margin-top: 8px !important; }
+
+  /* HeroGallery */
+  .hero-gallery { grid-template-columns: 1fr !important; height: 50vw !important; min-height: 260px !important; }
+  .hero-gallery-secondary { display: none !important; }
+}

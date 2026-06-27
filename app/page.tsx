@@ -8,17 +8,17 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section style={{ background: 'var(--moss)', padding: '72px 72px 72px' }}>
-        <div style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
+      <section className="home-hero-section" style={{ background: 'var(--moss)', padding: '72px 72px 72px' }}>
+        <div className="home-hero-card" style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
 
           <HeroGallery />
 
-          <div style={{ display: 'grid', gridTemplateColumns: '200px 1fr', minHeight: 150, marginTop: 16 }}>
+          <div className="home-hero-bar" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', minHeight: 150, marginTop: 16 }}>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '28px 32px', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
               <span style={{ fontSize: 33 }}>estudio</span>
               <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
             </div>
-            <div style={{ padding: '28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12, alignItems: 'flex-end' }}>
+            <div className="home-hero-bar-right" style={{ padding: '28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12, alignItems: 'flex-end' }}>
               <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right' }}>
                 Raw Textures. Modern Spaces.
               </h1>
@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* ── Values ───────────────────────────────────────── */}
       <section style={{ background: 'var(--moss)', padding: '0 72px 72px' }} id="story">
-        <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
+        <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
 
           {/* Row 1 */}
           <div style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
@@ -84,11 +84,11 @@ export default function Home() {
       </section>
 
       {/* ── Making in Progress + Wave ────────────────────── */}
-      <section style={{ background: 'var(--moss)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
+      <section className="making-section" style={{ background: 'var(--moss)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
 
         {/* Left: 3 vertical photos + text */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, flex: 1 }}>
+          <div className="making-photos" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, flex: 1 }}>
             <div style={{ minHeight: 500, overflow: 'hidden' }}>
               <img src="/product-1.jpg" alt="" style={imgFill} />
             </div>

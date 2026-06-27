@@ -6,10 +6,10 @@ export const metadata = {
 
 export default function TheJournal() {
   return (
-    <div style={{ background: 'var(--moss)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div className="pg" style={{ background: 'var(--moss)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
 
       {/* ── Card 1: Text left, image right ───────────── */}
-      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+      <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 64px' }}>
           <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
             <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
@@ -34,7 +34,7 @@ export default function TheJournal() {
           </span>
         </div>
 
-        <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+        <div className="journal-img" style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
           <img src="/story-1.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
       </div>
@@ -51,7 +51,7 @@ export default function TheJournal() {
       </div>
 
       {/* ── Card 3: Photo + CTA ──────────────────────── */}
-      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
+      <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
         <div style={{ background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
           <img src="/story-2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
