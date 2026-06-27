@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body style={{ margin: 0, background: 'var(--linen)', color: 'var(--ink)', fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.6, WebkitFontSmoothing: 'antialiased' }}>
         <main>{children}</main>
 
-        <footer className="footer-grid" style={{ background: 'var(--linen)', borderTop: '1px solid var(--sand)', padding: '48px 48px 36px', display: 'grid', gridTemplateColumns: '1fr auto', gap: 32, alignItems: 'start' }}>
+        <footer className="footer-grid" style={{ background: 'var(--linen)', borderTop: '1px solid var(--sand)', padding: '48px 48px 36px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32, alignItems: 'start' }}>
           <div>
             <p style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, letterSpacing: '0.04em', color: 'var(--ink)', marginBottom: 12 }}>
               Estudio Malva
@@ -42,8 +42,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'flex-start', paddingTop: 4 }}>
-            <Link href="/contact" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Contact Us</Link>
+          <div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <li><Link href="/" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Home</Link></li>
+              <li><Link href="/products" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Products</Link></li>
+              <li><Link href="/thejournal" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>The Journal</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <li><a href="mailto:hola@estudiomalva.com" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>hola@estudiomalva.com</a></li>
+              <li><a href="#" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Instagram</a></li>
+            </ul>
           </div>
 
           <div className="footer-bottom-row" style={{ gridColumn: '1 / -1', borderTop: '1px solid var(--bone)', paddingTop: 24, marginTop: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
