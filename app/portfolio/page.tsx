@@ -1,106 +1,117 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Portafolio | Estudio Malva",
-  description: "Galería de proyectos y trabajos realizados por Estudio Malva",
+  title: "Products — Estudio Malva",
 };
 
+const products = [
+  {
+    num: "001",
+    name: "Baskets",
+    desc: "Woven by hand from local natural fibers. Each basket is a singular object shaped by the maker's touch and a deep knowledge of the craft.",
+    img: "/product-1.jpg",
+    alt: "Baskets",
+    href: "/portfolio/baskets",
+  },
+  {
+    num: "002",
+    name: "Fiber + Textile",
+    desc: "Llama weaving, brushed llama, and chaguar. Objects made slowly, by hand, in the north of Argentina.",
+    img: "/product-2.jpg",
+    alt: "Lama Fabrics",
+    imgPosition: "center bottom",
+    href: "/portfolio/fiber-textile",
+  },
+  {
+    num: "003",
+    name: "Ceramics",
+    desc: "Fired in hand-built kilns using local clay and natural pigments.",
+    img: "/product-3.jpg",
+    alt: "Ceramics",
+    href: "/portfolio/ceramics",
+  },
+  {
+    num: "004",
+    name: "Wood",
+    desc: "Wood integrated with alpaca, a traditional Argentine metal. Two materials brought together into objects built for everyday living.",
+    img: "/product-4.jpg",
+    alt: "Wood",
+    href: "/portfolio/wood",
+  },
+];
+
 export default function Portfolio() {
-  const projects = [
-    {
-      id: 1,
-      title: "Identidad Visual Moderna",
-      category: "Branding",
-      color: "bg-sand"
-    },
-    {
-      id: 2,
-      title: "Diseño de Sitio Web",
-      category: "Digital",
-      color: "bg-moss"
-    },
-    {
-      id: 3,
-      title: "Campaña de Marketing",
-      category: "Gráfico",
-      color: "bg-slate"
-    },
-    {
-      id: 4,
-      title: "Aplicación Móvil",
-      category: "Digital",
-      color: "bg-clay"
-    },
-    {
-      id: 5,
-      title: "Libro de Marca",
-      category: "Branding",
-      color: "bg-bone"
-    },
-    {
-      id: 6,
-      title: "Diseño Editorial",
-      category: "Gráfico",
-      color: "bg-linen"
-    }
-  ];
-
   return (
-    <div className="flex flex-col">
-      {/* Hero */}
-      <section className="bg-linen py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="font-fraunces text-6xl italic text-ink mb-6">
-            Nuestro Portafolio
+    <div style={{ background: 'var(--moss)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
+
+      {/* Header card */}
+      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '48px 52px', alignItems: 'center' }}>
+        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
+          <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
+          <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
+        </Link>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16 }}>
+          <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', textAlign: 'right' }}>
+            Initial <em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>Editions</em>
           </h1>
-          <p className="font-archivo text-lg leading-relaxed text-slate max-w-2xl">
-            Trabajos realizados con dedicación y respeto por la materia.
-            Cada proyecto cuenta una historia.
-          </p>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--clay)', border: '1px solid var(--clay)', padding: '6px 14px' }}>
+            Samples · In Development
+          </span>
         </div>
-      </section>
+      </div>
 
-      {/* Projects Grid */}
-      <section className="bg-paper py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project) => (
-              <div key={project.id} className="group cursor-pointer">
-                <div
-                  className={`w-full h-80 ${project.color} flex items-end justify-start p-8 relative overflow-hidden hover:opacity-90 transition`}
-                >
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-ink transition"></div>
-                  <div className="relative z-10">
-                    <p className="font-archivo text-xs tracking-widest uppercase text-ink opacity-60 mb-3">
-                      {project.category}
-                    </p>
-                    <h3 className="font-fraunces text-2xl italic text-ink">
-                      {project.title}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+      {/* Product grid */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+
+        {/* Row 1 */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+          {products.slice(0, 2).map((p) => (
+            <ProductCard key={p.num} product={p} />
+          ))}
         </div>
-      </section>
 
-      {/* CTA */}
-      <section className="bg-clay text-paper py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-fraunces text-5xl italic mb-6">¿Tienes un proyecto?</h2>
-          <p className="font-archivo text-lg leading-relaxed mb-8 max-w-2xl">
-            Nos gustaría ayudarte a transformar tu idea en algo tangible,
-            algo que permanezca.
-          </p>
+        {/* Row 2 */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+          {products.slice(2, 4).map((p) => (
+            <ProductCard key={p.num} product={p} />
+          ))}
+        </div>
+
+      </div>
+
+    </div>
+  );
+}
+
+function ProductCard({ product }: { product: typeof products[0] }) {
+  return (
+    <div style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ height: '72vh', minHeight: 480, background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+        <img
+          src={product.img}
+          alt={product.alt}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: product.imgPosition ?? 'center', display: 'block' }}
+        />
+        <span style={{ position: 'absolute', top: 20, left: 20, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'rgba(28,26,23,0.35)' }}>
+          {product.num}
+        </span>
+      </div>
+      <div style={{ padding: '24px 28px 28px', display: 'flex', flexDirection: 'column', gap: 6, borderTop: '1px solid var(--bone)', flex: 1 }}>
+        <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
+          {product.name}
+        </h2>
+        <p style={{ fontSize: 12, lineHeight: 1.7, color: 'var(--slate)', marginTop: 4, marginBottom: 16 }}>
+          {product.desc}
+        </p>
+        <div style={{ marginTop: 'auto', paddingTop: 16 }}>
           <Link
-            href="/contact"
-            className="inline-block font-archivo font-semibold text-sm tracking-wide uppercase px-6 py-3 bg-paper text-clay hover:bg-linen transition"
+            href={product.href}
+            style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', padding: '10px 22px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', display: 'inline-block' }}
           >
-            Empecemos
+            See More
           </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
