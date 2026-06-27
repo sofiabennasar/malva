@@ -11,7 +11,7 @@ const products = [
     desc: "Woven by hand from local natural fibers. Each basket is a singular object shaped by the maker's touch and a deep knowledge of the craft.",
     img: "/product-1.jpg",
     alt: "Baskets",
-    href: "/portfolio/baskets",
+    href: "/products/baskets",
   },
   {
     num: "002",
@@ -20,7 +20,7 @@ const products = [
     img: "/product-2.jpg",
     alt: "Lama Fabrics",
     imgPosition: "center bottom",
-    href: "/portfolio/fiber-textile",
+    href: "/products/fiber-textile",
   },
   {
     num: "003",
@@ -28,7 +28,7 @@ const products = [
     desc: "Fired in hand-built kilns using local clay and natural pigments.",
     img: "/product-3.jpg",
     alt: "Ceramics",
-    href: "/portfolio/ceramics",
+    href: "/products/ceramics",
   },
   {
     num: "004",
@@ -36,7 +36,7 @@ const products = [
     desc: "Wood integrated with alpaca, a traditional Argentine metal. Two materials brought together into objects built for everyday living.",
     img: "/product-4.jpg",
     alt: "Wood",
-    href: "/portfolio/wood",
+    href: "/products/wood",
   },
 ];
 

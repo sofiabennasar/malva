@@ -47,7 +47,7 @@ export default function Nav() {
       <ul style={{ display: 'flex', gap: 36, listStyle: 'none', margin: 0, padding: 0 }}>
         {[
           { href: '/', label: 'Inicio' },
-          { href: '/portfolio', label: 'Portafolio' },
+          { href: '/products', label: 'Portafolio' },
           { href: '/about', label: 'Nosotros' },
           { href: '/contact', label: 'Contacto' },
         ].map(({ href, label }) => (
