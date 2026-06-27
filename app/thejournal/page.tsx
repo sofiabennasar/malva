@@ -34,7 +34,7 @@ export default function TheJournal() {
           </span>
         </div>
 
-        <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden', minHeight: 520 }}>
+        <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
           {/* Story 1 image — placeholder until photo is uploaded */}
         </div>
       </div>

@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
               <li><Link href="/portfolio" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Products</Link></li>
-              <li><Link href="/about" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>The Journal</Link></li>
+              <li><Link href="/thejournal" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>The Journal</Link></li>
             </ul>
           </div>
 
