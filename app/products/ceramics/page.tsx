@@ -32,6 +32,7 @@ const products = [
     slides: [
       { src: "/ceramics-2.jpg",  alt: "Vase 002" },
       { src: "/ceramics-2b.jpg", alt: "Vase 002 detail" },
+      { src: "/ceramics-2c.jpg", alt: "Vase 002 detail 2" },
     ],
     specs: { Material: "Terracotta", Size: "TBD", Technique: "Terracotta ceramic crafted from natural clay and shaped by hand." },
   },
@@ -42,6 +43,7 @@ const products = [
       { src: "/ceramics-3.jpg",  alt: "Taza 001" },
       { src: "/ceramics-3b.jpg", alt: "Taza 001 detail" },
       { src: "/ceramics-3c.jpg", alt: "Taza 001 detail 2" },
+      { src: "/ceramics-3d.jpg", alt: "Taza 001 detail 3" },
     ],
     specs: { Material: "Natural clay", Size: "TBD", Technique: "Glazed ceramic crafted from natural clay and shaped by hand." },
   },
