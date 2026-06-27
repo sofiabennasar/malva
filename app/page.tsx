@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section style={{ background: 'var(--moss)', padding: '72px 72px 0' }}>
+      <section style={{ background: 'var(--moss)', padding: '72px 72px 72px' }}>
         <div style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
 
           <HeroGallery />
