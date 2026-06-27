@@ -20,20 +20,23 @@ export default function HeroGallery() {
     top: '50%',
     left: '50%',
     width: '66vh',
-    height: 'auto',
+    height: '70vw',
+    objectFit: 'cover',
+    objectPosition: 'center',
     display: 'block',
     opacity: active === i ? 1 : 0,
     transition: 'opacity 1.4s ease',
     transform: 'translate(-50%, -50%) rotate(-90deg)',
   });
 
-  // Secondary panel is 75% height of 66vh = ~49.5vh tall
+  // Secondary panel is 75% height of 66vh = ~49.5vh tall, width ~28vw
   const rotatedSlideSm = (i: number): React.CSSProperties => ({
     position: 'absolute',
     top: '50%',
     left: '50%',
     width: '50vh',
-    height: 'auto',
+    height: '35vw',
+    objectFit: 'cover',
     objectPosition: 'center',
     display: 'block',
     opacity: active === i ? 1 : 0,
