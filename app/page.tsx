@@ -73,7 +73,7 @@ export default function Home() {
           <div style={{ gridColumn: 4, gridRow: 3 }} />
           <div style={{ gridColumn: 5, gridRow: 3, display: 'flex', alignItems: 'flex-end', padding: '36px 32px' }}>
             <Link
-              href="/about"
+              href="/thejournal"
               style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer' }}
             >
               The Journal
