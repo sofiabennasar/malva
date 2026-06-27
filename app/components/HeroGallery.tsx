@@ -49,7 +49,7 @@ export default function HeroGallery() {
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-1.jpg" alt="" style={{ ...rotatedSlide(0), objectPosition: 'center center' }} />
-        <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectPosition: 'right center' }} />
+        <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectFit: 'contain', objectPosition: 'center center' }} />
       </div>
       {/* Secondary panel */}
       <div style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
