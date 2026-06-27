@@ -35,7 +35,7 @@ export default function TheJournal() {
         </div>
 
         <div style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
-          {/* Story 1 image — placeholder until photo is uploaded */}
+          <img src="/story-1.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export default function TheJournal() {
       {/* ── Card 3: Photo + CTA ──────────────────────── */}
       <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
         <div style={{ background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
-          {/* Story 2 image — placeholder until photo is uploaded */}
+          <img src="/story-2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '48px 48px', gap: 16 }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: 8 }}>
