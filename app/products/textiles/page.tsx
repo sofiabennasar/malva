@@ -2,7 +2,7 @@ import Link from "next/link";
 import ProductCarousel from "@/app/components/ProductCarousel";
 
 export const metadata = {
-  title: "Fiber + Textile — Estudio Malva",
+  title: "Textiles — Estudio Malva",
 };
 
 const specRow: React.CSSProperties = {
@@ -103,7 +103,7 @@ const products = [
   },
 ];
 
-export default function FiberTextile() {
+export default function Textiles() {
   return (
     <div className="pg" style={{ background: 'var(--moss)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
 
@@ -121,12 +121,12 @@ export default function FiberTextile() {
       {/* Hero */}
       <div className="two-col hero-h" style={{ background: 'var(--linen)', padding: 16, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, height: '55vh' }}>
         <div style={{ background: 'var(--sand)', overflow: 'hidden' }}>
-          <img src="/fiber-hero.jpg" alt="Fiber + Textile — Estudio Malva" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom center', display: 'block' }} />
+          <img src="/fiber-hero.jpg" alt="Textiles — Estudio Malva" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom center', display: 'block' }} />
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '36px 28px' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
-              Fiber + Textile · Initial Edition
+              Textiles · Initial Edition
             </span>
             <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(36px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)' }}>
               Made<br /><em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>slowly</em>
@@ -144,7 +144,7 @@ export default function FiberTextile() {
       {/* Section label */}
       <div className="sec-label" style={{ background: 'var(--linen)', padding: '32px 52px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
-          Fiber + Textile · Initial Edition
+          Textiles · Initial Edition
         </span>
         <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--slate)', opacity: 0.5 }}>
           8 pieces
@@ -170,7 +170,7 @@ export default function FiberTextile() {
               </div>
               <div style={{ marginTop: 'auto' }}>
                 <Link
-                  href={`/contact?category=fiber&product=${p.inquiry}`}
+                  href={`/contact?category=textiles&product=${p.inquiry}`}
                   style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent' }}
                 >
                   Inquire

@@ -15,12 +15,12 @@ const products = [
   },
   {
     num: "002",
-    name: "Fiber + Textile",
+    name: "Textiles",
     desc: "Llama weaving, brushed llama, and chaguar. Objects made slowly, by hand, in the north of Argentina.",
     img: "/product-2.jpg",
     alt: "Lama Fabrics",
     imgPosition: "center bottom",
-    href: "/products/fiber-textile",
+    href: "/products/textiles",
   },
   {
     num: "003",
