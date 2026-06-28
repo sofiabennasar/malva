@@ -49,12 +49,12 @@ export default function HeroGallery() {
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '66vh', height: '70vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
-        <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectFit: 'cover', objectPosition: 'center 40%' }} />
+        <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectFit: 'contain', objectPosition: 'center 40%' }} />
       </div>
       {/* Secondary panel */}
       <div className="hero-gallery-secondary" style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-2.jpg" alt="" style={{ ...rotatedSlideSm(0), objectFit: 'cover', objectPosition: 'center center' }} />
-        <img src="/hero-4.jpg" alt="" style={rotatedSlideSm(1)} />
+        <img src="/hero-4.jpg" alt="" style={{ ...rotatedSlideSm(1), objectPosition: 'left top' }} />
       </div>
     </div>
   );
