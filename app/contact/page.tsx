@@ -19,6 +19,11 @@ function ContactForm() {
   const [category, setCategory] = useState(params.get('category') ?? '');
   const [product, setProduct] = useState(params.get('product')?.replace(/\+/g, ' ') ?? '');
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   return (
     <div className="pg" style={{ background: 'var(--moss)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
@@ -50,22 +55,32 @@ function ContactForm() {
           ) : (
             <form
               style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}
-              onSubmit={(e) => { e.preventDefault(); setSubmitted(true); }}
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setSending(true);
+                await fetch('/api/contact', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ firstName, lastName, email, category, product, message }),
+                });
+                setSending(false);
+                setSubmitted(true);
+              }}
             >
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <label style={labelStyle}>First name</label>
-                  <input type="text" placeholder="Sofia" required style={inputStyle} />
+                  <input type="text" placeholder="Sofia" required style={inputStyle} value={firstName} onChange={e => setFirstName(e.target.value)} />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <label style={labelStyle}>Last name</label>
-                  <input type="text" placeholder="Bennasar" required style={inputStyle} />
+                  <input type="text" placeholder="Bennasar" required style={inputStyle} value={lastName} onChange={e => setLastName(e.target.value)} />
                 </div>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 <label style={labelStyle}>Email</label>
-                <input type="email" placeholder="you@email.com" required style={inputStyle} />
+                <input type="email" placeholder="you@email.com" required style={inputStyle} value={email} onChange={e => setEmail(e.target.value)} />
               </div>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
@@ -101,14 +116,17 @@ function ContactForm() {
                 <textarea
                   placeholder="Tell us what you're looking for..."
                   style={{ ...inputStyle, resize: 'none', height: 100 }}
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
                 />
               </div>
 
               <button
                 type="submit"
-                style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', background: 'var(--ink)', color: 'var(--linen)', border: 'none', cursor: 'pointer', alignSelf: 'flex-start', marginTop: 8 }}
+                disabled={sending}
+                style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', background: 'var(--ink)', color: 'var(--linen)', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: 'flex-start', marginTop: 8, opacity: sending ? 0.6 : 1 }}
               >
-                Send message
+                {sending ? 'Sending...' : 'Send message'}
               </button>
             </form>
           )}
