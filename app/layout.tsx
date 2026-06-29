@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Archivo, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
+import StickyHeader from "./components/StickyHeader";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${fraunces.variable} ${archivo.variable} ${jetbrainsMono.variable}`}>
       <body style={{ margin: 0, background: 'var(--linen)', color: 'var(--ink)', fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.6, WebkitFontSmoothing: 'antialiased' }}>
+        <StickyHeader />
         <main>{children}</main>
 
         <footer className="footer-grid" style={{ background: 'var(--linen)', borderTop: '1px solid var(--sand)', padding: '48px 48px 36px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32, alignItems: 'start' }}>
