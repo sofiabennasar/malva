@@ -37,13 +37,10 @@ export default function TheJournal() {
       </div>
 
       {/* ── Card 2: Tagline ──────────────────────────── */}
-      <div style={{ background: 'var(--ink)', padding: '80px 64px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 32, minHeight: 280 }}>
-        <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 'clamp(26px, 3.2vw, 48px)', fontWeight: 300, color: 'var(--linen)', lineHeight: 1.3, maxWidth: 700 }}>
-          Rooted in origin.<br />
-          <span style={{ color: 'var(--clay)' }}>Designed for contemporary living.</span>
-        </p>
-        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(247,244,238,0.4)' }}>
-          Made in Argentina
+      <div style={{ background: 'var(--ink)', padding: '48px 64px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+        <p style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(32px, 5vw, 72px)', fontWeight: 300, lineHeight: 1.1, margin: 0 }}>
+          <span style={{ color: 'var(--linen)', display: 'block' }}>Made in</span>
+          <span style={{ color: 'var(--clay)', display: 'block' }}>Argentina</span>
         </p>
       </div>
 
