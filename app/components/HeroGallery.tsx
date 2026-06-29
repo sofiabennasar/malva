@@ -53,7 +53,7 @@ export default function HeroGallery() {
       </div>
       {/* Secondary panel */}
       <div className="hero-gallery-secondary" style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
-        <img src="/hero-2.jpg" alt="" style={{ ...rotatedSlideSm(0), objectFit: 'cover', objectPosition: 'center center' }} />
+        <img src="/hero-2.jpg" alt="" style={{ ...rotatedSlideSm(0), objectFit: 'cover', objectPosition: 'center center', transform: 'translate(-50%, -50%) rotate(90deg)' }} />
         <img src="/hero-4.jpg" alt="" style={{ ...rotatedSlideSm(1), objectPosition: 'right bottom' }} />
       </div>
     </div>
