@@ -139,8 +139,8 @@ function ContactForm() {
           </p>
           <div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 12 }}>Email</p>
-            <a href="mailto:hola@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
-              hola@estudiomalva.com
+            <a href="mailto:sales@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
+              sales@estudiomalva.com
             </a>
           </div>
           <div>
