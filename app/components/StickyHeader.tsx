@@ -69,7 +69,7 @@ export default function StickyHeader() {
               key={href}
               href={href}
               onClick={() => setMenuOpen(false)}
-              style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 'clamp(22px, 2.4vw, 34px)', fontWeight: 300, color: 'var(--linen)', textDecoration: 'none', lineHeight: 1.15 }}
+              style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 'clamp(17px, 1.8vw, 26px)', fontWeight: 300, color: 'var(--linen)', textDecoration: 'none', lineHeight: 1.15 }}
             >
               {label}
             </Link>
