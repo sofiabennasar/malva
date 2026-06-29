@@ -20,7 +20,7 @@ const products = [
     img: "/product-2.jpg",
     alt: "Lama Fabrics",
     imgPosition: "center bottom",
-    href: "/products/fiber-textile",
+    href: "/products/textile",
   },
   {
     num: "003",
