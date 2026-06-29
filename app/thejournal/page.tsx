@@ -19,7 +19,7 @@ export default function TheJournal() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
             <div style={{ width: 32, height: 1, background: 'var(--clay)', marginBottom: 4 }} />
             <p style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(22px, 2.4vw, 34px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', marginBottom: 8 }}>
-              Estudio Malva sources handmade objects directly from artisan communities across Argentina.
+              We source handmade objects directly from artisan communities across Argentina.
             </p>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--slate)' }}>
               Founded by Mora and Sofia, two Argentinian creatives building a direct bridge between Buenos Aires and Los Angeles, we work closely with independent makers to uncover exceptional materials, traditional techniques, and timeless forms.
@@ -29,9 +29,6 @@ export default function TheJournal() {
             </p>
           </div>
 
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--sand)' }}>
-            Our Story
-          </span>
         </div>
 
         <div className="journal-img" style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
