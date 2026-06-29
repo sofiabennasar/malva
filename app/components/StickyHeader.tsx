@@ -42,10 +42,10 @@ export default function StickyHeader() {
 
       {/* Fullscreen menu overlay */}
       <div style={{
-        position: 'fixed', inset: 0, zIndex: 200,
+        position: 'fixed', top: 0, left: 0, right: 0, height: '50vh', zIndex: 200,
         background: 'var(--ink)',
         display: 'flex', flexDirection: 'column',
-        padding: '28px 48px 52px',
+        padding: '28px 48px 40px',
         opacity: menuOpen ? 1 : 0,
         pointerEvents: menuOpen ? 'all' : 'none',
         transition: 'opacity 0.3s ease',
