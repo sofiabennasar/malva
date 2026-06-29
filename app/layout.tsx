@@ -59,10 +59,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <div className="footer-bottom-row" style={{ gridColumn: '1 / -1', borderTop: '1px solid var(--bone)', paddingTop: 24, marginTop: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', color: 'var(--slate)', opacity: 0.6, textTransform: 'uppercase' }}>
-              © 2026 Estudio Malva · Argentina
+              © 2026 Estudio Malva
             </span>
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.08em', color: 'var(--slate)', opacity: 0.6, textTransform: 'uppercase' }}>
-              Made with intention
+              Made in Argentina
             </span>
           </div>
         </footer>
