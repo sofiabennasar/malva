@@ -23,7 +23,7 @@ const products = [
       { src: "/llama-1.jpg",  alt: "Throw 001" },
       { src: "/llama-1b.jpg", alt: "Throw 001 detail" },
     ],
-    specs: { Material: "Llama", Size: "TBD", Technique: "Naturally colored llama fiber, hand-spun and woven using traditional techniques." },
+    specs: { Material: "Naturally Undyed Llama Fiber.", Size: "2.3' x 7.2'", Technique: "A lightweight throw woven from undyed llama fiber. Soft, warm, and understated, it showcases the natural ivory tone of the animal's coat. Hand-spun and woven using traditional techniques passed down through generations." },
   },
   {
     name: "Throw 002",
@@ -32,7 +32,7 @@ const products = [
       { src: "/llama-2.jpg",  alt: "Throw 002" },
       { src: "/llama-2b.jpg", alt: "Throw 002 detail" },
     ],
-    specs: { Material: "Llama", Size: "TBD", Technique: "Naturally colored llama fiber, hand-spun and woven using traditional techniques." },
+    specs: { Material: "Naturally Undyed Llama Fiber.", Size: "2.3' x 7.2'", Technique: "Woven from undyed brown llama fiber sourced in the Argentine Andes. The rich color comes directly from the animal itself and requires no dyes or chemical treatments. Hand-spun and woven using traditional techniques passed down through generations." },
   },
   {
     name: "Throw 003",
@@ -63,7 +63,7 @@ const products = [
       { src: "/brushed-1b.jpg", alt: "Quilt 001 detail", objectPosition: "bottom center" },
       { src: "/brushed-1c.jpg", alt: "Quilt 001 detail 2", objectPosition: "bottom center" },
     ],
-    specs: { Material: "Brushed llama", Size: "TBD", Technique: "Undyed llama fiber from the Argentine Andes, traditionally woven and hand-brushed for a remarkably soft finish." },
+    specs: { Material: "Hand-Brushed Llama Fiber", Size: "9' x 9.5'", Technique: "A generously sized bed cover woven from undyed llama fiber. The bold black stripe is created using the natural shade of the animal's coat, without dyes. Designed as a warm, textural layer for the bed." },
   },
   {
     name: "Quilt 002",
