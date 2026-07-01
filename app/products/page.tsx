@@ -86,7 +86,7 @@ export default function Portfolio() {
 function ProductCard({ product }: { product: typeof products[0] }) {
   return (
     <div style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ height: '72vh', minHeight: 480, background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+      <div style={{ height: '55vh', minHeight: 380, background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img
           src={product.img}
           alt={product.alt}
