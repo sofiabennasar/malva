@@ -24,7 +24,7 @@ const products = [
       { src: "/ceramics-1b.jpg", alt: "Vase 001 detail" },
       { src: "/ceramics-1c.jpg", alt: "Vase 001 detail 2" },
     ],
-    specs: { Material: "Natural clay", Size: "TBD", Technique: "Unglazed ceramic crafted from natural clay and shaped by hand." },
+    specs: { Material: "Clay, Unglazed", Size: '7.5" x 3.5" x 5"', Technique: "A low-profile tabletop vessel defined by its raw mineral mass. The small-scale form is hand-shaped to emphasize a dense, unglazed texture, operating as a functional, decorative object that relies entirely on structural volume and unaltered material truth" },
   },
   {
     name: "Vase 002",
@@ -34,7 +34,7 @@ const products = [
       { src: "/ceramics-2b.jpg", alt: "Vase 002 detail" },
       { src: "/ceramics-2c.jpg", alt: "Vase 002 detail 2" },
     ],
-    specs: { Material: "Terracotta", Size: "TBD", Technique: "Terracotta ceramic crafted from natural clay and shaped by hand." },
+    specs: { Material: "Terracota Clay", Size: '7.5" x 8" x 7.5"', Technique: "A structural vessel hand-shaped from native clay to maximize density and volumetric weight. The unglazed exterior highlights the deep terracotta tone of the mineral body, emphasizing a high-friction tactile surface and unaltered material truth over ornament" },
   },
   {
     name: "Taza 001",
@@ -45,7 +45,7 @@ const products = [
       { src: "/ceramics-3c.jpg", alt: "Taza 001 detail 2" },
       { src: "/ceramics-3d.jpg", alt: "Taza 001 detail 3" },
     ],
-    specs: { Material: "Natural clay", Size: "TBD", Technique: "Glazed ceramic crafted from natural clay and shaped by hand." },
+    specs: { Material: "Glazed Ceramic", Size: '2.5" x 4" x 2.5"', Technique: "A paired set of hand-shaped structural vessels. The surfaces are treated with a heavy mineral glaze that reacts under high-temperature reduction, producing deep tonal variation, and localized vitrification" },
   },
 ];
 

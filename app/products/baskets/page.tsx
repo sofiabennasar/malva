@@ -85,15 +85,15 @@ export default function Baskets() {
             <div style={{ display: 'flex', flexDirection: 'column', borderTop: '1px solid var(--bone)', marginBottom: 12 }}>
               <div style={specRowStyle}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.55 }}>Material</span>
-                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>TBD</span>
+                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>Wild-Harvested Carandillo Palm Fiber</span>
               </div>
               <div style={specRowStyle}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.55 }}>Size</span>
-                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>22 × 22 × 22 cm</span>
+                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>17" x 13" x 13"</span>
               </div>
               <div style={specRowStyle}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.55 }}>Technique</span>
-                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>TBD</span>
+                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>A rigid basket bag constructed using a flat-interlocking weave. The wide, satin-textured palm fibers are tightly compressed to create a smooth, dense surface grid, providing the minimalist cube with clean edge-alignment and self-supporting structural weight</span>
               </div>
             </div>
             <div style={{ marginTop: 'auto' }}>
@@ -117,15 +117,15 @@ export default function Baskets() {
             <div style={{ display: 'flex', flexDirection: 'column', borderTop: '1px solid var(--bone)', marginBottom: 12 }}>
               <div style={specRowStyle}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.55 }}>Material</span>
-                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>TBD</span>
+                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>Wild-Harvested Carandillo Palm Fiber</span>
               </div>
               <div style={specRowStyle}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.55 }}>Size</span>
-                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>22 × 22 × 22 cm</span>
+                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>12" x 10" x 6"</span>
               </div>
               <div style={specRowStyle}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.55 }}>Technique</span>
-                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>TBD</span>
+                <span style={{ fontSize: 13, lineHeight: 1.5, color: 'var(--ink)' }}>A cylindrical vessel utilizing a continuous plaiting technique. The flat fiber profile allows for a low-profile, uniform wall thickness that retains a sharp geometric silhouette while emphasizing the raw material's subtle, natural pale-straw tone</span>
               </div>
             </div>
             <div style={{ marginTop: 'auto' }}>

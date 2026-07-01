@@ -24,7 +24,7 @@ const products = [
       { src: "/wood-1b.jpg", alt: "Stool 001 detail" },
       { src: "/wood-1c.jpg", alt: "Stool 001 detail 2" },
     ],
-    specs: { Material: "TBD", Size: "TBD", Technique: "TBD" },
+    specs: { Material: "Solid Algarrobo Wood and Natural Cowhide", Size: '12" x 21" x 12"', Technique: "A low-profile seating structure engineered from solid, high-density algarrobo wood. The frame features hand-planed linear joints paired with a high-tension natural cowhide seat, balancing raw material friction with precise structural weight and geometric stability" },
   },
   {
     name: "Knife 001",
@@ -34,7 +34,7 @@ const products = [
       { src: "/wood-2b.jpg", alt: "Knife 001 detail" },
       { src: "/wood-2c.jpg", alt: "Knife 001 detail 2" },
     ],
-    specs: { Material: "TBD", Size: "TBD", Technique: "TBD" },
+    specs: { Material: "Solid Algarrobo Wood and Handcrafted Alpaca", Size: '5 1/4" x 1"', Technique: "A set of butter knives combining high-density timber with a native metal alloy. Each piece features a hand-contoured algarrobo handle joined to a smooth, low-profile alpaca blade engineered for a balanced, functional weight" },
   },
 ];
 

@@ -23,7 +23,7 @@ const products = [
       { src: "/llama-1.jpg",  alt: "Throw 001" },
       { src: "/llama-1b.jpg", alt: "Throw 001 detail" },
     ],
-    specs: { Material: "Naturally Undyed Llama Fiber", Size: "2.3' x 7.2'", Technique: "A lightweight throw woven from undyed llama fiber. Soft, warm, and understated, it showcases the natural ivory tone of the animal's coat. Hand-spun and woven using traditional techniques passed down through generations" },
+    specs: { Material: "Naturally Undyed Llama Fiber", Size: "2.3' x 7.2'", Technique: "Lightweight textile defined by its structural weave and raw materiality. Woven entirely from undyed llama fiber on manual tension looms, it retains its natural ivory tone and irregular tonal depth" },
   },
   {
     name: "Throw 002",
@@ -32,7 +32,7 @@ const products = [
       { src: "/llama-2.jpg",  alt: "Throw 002" },
       { src: "/llama-2b.jpg", alt: "Throw 002 detail" },
     ],
-    specs: { Material: "Naturally Undyed Llama Fiber", Size: "2.3' x 7.2'", Technique: "Woven from undyed brown llama fiber sourced in the Argentine Andes. The rich color comes directly from the animal itself and requires no dyes or chemical treatments. Hand-spun and woven using traditional techniques passed down through generations" },
+    specs: { Material: "Naturally Undyed Llama Fiber", Size: "2.3' x 7.2'", Technique: "Lightweight textile defined by its structural weave and raw materiality. Woven entirely from undyed llama fiber on manual tension looms. The structural palette is achieved entirely without synthetic dyes or chemical treatments, highlighting the raw material's native color variation" },
   },
   {
     name: "Throw 003",
@@ -42,7 +42,7 @@ const products = [
       { src: "/llama-3b.jpg", alt: "Throw 003 detail" },
       { src: "/llama-3c.jpg", alt: "Throw 003 detail 2" },
     ],
-    specs: { Material: "Wild-Harvested Chaguar Fiber", Size: "4.2' x 3.2'", Technique: "Handwoven from wild-harvested chaguar fiber and naturally dyed using pigments derived from native plants. Rich in texture and character, this piece reflects generations of textile knowledge from northern Argentina" },
+    specs: { Material: "Wild-Harvested Chaguar Fiber", Size: "4.2' x 3.2'", Technique: "A highly structured textile hand-knotted from wild-harvested chaguar forest fibers. Colored with organic pigments extracted from native plants, the piece features a rigid, tactile friction and non-uniform density" },
   },
   {
     name: "Rug 001",
@@ -53,7 +53,7 @@ const products = [
       { src: "/rug-1c.jpg", alt: "Rug 001 detail 2", objectPosition: "bottom center" },
       { src: "/rug-1d.jpg", alt: "Rug 001 detail 3", objectPosition: "bottom center" },
     ],
-    specs: { Material: "Naturally Dyed Baetón Wool", Size: "4' x 6'", Technique: "Handwoven in Santiago del Estero from sheep wool dyed with natural pigments derived from native plants, roots, and minerals. The graphic black-and-natural composition balances traditional craftsmanship with a contemporary aesthetic" },
+    specs: { Material: "Naturally Dyed Baetón Wool", Size: "4' x 6'", Technique: "Hand-loomed in Santiago del Estero using raw sheep wool treated with native botanical and mineral pigments. The high-contrast, geometric composition balances heavy, traditional structural weight with a minimal, graphic aesthetic" },
   },
   {
     name: "Quilt 001",
@@ -63,7 +63,7 @@ const products = [
       { src: "/brushed-1b.jpg", alt: "Quilt 001 detail", objectPosition: "bottom center" },
       { src: "/brushed-1c.jpg", alt: "Quilt 001 detail 2", objectPosition: "bottom center" },
     ],
-    specs: { Material: "Hand-Brushed Llama Fiber", Size: "9' x 9.5'", Technique: "A generously sized bed cover woven from undyed llama fiber. The bold black stripe is created using the natural shade of the animal's coat, without dyes. Designed as a warm, textural layer for the bed" },
+    specs: { Material: "Hand-Brushed Llama Fiber", Size: "9' x 9.5'", Technique: "An oversized bed cover woven from undyed llama fiber and finished with a manual brushing technique to raise the pile. The linear black motif is integrated structurally using the animal's natural coat variations, omitting synthetic processing" },
   },
   {
     name: "Quilt 002",
@@ -73,7 +73,7 @@ const products = [
       { src: "/brushed-2b.jpg", alt: "Quilt 002 detail", objectPosition: "bottom center" },
       { src: "/brushed-2c.jpg", alt: "Quilt 002 detail 2", objectPosition: "bottom center" },
     ],
-    specs: { Material: "Hand-Brushed Llama Fiber", Size: "9' x 9.5'", Technique: "Woven entirely from undyed llama fiber, this oversized bed cover celebrates the material in its purest form. Soft, warm, and naturally rich in texture, with color derived only from the llama's coat" },
+    specs: { Material: "Hand-Brushed Llama Fiber", Size: "9' x 9.5'", Technique: "A generous, high-density layer woven entirely from undyed llama fiber. The surface undergoes a mechanical-free hand-brushing process to create a dense, soft pile that maximizes thermal efficiency and surface texture" },
   },
   {
     name: "Bag 001",
@@ -86,7 +86,7 @@ const products = [
       { src: "/bag-1e.jpg", alt: "Bag 001 detail 4" },
       { src: "/bag-1f.jpg", alt: "Bag 001 detail 5" },
     ],
-    specs: { Material: "Wild-Harvested Chaguar Fiber with Natural Plant-Based Dyes", Size: '~19" Height', Technique: "A handwoven chaguar bag dyed with natural pigments and designed for everyday use. Lightweight yet durable, with a distinctly organic texture" },
+    specs: { Material: "Wild-Harvested Chaguar Fiber with Natural Plant-Based Dyes", Size: '~19" Height', Technique: "A utilitarian container hand-knotted from high-tensile chaguar fiber. Dyed using plant-derived pigments, the open-mesh construction provides structural durability while maintaining an organic, low-profile silhouette" },
   },
   {
     name: "Bag 002",
@@ -95,7 +95,7 @@ const products = [
       { src: "/bag-2.jpg",  alt: "Bag 002" },
       { src: "/bag-2b.jpg", alt: "Bag 002 detail" },
     ],
-    specs: { Material: "Wild-Harvested Chaguar Fiber and Handcrafted Alpaca Silver", Size: '11" x 7.5"', Technique: "Handwoven from natural chaguar fiber and finished with a handcrafted alpaca silver plate. A refined meeting of textile and metal traditions from northern Argentina" },
+    specs: { Material: "Wild-Harvested Chaguar Fiber and Handcrafted Alpaca Silver", Size: '11" x 7.5"', Technique: "A structural pouch utilizing hand-knotted chaguar fiber, finished with a custom-molded alpaca silver plate. A precise intersection of high-friction textile and smooth metal alloy traditions from northern Argentina" },
   },
 ];
 
