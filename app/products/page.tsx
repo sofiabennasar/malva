@@ -92,9 +92,6 @@ function ProductCard({ product }: { product: typeof products[0] }) {
           alt={product.alt}
           style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: product.imgPosition ?? 'center', display: 'block' }}
         />
-        <span style={{ position: 'absolute', top: 20, left: 20, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'rgba(28,26,23,0.35)' }}>
-          {product.num}
-        </span>
       </div>
       <div style={{ padding: '24px 28px 28px', display: 'flex', flexDirection: 'column', gap: 6, borderTop: '1px solid var(--bone)', flex: 1 }}>
         <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
