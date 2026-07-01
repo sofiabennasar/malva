@@ -53,7 +53,7 @@ export default function Baskets() {
               Woven<br /><em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>by hand</em>
             </h1>
             <p style={{ fontSize: 13, lineHeight: 1.8, color: 'var(--slate)' }}>
-              Each basket is shaped by a single maker's hands — formed slowly from natural fibers, carrying the knowledge of generations.
+              A collection of structural, hand-woven floor containers defined by rigid geometries and raw plant materiality. Each piece operates as a functional object, emphasizing volume, texture, and self-supporting form.
             </p>
           </div>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.45 }}>
