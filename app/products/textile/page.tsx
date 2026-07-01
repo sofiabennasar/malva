@@ -73,7 +73,7 @@ const products = [
       { src: "/brushed-2b.jpg", alt: "Quilt 002 detail", objectPosition: "bottom center" },
       { src: "/brushed-2c.jpg", alt: "Quilt 002 detail 2", objectPosition: "bottom center" },
     ],
-    specs: { Material: "Brushed llama", Size: "TBD", Technique: "Undyed llama fiber from the Argentine Andes, traditionally woven and hand-brushed for a remarkably soft finish." },
+    specs: { Material: "Hand-Brushed Llama Fiber", Size: "9' x 9.5'", Technique: "Woven entirely from undyed llama fiber, this oversized bed cover celebrates the material in its purest form. Soft, warm, and naturally rich in texture, with color derived only from the llama's coat." },
   },
   {
     name: "Bag 001",
