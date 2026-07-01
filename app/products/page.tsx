@@ -61,17 +61,17 @@ export default function Portfolio() {
       </div>
 
       {/* Product grid */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
 
         {/* Row 1 */}
-        <div className="two-col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+        <div className="two-col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40 }}>
           {products.slice(0, 2).map((p) => (
             <ProductCard key={p.num} product={p} />
           ))}
         </div>
 
         {/* Row 2 */}
-        <div className="two-col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 16 }}>
+        <div className="two-col" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 40 }}>
           {products.slice(2, 4).map((p) => (
             <ProductCard key={p.num} product={p} />
           ))}
