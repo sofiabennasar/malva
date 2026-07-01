@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
               <li><Link href="/contact" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Contact Us</Link></li>
-              <li><a href="#" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Instagram</a></li>
+              <li><a href="https://www.instagram.com/estudiomalva.ar" target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: 'var(--ink)', opacity: 0.65, textDecoration: 'none' }}>Instagram</a></li>
             </ul>
           </div>
 
