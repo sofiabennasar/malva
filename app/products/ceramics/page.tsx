@@ -78,7 +78,7 @@ export default function Ceramics() {
               Fired<br /><em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>by hand</em>
             </h1>
             <p style={{ fontSize: 13, lineHeight: 1.8, color: 'var(--slate)' }}>
-              Built from local clay and fired in hand-built kilns. Each piece carries the marks of the earth it came from.
+              A collection of structural, hand-formed vessels defined by heavy mineral mass and raw clay materiality. Each piece operates as a functional object, emphasizing volume, unglazed texture, and self-supporting geometric form.
             </p>
           </div>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.45 }}>
