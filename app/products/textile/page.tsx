@@ -128,7 +128,7 @@ export default function FiberTextile() {
               Made<br /><em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>slowly</em>
             </h1>
             <p style={{ fontSize: 13, lineHeight: 1.8, color: 'var(--slate)' }}>
-              Llama weaving, brushed llama, and hand-knotted rugs. Each piece made by hand in the north of Argentina, carrying the knowledge of generations.
+              A collection of low-profile, structured textiles developed in northern Argentina. Each piece is defined by its raw materiality, manual tension-loom construction, and structural drape.
             </p>
           </div>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.45 }}>
