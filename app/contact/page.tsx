@@ -146,7 +146,7 @@ function ContactForm() {
           <div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 12 }}>Instagram</p>
             <a href="#" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
-              @estudiomalva
+              @estudiomalva.ar
             </a>
           </div>
         </div>
