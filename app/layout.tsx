@@ -57,8 +57,16 @@ export default function RootLayout({
         <main className="flex-grow">{children}</main>
 
         <footer className="bg-linen border-t border-bone">
-          <div className="max-w-6xl mx-auto px-6 py-16 font-archivo text-xs tracking-widest uppercase text-slate">
+          <div className="max-w-6xl mx-auto px-6 py-16 font-archivo text-xs tracking-widest uppercase text-slate flex items-center justify-between">
             <p>&copy; 2026 Estudio Malva. Todos los derechos reservados.</p>
+            <div className="flex gap-6">
+              <a href="https://instagram.com/estudiomalva.ar" className="text-slate hover:text-clay transition">
+                Instagram
+              </a>
+              <a href="#" className="text-slate hover:text-clay transition">
+                LinkedIn
+              </a>
+            </div>
           </div>
         </footer>
       </body>

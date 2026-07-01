@@ -74,7 +74,7 @@ export default function Contact() {
                 Redes
               </p>
               <div className="flex gap-6">
-                <a href="#" className="font-archivo text-sm text-slate hover:text-clay transition">
+                <a href="https://instagram.com/estudiomalva.ar" className="font-archivo text-sm text-slate hover:text-clay transition">
                   Instagram
                 </a>
                 <a href="#" className="font-archivo text-sm text-slate hover:text-clay transition">
