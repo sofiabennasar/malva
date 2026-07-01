@@ -67,7 +67,7 @@ export default function Wood() {
               Shaped<br /><em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>by hand</em>
             </h1>
             <p style={{ fontSize: 13, lineHeight: 1.8, color: 'var(--slate)' }}>
-              Wood objects crafted by artisans in the north of Argentina, made with traditional techniques passed down through generations.
+              A collection of high-mass, structural objects defined by linear geometry and raw timber materiality. Sourced from native, high-density wood species in Argentina, each piece is shaped by hand to emphasize grain direction, volumetric weight, and self-supporting form.
             </p>
           </div>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.45 }}>
