@@ -42,7 +42,7 @@ const products = [
       { src: "/llama-3b.jpg", alt: "Throw 003 detail" },
       { src: "/llama-3c.jpg", alt: "Throw 003 detail 2" },
     ],
-    specs: { Material: "Chaguar", Size: "TBD", Technique: "Chaguar is an ancient South American textile fiber hand-harvested from wild Argentine plants, which artisans strip, naturally dye, and hand-spin into remarkably strong, lightweight woven or knotted fabrics using generational techniques." },
+    specs: { Material: "Wild-Harvested Chaguar Fiber", Size: "4.2' x 3.2'", Technique: "Handwoven from wild-harvested chaguar fiber and naturally dyed using pigments derived from native plants. Rich in texture and character, this piece reflects generations of textile knowledge from northern Argentina." },
   },
   {
     name: "Rug 001",
@@ -53,7 +53,7 @@ const products = [
       { src: "/rug-1c.jpg", alt: "Rug 001 detail 2", objectPosition: "bottom center" },
       { src: "/rug-1d.jpg", alt: "Rug 001 detail 3", objectPosition: "bottom center" },
     ],
-    specs: { Material: "Wool", Size: "TBD", Technique: "The wool is dyed with pigments derived from native plants, roots, and minerals. It is woven on traditional looms." },
+    specs: { Material: "Naturally Dyed Baetón Wool", Size: "4' x 6'", Technique: "Handwoven in Santiago del Estero from sheep wool dyed with natural pigments derived from native plants, roots, and minerals. The graphic black-and-natural composition balances traditional craftsmanship with a contemporary aesthetic." },
   },
   {
     name: "Quilt 001",
@@ -86,7 +86,7 @@ const products = [
       { src: "/bag-1e.jpg", alt: "Bag 001 detail 4" },
       { src: "/bag-1f.jpg", alt: "Bag 001 detail 5" },
     ],
-    specs: { Material: "Chaguar", Size: "TBD", Technique: "Chaguar is an ancient South American textile fiber hand-harvested from wild Argentine plants, which artisans strip, naturally dye, and hand-spin into remarkably strong, lightweight woven or knotted fabrics using generational techniques." },
+    specs: { Material: "Wild-Harvested Chaguar Fiber with Natural Plant-Based Dyes", Size: '~19" Height', Technique: "A handwoven chaguar bag dyed with natural pigments and designed for everyday use. Lightweight yet durable, with a distinctly organic texture." },
   },
   {
     name: "Bag 002",
@@ -95,11 +95,7 @@ const products = [
       { src: "/bag-2.jpg",  alt: "Bag 002" },
       { src: "/bag-2b.jpg", alt: "Bag 002 detail" },
     ],
-    specs: {
-      Material: "Chaguar + Alpaca",
-      Size: "TBD",
-      Technique: "Chaguar is an ancient South American textile fiber hand-harvested from wild Argentine plants, which artisans strip, naturally dye, and hand-spin into remarkably strong, lightweight woven or knotted fabrics using generational techniques.\n\nAlpaca silver is a durable, silvery metal alloy of copper, zinc, and nickel that is traditionally cut, formed, textured, and polished by hand by Andean artisans using metalworking techniques.",
-    },
+    specs: { Material: "Wild-Harvested Chaguar Fiber and Handcrafted Alpaca Silver", Size: '11" x 7.5"', Technique: "Handwoven from natural chaguar fiber and finished with a handcrafted alpaca silver plate. A refined meeting of textile and metal traditions from northern Argentina." },
   },
 ];
 
