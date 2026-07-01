@@ -8,7 +8,7 @@ const products = [
   {
     num: "001",
     name: "Baskets",
-    desc: "Woven by hand from local natural fibers. Each basket is a singular object shaped by the maker's touch and a deep knowledge of the craft.",
+    desc: "A collection of structural, hand-woven floor containers defined by rigid geometries and raw plant materiality. Each piece operates as a functional object, emphasizing volume, texture, and self-supporting form.",
     img: "/product-1.jpg",
     alt: "Baskets",
     href: "/products/baskets",
@@ -16,7 +16,7 @@ const products = [
   {
     num: "002",
     name: "Textiles",
-    desc: "Llama weaving, brushed llama, and chaguar. Objects made slowly, by hand, in the north of Argentina.",
+    desc: "A collection of low-profile, structured textiles developed in northern Argentina. Each piece is defined by its raw materiality, manual tension-loom construction, and structural drape.",
     img: "/product-2.jpg",
     alt: "Lama Fabrics",
     imgPosition: "center bottom",
@@ -25,7 +25,7 @@ const products = [
   {
     num: "003",
     name: "Ceramics",
-    desc: "Fired in hand-built kilns using local clay and natural pigments.",
+    desc: "A collection of structural, hand-formed vessels defined by heavy mineral mass and raw clay materiality. Each piece operates as a functional object, emphasizing volume, unglazed texture, and self-supporting geometric form.",
     img: "/product-3.jpg",
     alt: "Ceramics",
     href: "/products/ceramics",
@@ -33,7 +33,7 @@ const products = [
   {
     num: "004",
     name: "Wood",
-    desc: "Wood integrated with alpaca, a traditional Argentine metal. Two materials brought together into objects built for everyday living.",
+    desc: "A collection of high-mass, structural objects defined by linear geometry and raw timber materiality. Sourced from native, high-density wood species in Argentina, each piece is shaped by hand to emphasize grain direction, volumetric weight, and self-supporting form.",
     img: "/product-4.jpg",
     alt: "Wood",
     href: "/products/wood",
