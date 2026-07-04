@@ -66,10 +66,10 @@ export default function Home() {
             <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Culture<br />Preserved</h3>
             <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By protecting generational techniques at risk of disappearing, we bring time-honored crafts into contemporary spaces to keep local heritage vibrant and self-sustaining.</p>
           </div>
-          <div style={{ gridColumn: 2, gridRow: 3 }} />
-          <div style={{ gridColumn: 3, gridRow: 3, overflow: 'hidden' }}>
+          <div style={{ gridColumn: 2, gridRow: 3, overflow: 'hidden' }}>
             <img src="/values-3.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom' }} />
           </div>
+          <div style={{ gridColumn: 3, gridRow: 3 }} />
           <div style={{ gridColumn: 4, gridRow: 3 }} />
           <div style={{ gridColumn: 5, gridRow: 3, display: 'flex', alignItems: 'flex-end', padding: '36px 32px' }}>
             <Link
