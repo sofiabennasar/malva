@@ -42,7 +42,7 @@ export default function Home() {
           <div style={{ gridColumn: 3, gridRow: 1, padding: '36px 32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>01</p>
             <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Direct<br />Alliance</h3>
-            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By bypassing traditional supply chains entirely, we cultivate deep, face-to-face relationships inside the remote workshops and family homes where these objects are born.</p>
+            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We bypass traditional supply chains entirely, working directly with the artisans, workshops, and families where each object is crafted.</p>
           </div>
           <div style={{ gridColumn: 4, gridRow: 1 }} />
           <div style={{ gridColumn: 5, gridRow: 1 }} />
