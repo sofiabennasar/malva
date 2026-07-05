@@ -64,6 +64,7 @@ a { color: inherit; text-decoration: none; }
     flex-direction: column !important;
   }
   .values-grid > div { grid-column: auto !important; grid-row: auto !important; }
+  .values-cell { padding: 24px 16px !important; }
 
   /* Homepage making section */
   .making-section { padding: 0 16px 16px !important; grid-template-columns: 1fr !important; }
