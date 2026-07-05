@@ -39,6 +39,11 @@ a { color: inherit; text-decoration: none; }
   /* Journal card 1 image: restore natural height */
   .journal-img { min-height: 280px !important; }
 
+  /* Journal inner paddings */
+  .journal-text-pad { padding: 32px 16px !important; }
+  .journal-tagline { padding: 16px !important; }
+  .journal-cta-pad { padding: 24px 16px !important; }
+
   /* Contact form padding */
   .contact-side { padding: 40px 16px !important; }
 

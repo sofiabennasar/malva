@@ -11,7 +11,7 @@ export default function TheJournal() {
 
       {/* ── Card 1: Text left, image right ───────────── */}
       <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 64px' }}>
+        <div className="journal-text-pad" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 64px' }}>
           <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
             <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
             <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
@@ -38,7 +38,7 @@ export default function TheJournal() {
       </div>
 
       {/* ── Card 2: Tagline ──────────────────────────── */}
-      <div style={{ background: 'var(--ink)', padding: '24px 64px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+      <div className="journal-tagline" style={{ background: 'var(--ink)', padding: '24px 64px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
         <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 'clamp(8px, 1.25vw, 18px)', fontWeight: 300, letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.1, margin: 0 }}>
           <span style={{ color: 'var(--linen)' }}>Made in </span><span style={{ color: 'var(--clay)' }}>Argentina</span>
         </p>
@@ -52,7 +52,7 @@ export default function TheJournal() {
         <div style={{ background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
           <img src="/story-2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '48px 48px', gap: 16 }}>
+        <div className="journal-cta-pad" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '48px 48px', gap: 16 }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: 8 }}>
             Explore
           </p>
