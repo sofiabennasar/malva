@@ -31,7 +31,7 @@ export default function Home() {
       </section>
 
       {/* ── Values ───────────────────────────────────────── */}
-      <section style={{ background: 'var(--moss)', padding: '0 72px 72px' }} id="story">
+      <section className="values-section" style={{ background: 'var(--moss)', padding: '0 72px 72px' }} id="story">
         <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
 
           {/* Row 1 */}
