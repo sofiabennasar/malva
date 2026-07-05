@@ -29,8 +29,8 @@ const techniques = [
   },
 ];
 
-const CARD_W = 200;
-const CARD_H = 300;
+const CARD_W = 400;
+const CARD_H = 600;
 
 export default function TechniqueCarousel() {
   const [active, setActive] = useState(0);
