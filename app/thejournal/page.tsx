@@ -38,7 +38,7 @@ export default function TheJournal() {
 
       {/* ── Card 2: Tagline ──────────────────────────── */}
       <div style={{ background: 'var(--ink)', padding: '24px 64px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 'clamp(16px, 2.5vw, 36px)', fontWeight: 400, lineHeight: 1.1, margin: 0 }}>
+        <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 'clamp(16px, 2.5vw, 36px)', fontWeight: 300, letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.1, margin: 0 }}>
           <span style={{ color: 'var(--linen)' }}>Made in </span><span style={{ color: 'var(--clay)' }}>Argentina</span>
         </p>
       </div>
