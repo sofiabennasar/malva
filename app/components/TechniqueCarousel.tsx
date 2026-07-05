@@ -1,31 +1,38 @@
 'use client';
 
 import { useState } from 'react';
+import ArgentinaMap from './ArgentinaMap';
 
 const techniques = [
   {
     title: 'Llama Weaving',
     description: 'Fiber hand-spun from llama fleece and woven on manual tension looms. The natural color palette — ivory, grey, and deep brown — comes entirely from the animal\'s coat, with no synthetic dyes.',
+    dot: { x: 100, y: 22, label: 'Jujuy' },
   },
   {
     title: 'Chaguar Knotting',
     description: 'Wild chaguar plants are hand-harvested, stripped, and their fibers knotted into durable, textured forms. One of the oldest fiber traditions in northern Argentina, practiced by Wichí communities.',
+    dot: { x: 192, y: 88, label: 'Chaco' },
   },
   {
     title: 'Natural Dyeing',
     description: 'Pigments extracted from native roots, bark, minerals, and plants are used to color wool and fiber. Each dye batch is unique — the result of season, water, and the hand of the maker.',
+    dot: { x: 158, y: 130, label: 'Santiago del Estero' },
   },
   {
     title: 'Hand Brushing',
     description: 'After weaving, llama textiles are hand-brushed to raise the fiber pile, creating a dense, soft surface without mechanical processing. The technique amplifies warmth and tactile depth.',
+    dot: { x: 54, y: 44, label: 'Salta' },
   },
   {
     title: 'Carandillo Plaiting',
     description: 'Wide strips of carandillo palm leaf are interlocked using a flat plaiting technique. The satin-like surface and tight compression give these baskets their geometric precision and structural rigidity.',
+    dot: { x: 188, y: 38, label: 'Formosa' },
   },
   {
     title: 'Algarrobo Carving',
     description: 'Native algarrobo wood — dense, slow-growing, and deeply grained — is hand-planed and shaped into structural objects. No veneer, no filler. The form reveals the material as it is.',
+    dot: { x: 158, y: 165, label: 'Córdoba' },
   },
 ];
 
@@ -177,6 +184,16 @@ export default function TechniqueCarousel() {
             style={{ width: i === active ? 20 : 6, height: 6, borderRadius: 3, background: 'var(--linen)', opacity: i === active ? 0.9 : 0.25, cursor: 'pointer', transition: 'all 0.3s ease' }}
           />
         ))}
+      </div>
+
+      {/* Map */}
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+        <div style={{ width: 160, height: 267 }}>
+          <ArgentinaMap dot={techniques[active].dot} />
+        </div>
+        <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--linen)', opacity: 0.4 }}>
+          {techniques[active].dot.label}
+        </p>
       </div>
     </div>
   );
