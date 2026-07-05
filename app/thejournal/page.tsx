@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TechniqueCarousel from "@/app/components/TechniqueCarousel";
 
 export const metadata = {
   title: "Our Story — Estudio Malva",
@@ -42,6 +43,9 @@ export default function TheJournal() {
           <span style={{ color: 'var(--linen)' }}>Made in </span><span style={{ color: 'var(--clay)' }}>Argentina</span>
         </p>
       </div>
+
+      {/* ── Technique Carousel ───────────────────────── */}
+      <TechniqueCarousel />
 
       {/* ── Card 3: Photo + CTA ──────────────────────── */}
       <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
