@@ -122,7 +122,7 @@ export default function TechniqueCarousel() {
                   overflow: 'hidden',
                 }}>
                   <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
-                    <img src={t.map} alt={t.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                    <img src={t.map} alt={t.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'contain', display: 'block' }} />
                   </div>
                   <div style={{ padding: '24px 20px' }}>
                     <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
