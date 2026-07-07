@@ -6,37 +6,37 @@ const techniques = [
   {
     title: 'Chaguar',
     description: 'Extracted from the resilient leaves of wild forest bromeliads, this ancient textile fiber is hand-stripped, sun-dehydrated, and manually spun into high-tensile cords by a specialized artisan workshop in the Chaco Salteño. The raw thread is either left in its unadulterated state or naturally saturated with regional botanical pigments before being hand-knotted into a lightweight, structural mesh that balances immense durability with organic elasticity.',
-    map: '/map-01.jpg',
+    map: '/map-01.png',
   },
   {
     title: 'Hand-Brushed Llama',
     description: 'Woven on manual tension looms by artisan workshops in Tucumán and Jujuy, this textile utilizes unadulterated, hand-spun llama fiber sorted into monochromatic lots to preserve its natural lanolin and irregular tonal variations. Once off the loom, a rigorous hand-brushing process applies controlled friction to raise the undercoat fibers, creating a high-pile surface that maximizes thermal efficiency and alters tactile density without structural degradation.',
-    map: '/map-02.jpg',
+    map: '/map-02.png',
   },
   {
     title: 'Naturally Undyed Llama Fiber',
     description: 'Woven on traditional manual looms by an artisan workshop in Salta, this textile utilizes raw, hand-spun llama fiber selected strictly by its natural color gradations to completely bypass synthetic dyes. The resulting weave maintains a dense, low-profile structure that highlights the intrinsic tensile strength and subtle, non-uniform texture of the unadulterated mountain fiber.',
-    map: '/map-03.jpg',
+    map: '/map-03.png',
   },
   {
     title: 'Fiber Weaving',
     description: 'Constructed from native palm fibers by an artisan in Misiones, these structural vessels are hand-woven utilizing high-tension interlacing techniques. The manual assembly process manipulates the raw, unadulterated plant fibers into a rigid geometric matrix, resulting in a durable, three-dimensional form defined by its natural structural friction.',
-    map: '/map-04.jpg',
+    map: '/map-04.png',
   },
   {
     title: 'Naturally Dyed Baetón Wool',
     description: 'This heavy-weight wool textile owes its exceptional durability to a manual high-compression weave executed on traditional looms by artisans in Santiago del Estero. Before entering the loom, the hand-spun yarn undergoes an organic saturation process, utilizing regional plant roots and crushed minerals that bond directly with the raw wool fibers to produce a deeply saturated, non-uniform chromatic profile.',
-    map: '/map-05.jpg',
+    map: '/map-05.png',
   },
   {
     title: 'Alpaca',
     description: 'This durable, non-ferrous alloy is manipulated through manual cold-working and precision striking to achieve its structural form and distinctive silvery luster. Without the use of casting machinery, specialized metalwork studios manually cut, texture, and high-polish the copper-nickel-zinc matrix, resulting in objects defined by a refined, architectural rigidity and subtle surface variations.',
-    map: '/map-06.jpg',
+    map: '/map-06.png',
   },
   {
     title: 'Natural Dyes',
     description: 'Bypassing all synthetic colorants, our collections utilize raw pigments extracted directly from local barks, roots, native seeds, and crushed minerals gathered across regional ecosystems. Through variable thermal baths and natural oxidation, these organic materials permanently bond with raw textile fibers, yielding a deeply saturated, living chromatic profile defined by its subtle, non-uniform tonal shifts.',
-    map: '/map-07.jpg',
+    map: '/map-07.png',
   },
 ];
 
