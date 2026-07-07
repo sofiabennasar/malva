@@ -118,20 +118,25 @@ export default function TechniqueCarousel() {
                   position: 'absolute', inset: 0,
                   backfaceVisibility: 'hidden',
                   background: 'var(--linen)',
-                  display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-                  padding: '24px 20px',
+                  display: 'flex', flexDirection: 'column',
+                  overflow: 'hidden',
                 }}>
-                  <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
-                    {String(idx + 1).padStart(2, '0')}
-                  </p>
-                  <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
-                    {t.title}
-                  </h3>
-                  {isCenter && (
-                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 8, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.5, marginTop: 16 }}>
-                      tap to learn more
+                  <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+                    <img src={t.map} alt={t.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  </div>
+                  <div style={{ padding: '24px 20px' }}>
+                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
+                      {String(idx + 1).padStart(2, '0')}
                     </p>
-                  )}
+                    <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
+                      {t.title}
+                    </h3>
+                    {isCenter && (
+                      <p style={{ fontFamily: 'var(--font-mono)', fontSize: 8, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.5, marginTop: 16 }}>
+                        tap to learn more
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {/* Back */}
@@ -141,12 +146,17 @@ export default function TechniqueCarousel() {
                   transform: 'rotateY(180deg)',
                   background: 'var(--ink)',
                   display: 'flex', flexDirection: 'column',
+                  justifyContent: 'flex-end',
+                  padding: '24px 20px',
                   overflow: 'hidden',
                 }}>
-                  <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
-                    <img src={t.map} alt={t.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-                  </div>
-                  <div style={{ padding: '16px 18px' }}>
+                  <div>
+                    <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
+                      {String(idx + 1).padStart(2, '0')}
+                    </p>
+                    <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--linen)', marginBottom: 14 }}>
+                      {t.title}
+                    </h3>
                     <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, lineHeight: 1.7, color: 'var(--linen)', opacity: 0.8 }}>
                       {t.description}
                     </p>
