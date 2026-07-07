@@ -4,28 +4,39 @@ import { useState } from 'react';
 
 const techniques = [
   {
-    title: 'Llama Weaving',
-    description: 'Fiber hand-spun from llama fleece and woven on manual tension looms. The natural color palette — ivory, grey, and deep brown — comes entirely from the animal\'s coat, with no synthetic dyes.',
+    title: 'Chaguar',
+    description: 'Extracted from the resilient leaves of wild forest bromeliads, this ancient textile fiber is hand-stripped, sun-dehydrated, and manually spun into high-tensile cords by a specialized artisan workshop in the Chaco Salteño. The raw thread is either left in its unadulterated state or naturally saturated with regional botanical pigments before being hand-knotted into a lightweight, structural mesh that balances immense durability with organic elasticity.',
+    map: '/map-01.jpg',
   },
   {
-    title: 'Chaguar Knotting',
-    description: 'Wild chaguar plants are hand-harvested, stripped, and their fibers knotted into durable, textured forms. One of the oldest fiber traditions in northern Argentina, practiced by Wichí communities.',
+    title: 'Hand-Brushed Llama',
+    description: 'Woven on manual tension looms by artisan workshops in Tucumán and Jujuy, this textile utilizes unadulterated, hand-spun llama fiber sorted into monochromatic lots to preserve its natural lanolin and irregular tonal variations. Once off the loom, a rigorous hand-brushing process applies controlled friction to raise the undercoat fibers, creating a high-pile surface that maximizes thermal efficiency and alters tactile density without structural degradation.',
+    map: '/map-02.jpg',
   },
   {
-    title: 'Natural Dyeing',
-    description: 'Pigments extracted from native roots, bark, minerals, and plants are used to color wool and fiber. Each dye batch is unique — the result of season, water, and the hand of the maker.',
+    title: 'Naturally Undyed Llama Fiber',
+    description: 'Woven on traditional manual looms by an artisan workshop in Salta, this textile utilizes raw, hand-spun llama fiber selected strictly by its natural color gradations to completely bypass synthetic dyes. The resulting weave maintains a dense, low-profile structure that highlights the intrinsic tensile strength and subtle, non-uniform texture of the unadulterated mountain fiber.',
+    map: '/map-03.jpg',
   },
   {
-    title: 'Hand Brushing',
-    description: 'After weaving, llama textiles are hand-brushed to raise the fiber pile, creating a dense, soft surface without mechanical processing. The technique amplifies warmth and tactile depth.',
+    title: 'Fiber Weaving',
+    description: 'Constructed from native palm fibers by an artisan in Misiones, these structural vessels are hand-woven utilizing high-tension interlacing techniques. The manual assembly process manipulates the raw, unadulterated plant fibers into a rigid geometric matrix, resulting in a durable, three-dimensional form defined by its natural structural friction.',
+    map: '/map-04.jpg',
   },
   {
-    title: 'Carandillo Plaiting',
-    description: 'Wide strips of carandillo palm leaf are interlocked using a flat plaiting technique. The satin-like surface and tight compression give these baskets their geometric precision and structural rigidity.',
+    title: 'Naturally Dyed Baetón Wool',
+    description: 'This heavy-weight wool textile owes its exceptional durability to a manual high-compression weave executed on traditional looms by artisans in Santiago del Estero. Before entering the loom, the hand-spun yarn undergoes an organic saturation process, utilizing regional plant roots and crushed minerals that bond directly with the raw wool fibers to produce a deeply saturated, non-uniform chromatic profile.',
+    map: '/map-05.jpg',
   },
   {
-    title: 'Algarrobo Carving',
-    description: 'Native algarrobo wood — dense, slow-growing, and deeply grained — is hand-planed and shaped into structural objects. No veneer, no filler. The form reveals the material as it is.',
+    title: 'Alpaca',
+    description: 'This durable, non-ferrous alloy is manipulated through manual cold-working and precision striking to achieve its structural form and distinctive silvery luster. Without the use of casting machinery, specialized metalwork studios manually cut, texture, and high-polish the copper-nickel-zinc matrix, resulting in objects defined by a refined, architectural rigidity and subtle surface variations.',
+    map: '/map-06.jpg',
+  },
+  {
+    title: 'Natural Dyes',
+    description: 'Bypassing all synthetic colorants, our collections utilize raw pigments extracted directly from local barks, roots, native seeds, and crushed minerals gathered across regional ecosystems. Through variable thermal baths and natural oxidation, these organic materials permanently bond with raw textile fibers, yielding a deeply saturated, living chromatic profile defined by its subtle, non-uniform tonal shifts.',
+    map: '/map-07.jpg',
   },
 ];
 
@@ -132,12 +143,8 @@ export default function TechniqueCarousel() {
                   display: 'flex', flexDirection: 'column',
                   overflow: 'hidden',
                 }}>
-                  <div style={{ flex: 1, background: 'var(--sand)', position: 'relative' }}>
-                    <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.4 }}>
-                        Image
-                      </span>
-                    </div>
+                  <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
+                    <img src={t.map} alt={t.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
                   </div>
                   <div style={{ padding: '16px 18px' }}>
                     <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, lineHeight: 1.7, color: 'var(--linen)', opacity: 0.8 }}>
