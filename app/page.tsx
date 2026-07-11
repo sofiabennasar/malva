@@ -106,17 +106,17 @@ export default function Home() {
         </div>
 
         {/* Bottom: Evolving the Craft full width */}
-        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 48px 48px', minHeight: 340, gap: 48 }}>
-          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)' }}>
-            Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
-          </p>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-            <div>
-              <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16 }} />
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
-                Evolving the Craft
-              </p>
-            </div>
+        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '52px 48px 48px', minHeight: 340, gap: 28 }}>
+          <div>
+            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16 }} />
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
+              Evolving the Craft
+            </p>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 48 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', flex: 1 }}>
+              Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
+            </p>
             <NewsletterModal />
           </div>
         </div>
