@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="home-hero-section" style={{ background: 'var(--bone)', padding: '40px 72px 72px' }}>
-        <div className="home-hero-card" style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '60px 60px 0' }}>
+      <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '40px 72px 72px' }}>
+        <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', flexDirection: 'column', padding: '60px 60px 0' }}>
 
           <HeroGallery />
 
@@ -31,8 +31,8 @@ export default function Home() {
       </section>
 
       {/* ── Values ───────────────────────────────────────── */}
-      <section className="values-section" style={{ background: 'var(--bone)', padding: '0 72px 72px' }} id="story">
-        <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 260px)' }}>
+      <section className="values-section" style={{ background: 'var(--linen)', padding: '0 72px 72px' }} id="story">
+        <div className="values-grid" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 260px)' }}>
 
           {/* Row 1 */}
           <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* ── Making in Progress + Wave ────────────────────── */}
-      <section className="making-section" style={{ background: 'var(--bone)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
+      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
 
         {/* Left: 3 vertical photos + text */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
