@@ -92,7 +92,7 @@ export default function Home() {
               <img src="/product-3.jpg" alt="" style={imgFill} />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, justifyContent: 'flex-end', padding: '4px 0 24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, justifyContent: 'flex-end', paddingBottom: 24, height: '100%', boxSizing: 'border-box' }}>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
               Our initial editions are currently in development. We are in a discovery phase, studying the distinct structural qualities of native fibers, clay, and traditional craft. These inaugural collections are being refined for contemporary environments and will be available soon.
             </p>
