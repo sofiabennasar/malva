@@ -128,7 +128,7 @@ export default function TechniqueCarousel() {
                     <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
                       {String(idx + 1).padStart(2, '0')}
                     </p>
-                    <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
+                    <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
                       {t.title}
                     </h3>
                     {isCenter && (
@@ -154,7 +154,7 @@ export default function TechniqueCarousel() {
                     <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
                       {String(idx + 1).padStart(2, '0')}
                     </p>
-                    <h3 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--linen)', marginBottom: 14 }}>
+                    <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 18, fontWeight: 300, lineHeight: 1.2, color: 'var(--linen)', marginBottom: 14 }}>
                       {t.title}
                     </h3>
                     <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, lineHeight: 1.7, color: 'var(--linen)', opacity: 0.8 }}>

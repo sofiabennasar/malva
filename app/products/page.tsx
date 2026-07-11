@@ -46,12 +46,12 @@ export default function Portfolio() {
 
       {/* Header card */}
       <div className="hdr" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '48px 52px', alignItems: 'center' }}>
-        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
+        <Link href="/" style={{ fontFamily: 'var(--font-dm-sans)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
         </Link>
         <div className="hdr-info" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 16 }}>
-          <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', textAlign: 'right' }}>
+          <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', textAlign: 'right' }}>
             Initial <em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>Editions</em>
           </h1>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--clay)', border: '1px solid var(--clay)', padding: '6px 14px' }}>
@@ -94,7 +94,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
         />
       </div>
       <div style={{ padding: '24px 28px 28px', display: 'flex', flexDirection: 'column', gap: 6, borderTop: '1px solid var(--bone)', flex: 1 }}>
-        <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
+        <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)' }}>
           {product.name}
         </h2>
         <p style={{ fontSize: 12, lineHeight: 1.7, color: 'var(--slate)', marginTop: 4, marginBottom: 16 }}>

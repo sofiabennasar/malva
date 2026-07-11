@@ -30,7 +30,7 @@ function ContactForm() {
 
       {/* Header */}
       <div className="hdr" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 52px', alignItems: 'center' }}>
-        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
+        <Link href="/" style={{ fontFamily: 'var(--font-dm-sans)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
         </Link>
@@ -44,12 +44,12 @@ function ContactForm() {
 
         {/* Form side */}
         <div className="contact-side" style={{ padding: '72px 64px', display: 'flex', flexDirection: 'column' }}>
-          <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)', marginBottom: 48 }}>
+          <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)', marginBottom: 48 }}>
             Get in<br />touch.
           </h1>
 
           {submitted ? (
-            <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 18, color: 'var(--moss)' }}>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 18, color: 'var(--moss)' }}>
               Thank you — we'll be in touch soon.
             </p>
           ) : (
@@ -134,7 +134,7 @@ function ContactForm() {
 
         {/* Info side */}
         <div className="contact-side" style={{ background: 'var(--ink)', padding: '72px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 48 }}>
-          <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 'clamp(20px, 2vw, 28px)', fontWeight: 300, color: 'var(--linen)', lineHeight: 1.3, marginBottom: 'auto' }}>
+          <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 'clamp(20px, 2vw, 28px)', fontWeight: 300, color: 'var(--linen)', lineHeight: 1.3, marginBottom: 'auto' }}>
             We source directly.<br /><span style={{ color: 'var(--clay)' }}>No middlemen, no compromise.</span>
           </p>
           <div>

@@ -31,7 +31,7 @@ export default function NewsletterModal() {
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 20 }}>
               Estudio Malva
             </p>
-            <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(28px, 3vw, 40px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', marginBottom: 20 }}>
+            <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(28px, 3vw, 40px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', marginBottom: 20 }}>
               Be the first<br />to know.
             </h2>
             <p style={{ fontSize: 13, lineHeight: 1.8, color: 'var(--slate)', marginBottom: 32 }}>
@@ -57,7 +57,7 @@ export default function NewsletterModal() {
                 </button>
               </form>
             ) : (
-              <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 15, color: 'var(--moss)', marginTop: 20 }}>
+              <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 15, color: 'var(--moss)', marginTop: 20 }}>
                 You&apos;re on the list — thank you.
               </p>
             )}

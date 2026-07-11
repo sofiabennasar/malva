@@ -105,7 +105,7 @@ export default function FiberTextile() {
 
       {/* Header */}
       <div className="hdr" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 52px', alignItems: 'center' }}>
-        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
+        <Link href="/" style={{ fontFamily: 'var(--font-dm-sans)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1.1, color: 'var(--ink)' }}>
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
         </Link>
@@ -124,7 +124,7 @@ export default function FiberTextile() {
             <span style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
               Textiles · Initial Edition
             </span>
-            <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(36px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)' }}>
+            <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(36px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)' }}>
               Made<br /><em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>slowly</em>
             </h1>
             <p style={{ fontSize: 13, lineHeight: 1.8, color: 'var(--slate)' }}>
@@ -153,7 +153,7 @@ export default function FiberTextile() {
           <div key={p.name} style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column' }}>
             <ProductCarousel slides={p.slides} />
             <div style={{ padding: '12px 20px 16px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-              <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 'clamp(16px, 1.5vw, 22px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)', marginBottom: 32 }}>
+              <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(16px, 1.5vw, 22px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)', marginBottom: 32 }}>
                 {p.name}
               </h2>
               <div style={{ display: 'flex', flexDirection: 'column', borderTop: '1px solid var(--bone)', marginBottom: 12 }}>

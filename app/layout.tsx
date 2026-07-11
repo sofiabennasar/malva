@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <footer className="footer-grid" style={{ background: 'var(--linen)', borderTop: '1px solid var(--sand)', padding: '48px 48px 36px', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 32, alignItems: 'start' }}>
           <div>
-            <p style={{ fontFamily: 'var(--font-fraunces)', fontSize: 18, fontWeight: 300, letterSpacing: '0.04em', color: 'var(--ink)', marginBottom: 12 }}>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 18, fontWeight: 300, letterSpacing: '0.04em', color: 'var(--ink)', marginBottom: 12 }}>
               Estudio Malva
             </p>
             <p style={{ fontSize: 13, color: 'var(--slate)', lineHeight: 1.6, maxWidth: 220 }}>
