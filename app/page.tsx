@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* Bottom: Evolving the Craft full width */}
         <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 48px 48px', minHeight: 340, gap: 48 }}>
-          <p style={{ fontSize: 'clamp(16px, 2vw, 24px)', lineHeight: 1.5, color: 'rgba(247,244,238,0.75)', maxWidth: '100%' }}>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)' }}>
             Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
           </p>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
