@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function TheJournal() {
   return (
-    <div className="pg" style={{ background: 'var(--moss)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div className="pg" style={{ background: 'var(--linen)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
 
       {/* ── Card 1: Text left, image right ───────────── */}
       <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh' }}>
