@@ -100,7 +100,7 @@ export default function Home() {
               href="/products"
               style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent' }}
             >
-              See products
+              See collection
             </Link>
           </div>
         </div>
