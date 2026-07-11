@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* ── Values ───────────────────────────────────────── */}
       <section className="values-section" style={{ background: 'var(--linen)', padding: '0 72px 72px' }} id="story">
-        <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 260px)' }}>
+        <div className="values-grid" style={{ background: 'var(--bone)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 260px)' }}>
 
           {/* Row 1 */}
           <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
