@@ -54,7 +54,7 @@ export default function HeroGallery() {
       {/* Secondary panel */}
       <div className="hero-gallery-secondary" style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-2.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease' }} />
-        <img src="/hero-4.jpg" alt="" style={{ ...rotatedSlideSm(1), objectPosition: 'right bottom' }} />
+        <img src="/hero-4.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease' }} />
       </div>
     </div>
   );
