@@ -1,0 +1,245 @@
+export type Slide = { src: string; alt: string; objectPosition?: string };
+
+export type Product = {
+  slug: string;
+  num: string;
+  name: string;
+  category: string;
+  categorySlug: string;
+  material: string;
+  size: string;
+  technique: string;
+  slides: Slide[];
+};
+
+export const products: Product[] = [
+  {
+    slug: 'basket-001',
+    num: '001',
+    name: 'Basket 001',
+    category: 'Baskets',
+    categorySlug: 'baskets',
+    material: 'Wild-Harvested Carandillo Palm Fiber',
+    size: '17" x 13" x 13"',
+    technique: 'A rigid basket bag constructed using a flat-interlocking weave. The wide, satin-textured palm fibers are tightly compressed to create a smooth, dense surface grid, providing the minimalist cube with clean edge-alignment and self-supporting structural weight.',
+    slides: [
+      { src: '/basket-2.jpg', alt: 'Basket 001', objectPosition: 'bottom center' },
+      { src: '/basket-4.jpg', alt: 'Basket 001 detail', objectPosition: 'bottom center' },
+    ],
+  },
+  {
+    slug: 'basket-002',
+    num: '002',
+    name: 'Basket 002',
+    category: 'Baskets',
+    categorySlug: 'baskets',
+    material: 'Wild-Harvested Carandillo Palm Fiber',
+    size: '12" x 10" x 6"',
+    technique: "A cylindrical vessel utilizing a continuous plaiting technique. The flat fiber profile allows for a low-profile, uniform wall thickness that retains a sharp geometric silhouette while emphasizing the raw material's subtle, natural pale-straw tone.",
+    slides: [
+      { src: '/basket-3.jpg', alt: 'Basket 002', objectPosition: 'bottom center' },
+      { src: '/basket-5.jpg', alt: 'Basket 002 detail', objectPosition: 'bottom center' },
+    ],
+  },
+  {
+    slug: 'throw-001',
+    num: '003',
+    name: 'Throw 001',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Naturally Undyed Llama Fiber',
+    size: "2.3' x 7.2'",
+    technique: 'Lightweight textile defined by its structural weave and raw materiality. Woven entirely from undyed llama fiber on manual tension looms, it retains its natural ivory tone and irregular tonal depth.',
+    slides: [
+      { src: '/llama-1.jpg',  alt: 'Throw 001' },
+      { src: '/llama-1b.jpg', alt: 'Throw 001 detail' },
+    ],
+  },
+  {
+    slug: 'throw-002',
+    num: '004',
+    name: 'Throw 002',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Naturally Undyed Llama Fiber',
+    size: "2.3' x 7.2'",
+    technique: "Lightweight textile defined by its structural weave and raw materiality. Woven entirely from undyed llama fiber on manual tension looms. The structural palette is achieved entirely without synthetic dyes or chemical treatments, highlighting the raw material's native color variation.",
+    slides: [
+      { src: '/llama-2.jpg',  alt: 'Throw 002' },
+      { src: '/llama-2b.jpg', alt: 'Throw 002 detail' },
+    ],
+  },
+  {
+    slug: 'throw-003',
+    num: '005',
+    name: 'Throw 003',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Wild-Harvested Chaguar Fiber',
+    size: "4.2' x 3.2'",
+    technique: 'A highly structured textile hand-knotted from wild-harvested chaguar forest fibers. Colored with organic pigments extracted from native plants, the piece features a rigid, tactile friction and non-uniform density.',
+    slides: [
+      { src: '/llama-3.jpg',  alt: 'Throw 003' },
+      { src: '/llama-3b.jpg', alt: 'Throw 003 detail' },
+      { src: '/llama-3c.jpg', alt: 'Throw 003 detail 2' },
+    ],
+  },
+  {
+    slug: 'rug-001',
+    num: '006',
+    name: 'Rug 001',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Naturally Dyed Baetón Wool',
+    size: "4' x 6'",
+    technique: 'Hand-loomed in Santiago del Estero using raw sheep wool treated with native botanical and mineral pigments. The high-contrast, geometric composition balances heavy, traditional structural weight with a minimal, graphic aesthetic.',
+    slides: [
+      { src: '/rug-1.jpg',  alt: 'Rug 001', objectPosition: 'left center' },
+      { src: '/rug-1b.jpg', alt: 'Rug 001 detail', objectPosition: 'bottom center' },
+      { src: '/rug-1c.jpg', alt: 'Rug 001 detail 2', objectPosition: 'bottom center' },
+      { src: '/rug-1d.jpg', alt: 'Rug 001 detail 3', objectPosition: 'bottom center' },
+    ],
+  },
+  {
+    slug: 'quilt-001',
+    num: '007',
+    name: 'Quilt 001',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Hand-Brushed Llama Fiber',
+    size: "9' x 9.5'",
+    technique: "An oversized bed cover woven from undyed llama fiber and finished with a manual brushing technique to raise the pile. The linear black motif is integrated structurally using the animal's natural coat variations, omitting synthetic processing.",
+    slides: [
+      { src: '/brushed-1.jpg',  alt: 'Quilt 001', objectPosition: 'bottom center' },
+      { src: '/brushed-1b.jpg', alt: 'Quilt 001 detail', objectPosition: 'bottom center' },
+      { src: '/brushed-1c.jpg', alt: 'Quilt 001 detail 2', objectPosition: 'bottom center' },
+    ],
+  },
+  {
+    slug: 'quilt-002',
+    num: '008',
+    name: 'Quilt 002',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Hand-Brushed Llama Fiber',
+    size: "9' x 9.5'",
+    technique: 'A generous, high-density layer woven entirely from undyed llama fiber. The surface undergoes a mechanical-free hand-brushing process to create a dense, soft pile that maximizes thermal efficiency and surface texture.',
+    slides: [
+      { src: '/brushed-2.jpg',  alt: 'Quilt 002', objectPosition: 'bottom center' },
+      { src: '/brushed-2b.jpg', alt: 'Quilt 002 detail', objectPosition: 'bottom center' },
+      { src: '/brushed-2c.jpg', alt: 'Quilt 002 detail 2', objectPosition: 'bottom center' },
+    ],
+  },
+  {
+    slug: 'bag-001',
+    num: '009',
+    name: 'Bag 001',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Wild-Harvested Chaguar Fiber with Natural Plant-Based Dyes',
+    size: '~19" Height',
+    technique: 'A utilitarian container hand-knotted from high-tensile chaguar fiber. Dyed using plant-derived pigments, the open-mesh construction provides structural durability while maintaining an organic, low-profile silhouette.',
+    slides: [
+      { src: '/bag-1.jpg',  alt: 'Bag 001' },
+      { src: '/bag-1b.jpg', alt: 'Bag 001 detail' },
+      { src: '/bag-1c.jpg', alt: 'Bag 001 detail 2' },
+      { src: '/bag-1d.jpg', alt: 'Bag 001 detail 3', objectPosition: 'bottom center' },
+      { src: '/bag-1e.jpg', alt: 'Bag 001 detail 4' },
+      { src: '/bag-1f.jpg', alt: 'Bag 001 detail 5' },
+    ],
+  },
+  {
+    slug: 'bag-002',
+    num: '010',
+    name: 'Bag 002',
+    category: 'Textiles',
+    categorySlug: 'textile',
+    material: 'Wild-Harvested Chaguar Fiber and Handcrafted Alpaca Silver',
+    size: '11" x 7.5"',
+    technique: 'A structural pouch utilizing hand-knotted chaguar fiber, finished with a custom-molded alpaca silver plate. A precise intersection of high-friction textile and smooth metal alloy traditions from northern Argentina.',
+    slides: [
+      { src: '/bag-2.jpg',  alt: 'Bag 002' },
+      { src: '/bag-2b.jpg', alt: 'Bag 002 detail' },
+    ],
+  },
+  {
+    slug: 'vase-001',
+    num: '011',
+    name: 'Vase 001',
+    category: 'Ceramics',
+    categorySlug: 'ceramics',
+    material: 'Clay, Unglazed',
+    size: '7.5" x 3.5" x 5"',
+    technique: 'A low-profile tabletop vessel defined by its raw mineral mass. The small-scale form is hand-shaped to emphasize a dense, unglazed texture, operating as a functional, decorative object that relies entirely on structural volume and unaltered material truth.',
+    slides: [
+      { src: '/ceramics-1.jpg',  alt: 'Vase 001' },
+      { src: '/ceramics-1b.jpg', alt: 'Vase 001 detail' },
+      { src: '/ceramics-1c.jpg', alt: 'Vase 001 detail 2' },
+    ],
+  },
+  {
+    slug: 'vase-002',
+    num: '012',
+    name: 'Vase 002',
+    category: 'Ceramics',
+    categorySlug: 'ceramics',
+    material: 'Terracota Clay',
+    size: '7.5" x 8" x 7.5"',
+    technique: 'A structural vessel hand-shaped from native clay to maximize density and volumetric weight. The unglazed exterior highlights the deep terracotta tone of the mineral body, emphasizing a high-friction tactile surface and unaltered material truth over ornament.',
+    slides: [
+      { src: '/ceramics-2.jpg',  alt: 'Vase 002' },
+      { src: '/ceramics-2b.jpg', alt: 'Vase 002 detail' },
+      { src: '/ceramics-2c.jpg', alt: 'Vase 002 detail 2' },
+    ],
+  },
+  {
+    slug: 'taza-001',
+    num: '013',
+    name: 'Taza 001',
+    category: 'Ceramics',
+    categorySlug: 'ceramics',
+    material: 'Glazed Ceramic',
+    size: '2.5" x 4" x 2.5"',
+    technique: 'A paired set of hand-shaped structural vessels. The surfaces are treated with a heavy mineral glaze that reacts under high-temperature reduction, producing deep tonal variation, and localized vitrification.',
+    slides: [
+      { src: '/ceramics-3.jpg',  alt: 'Taza 001' },
+      { src: '/ceramics-3b.jpg', alt: 'Taza 001 detail' },
+      { src: '/ceramics-3c.jpg', alt: 'Taza 001 detail 2' },
+      { src: '/ceramics-3d.jpg', alt: 'Taza 001 detail 3' },
+    ],
+  },
+  {
+    slug: 'stool-001',
+    num: '014',
+    name: 'Stool 001',
+    category: 'Wood',
+    categorySlug: 'wood',
+    material: 'Solid Algarrobo Wood and Natural Cowhide',
+    size: '12" x 21" x 12"',
+    technique: 'A low-profile seating structure engineered from solid, high-density algarrobo wood. The frame features hand-planed linear joints paired with a high-tension natural cowhide seat, balancing raw material friction with precise structural weight and geometric stability.',
+    slides: [
+      { src: '/wood-1.jpg',  alt: 'Stool 001' },
+      { src: '/wood-1b.jpg', alt: 'Stool 001 detail' },
+      { src: '/wood-1c.jpg', alt: 'Stool 001 detail 2' },
+    ],
+  },
+  {
+    slug: 'knife-001',
+    num: '015',
+    name: 'Knife 001',
+    category: 'Wood',
+    categorySlug: 'wood',
+    material: 'Solid Algarrobo Wood and Handcrafted Alpaca',
+    size: '5 1/4" x 1"',
+    technique: 'A set of butter knives combining high-density timber with a native metal alloy. Each piece features a hand-contoured algarrobo handle joined to a smooth, low-profile alpaca blade engineered for a balanced, functional weight.',
+    slides: [
+      { src: '/wood-2.jpg',  alt: 'Knife 001' },
+      { src: '/wood-2b.jpg', alt: 'Knife 001 detail' },
+      { src: '/wood-2c.jpg', alt: 'Knife 001 detail 2' },
+    ],
+  },
+];
+
+export function getProduct(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug);
+}
