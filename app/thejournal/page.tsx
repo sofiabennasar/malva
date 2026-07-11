@@ -48,9 +48,9 @@ export default function TheJournal() {
       <TechniqueCarousel />
 
       {/* ── Card 3: Photo + CTA ──────────────────────── */}
-      <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
-        <div style={{ background: 'var(--bone)', position: 'relative', overflow: 'hidden' }}>
-          <img src="/story-2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+      <div className="two-col" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
+        <div style={{ background: 'var(--bone)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <img src="/story-2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transform: 'scale(0.8)' }} />
         </div>
         <div className="journal-cta-pad" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '48px 48px', gap: 16 }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: 8 }}>
