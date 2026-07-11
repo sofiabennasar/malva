@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="home-hero-section" style={{ background: 'var(--moss)', padding: '72px 72px 72px' }}>
-        <div className="home-hero-card" style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
+      <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '72px 72px 72px' }}>
+        <div className="home-hero-card" style={{ background: 'var(--bone)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
 
           <HeroGallery />
 
@@ -31,8 +31,8 @@ export default function Home() {
       </section>
 
       {/* ── Values ───────────────────────────────────────── */}
-      <section className="values-section" style={{ background: 'var(--moss)', padding: '0 72px 72px' }} id="story">
-        <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
+      <section className="values-section" style={{ background: 'var(--linen)', padding: '0 72px 72px' }} id="story">
+        <div className="values-grid" style={{ background: 'var(--bone)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
 
           {/* Row 1 */}
           <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* ── Making in Progress + Wave ────────────────────── */}
-      <section className="making-section" style={{ background: 'var(--moss)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
+      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
 
         {/* Left: 3 vertical photos + text */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
@@ -100,12 +100,12 @@ export default function Home() {
             </div>
           </div>
           <div style={{ padding: '4px 0 24px', display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'flex-start' }}>
-            <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 15, color: 'var(--linen)', lineHeight: 1.65 }}>
+            <p style={{ fontFamily: 'var(--font-fraunces)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
               Currently in development. Our initial editions are coming soon.
             </p>
             <Link
               href="/products"
-              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--linen)', color: 'var(--linen)', background: 'transparent' }}
+              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent' }}
             >
               See products
             </Link>
