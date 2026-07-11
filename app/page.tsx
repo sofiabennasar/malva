@@ -35,8 +35,8 @@ export default function Home() {
         <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 260px)' }}>
 
           {/* Row 1 */}
-          <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
-            <img src="/values-1.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom' }} />
+          <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src="/values-1.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom', transform: 'scale(0.8)' }} />
           </div>
           <div className="values-cell" style={{ gridColumn: 2, gridRow: 1, padding: '36px 32px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>01</p>
@@ -44,8 +44,8 @@ export default function Home() {
             <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We bypass traditional supply chains entirely, working directly with the artisans, workshops, and families where each object is crafted.</p>
           </div>
           <div className="values-empty" style={{ gridColumn: 3, gridRow: 1 }} />
-          <div className="values-img" style={{ gridColumn: 4, gridRow: 1, overflow: 'hidden' }}>
-            <img src="/values-2.jpg" alt="" style={imgFill} />
+          <div className="values-img" style={{ gridColumn: 4, gridRow: 1, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src="/values-2.jpg" alt="" style={{ ...imgFill, transform: 'scale(0.8)' }} />
           </div>
           <div className="values-cell" style={{ gridColumn: 5, gridRow: 1, padding: '36px 32px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>02</p>
@@ -56,8 +56,8 @@ export default function Home() {
           {/* Row 2 */}
           <div className="values-empty" style={{ gridColumn: 1, gridRow: 2 }} />
           <div className="values-empty" style={{ gridColumn: 2, gridRow: 2 }} />
-          <div className="values-img" style={{ gridColumn: 3, gridRow: 2, overflow: 'hidden' }}>
-            <img src="/values-3.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom' }} />
+          <div className="values-img" style={{ gridColumn: 3, gridRow: 2, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src="/values-3.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom', transform: 'scale(0.8)' }} />
           </div>
           <div className="values-cell" style={{ gridColumn: 4, gridRow: 2, padding: '36px 32px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>03</p>
