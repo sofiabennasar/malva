@@ -133,14 +133,14 @@ export default function Products() {
     <div className="pg" style={{ background: 'var(--linen)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
 
       {/* Header */}
-      <div style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '52px 64px', alignItems: 'center' }}>
+      <div style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '52px 64px', alignItems: 'center' }}>
         <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6 }}>
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
         </Link>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 12 }}>
           <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(24px, 2.8vw, 40px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--ink)', textAlign: 'right' }}>
-            Initial <em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>Editions</em>
+            INITIAL <em style={{ fontStyle: 'italic', color: 'var(--slate)' }}>EDITIONS</em>
           </h1>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', border: '1px solid var(--clay)', padding: '5px 12px' }}>
             In Development
