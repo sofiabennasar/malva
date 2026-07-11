@@ -12,7 +12,7 @@ export default function TheJournal() {
       {/* ── Card 1: Text left, image right ───────────── */}
       <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh' }}>
         <div className="journal-text-pad" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 64px' }}>
-          <Link href="/" style={{ fontFamily: 'var(--font-dm-sans)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
+          <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1.1 }}>
             <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
             <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)' }}>.</span></span>
           </Link>

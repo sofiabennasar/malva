@@ -30,7 +30,7 @@ export default function Nav() {
     >
       <span
         style={{
-          fontFamily: 'var(--font-dm-sans)',
+          fontFamily: 'var(--font-fraunces)',
           fontSize: 22,
           fontWeight: 300,
           letterSpacing: '0.02em',
