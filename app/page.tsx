@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="home-hero-section" style={{ background: 'var(--moss)', padding: '72px 72px 72px' }}>
-        <div className="home-hero-card" style={{ background: 'var(--bone)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
+        <div className="home-hero-card" style={{ background: 'var(--linen)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
 
           <HeroGallery />
 
@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* ── Values ───────────────────────────────────────── */}
       <section className="values-section" style={{ background: 'var(--moss)', padding: '0 72px 72px' }} id="story">
-        <div className="values-grid" style={{ background: 'var(--bone)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
+        <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(3, 260px)' }}>
 
           {/* Row 1 */}
           <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
