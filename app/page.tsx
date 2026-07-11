@@ -23,7 +23,7 @@ export default function Home() {
                 Raw Textures. Modern Spaces.
               </h1>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', maxWidth: 480, textAlign: 'right' }}>
-                At Estudio Malva, we believe a home should be shaped by stories. We travel directly to remote artisan communities across Argentina to bring you singular, handmade objects. No middlemen, no compromise.
+                Objects with origin. We travel directly to remote artisan communities across Argentina to secure singular, handmade pieces for curated environments, ensuring absolute transparency and integrity in every texture.
               </p>
             </div>
           </div>
