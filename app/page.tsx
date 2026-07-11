@@ -76,12 +76,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Making in Progress + Wave ────────────────────── */}
-      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }} id="journal">
+      {/* ── Making in Progress + Generation Next ────────── */}
+      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'flex', flexDirection: 'column', gap: 16 }} id="journal">
 
-        {/* Left: 3 vertical photos + text */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-          <div className="making-photos" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, flex: 1 }}>
+        {/* Top: 3 photos + text/button side by side */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+          <div className="making-photos" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
             <div style={{ minHeight: 500, overflow: 'hidden' }}>
               <img src="/product-1.jpg" alt="" style={imgFill} />
             </div>
@@ -92,7 +92,7 @@ export default function Home() {
               <img src="/product-3.jpg" alt="" style={imgFill} />
             </div>
           </div>
-          <div style={{ padding: '4px 0 24px', display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, justifyContent: 'flex-end', padding: '4px 0 24px' }}>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
               Currently in development. Our initial editions are coming soon.
             </p>
@@ -105,21 +105,19 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right: Wave card (dark) */}
-        <div style={{ display: 'flex' }}>
-          <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '52px 48px 24px', width: '100%', flex: 1 }}>
-            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 28 }} />
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 16 }}>
-              Evolving the Craft
-            </p>
-            <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(30px, 3.2vw, 48px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--linen)', marginBottom: 20 }}>
-              Generation <em style={{ fontStyle: 'italic', color: 'var(--sand)' }}>Next</em>
-            </h2>
-            <p style={{ fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 340, marginBottom: 36 }}>
-              Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
-            </p>
-            <NewsletterModal />
-          </div>
+        {/* Bottom: Generation Next full width */}
+        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '52px 48px 40px' }}>
+          <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 28 }} />
+          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 16 }}>
+            Evolving the Craft
+          </p>
+          <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(30px, 3.2vw, 48px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--linen)', marginBottom: 20 }}>
+            Generation <em style={{ fontStyle: 'italic', color: 'var(--sand)' }}>Next</em>
+          </h2>
+          <p style={{ fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 340, marginBottom: 36 }}>
+            Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
+          </p>
+          <NewsletterModal />
         </div>
 
       </section>
