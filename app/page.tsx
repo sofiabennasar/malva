@@ -92,13 +92,13 @@ export default function Home() {
               <img src="/product-3.jpg" alt="" style={imgFill} />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, justifyContent: 'flex-start', padding: '4px 0 24px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, justifyContent: 'flex-end', padding: '4px 0 24px' }}>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
               Our initial editions are currently in development. We are in a discovery phase, studying the distinct structural qualities of native fibers, clay, and traditional craft. These inaugural collections are being refined for contemporary environments and will be available soon.
             </p>
             <Link
               href="/products"
-              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer' }}
+              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content', whiteSpace: 'nowrap' }}
             >
               See collection
             </Link>
