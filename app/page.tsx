@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '72px 72px 72px' }}>
+      <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '40px 72px 72px' }}>
         <div className="home-hero-card" style={{ background: 'var(--bone)', display: 'flex', flexDirection: 'column', padding: '16px 16px 0' }}>
 
           <HeroGallery />
