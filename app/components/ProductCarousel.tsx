@@ -4,13 +4,13 @@ import { useState } from 'react';
 
 type Slide = { src: string; alt: string; objectPosition?: string };
 
-export default function ProductCarousel({ slides }: { slides: Slide[] }) {
+export default function ProductCarousel({ slides, containerStyle }: { slides: Slide[]; containerStyle?: React.CSSProperties }) {
   const [current, setCurrent] = useState(0);
 
   const goTo = (i: number) => setCurrent((i + slides.length) % slides.length);
 
   return (
-    <div className="card-photo-h" style={{ height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative' }}>
+    <div className="card-photo-h" style={{ height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative', ...containerStyle }}>
       {slides.map((slide, i) => (
         <img
           key={i}
