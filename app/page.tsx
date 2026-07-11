@@ -105,21 +105,18 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bottom: Generation Next full width */}
-        <div style={{ background: 'var(--ink)', display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center', padding: '52px 48px 40px', gap: 48 }}>
-          <div>
-            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 28 }} />
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 16 }}>
-              Evolving the Craft
-            </p>
-            <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(30px, 3.2vw, 48px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--linen)' }}>
-              Generation <em style={{ fontStyle: 'italic', color: 'var(--sand)' }}>Next</em>
-            </h2>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
-            <p style={{ fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 340 }}>
-              Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
-            </p>
+        {/* Bottom: Evolving the Craft full width */}
+        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 48px 48px', minHeight: 340, gap: 48 }}>
+          <p style={{ fontSize: 'clamp(16px, 2vw, 24px)', lineHeight: 1.5, color: 'rgba(247,244,238,0.75)', maxWidth: '100%' }}>
+            Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
+          </p>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+            <div>
+              <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16 }} />
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
+                Evolving the Craft
+              </p>
+            </div>
             <NewsletterModal />
           </div>
         </div>
