@@ -31,7 +31,7 @@ export default function StickyHeader() {
         transition: 'transform 0.35s ease',
       }}>
         <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, fontSize: 22, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1 }}>
-          estudio malva<span style={{ color: 'var(--clay)' }}>.</span>
+          estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span>
         </Link>
         <button
           onClick={() => setMenuOpen(true)}
@@ -53,7 +53,7 @@ export default function StickyHeader() {
         {/* Menu header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 72 }}>
           <Link href="/" onClick={() => setMenuOpen(false)} style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, fontSize: 22, color: 'var(--linen)', letterSpacing: '0.02em', lineHeight: 1 }}>
-            estudio malva<span style={{ color: 'var(--clay)' }}>.</span>
+            estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span>
           </Link>
           <button
             onClick={() => setMenuOpen(false)}

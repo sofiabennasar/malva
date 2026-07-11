@@ -41,7 +41,7 @@ export default function Nav() {
           transition: 'opacity 0.3s',
         }}
       >
-        estudio malva<span style={{ color: 'var(--clay)' }}>.</span>
+        estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span>
       </span>
 
       <ul style={{ display: 'flex', gap: 36, listStyle: 'none', margin: 0, padding: 0 }}>
