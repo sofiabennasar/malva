@@ -14,7 +14,7 @@ export default function Home() {
           <HeroGallery />
 
           <div className="home-hero-bar" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', minHeight: 150, marginTop: 16 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '28px 32px', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.9 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '28px 32px', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.75 }}>
               <span style={{ fontSize: 33 }}>estudio</span>
               <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
             </div>
