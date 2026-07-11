@@ -64,7 +64,7 @@ export default function Home() {
             <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Culture<br />Preserved</h3>
             <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By protecting generational techniques at risk of disappearing, we bring time-honored crafts into contemporary spaces to keep local heritage vibrant and self-sustaining.</p>
           </div>
-          <div className="values-cell" style={{ gridColumn: 5, gridRow: 2, display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-start', flexDirection: 'column', padding: '36px 32px', alignSelf: 'stretch', justifyContent: 'flex-end' }}>
+          <div className="values-cell" style={{ gridColumn: 5, gridRow: 2, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '36px 32px', alignSelf: 'stretch' }}>
             <Link
               href="/thejournal"
               style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer' }}
