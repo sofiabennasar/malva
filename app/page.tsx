@@ -18,11 +18,11 @@ export default function Home() {
               <span style={{ fontSize: 33 }}>estudio</span>
               <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
             </div>
-            <div className="home-hero-bar-right" style={{ padding: '28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12, alignItems: 'flex-end' }}>
-              <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right' }}>
+            <div className="home-hero-bar-right" style={{ padding: '28px 0 28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 12, alignItems: 'flex-end' }}>
+              <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right', textTransform: 'uppercase' }}>
                 Raw Textures. Modern Spaces.
               </h1>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', maxWidth: 480, textAlign: 'right' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', textAlign: 'right' }}>
                 Objects with origin. We travel directly to remote artisan communities across Argentina to secure singular, handmade pieces for curated environments, ensuring absolute transparency and integrity in every texture.
               </p>
             </div>
