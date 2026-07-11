@@ -70,9 +70,9 @@ export default function TechniqueCarousel() {
   }));
 
   return (
-    <div style={{ background: 'var(--moss)', padding: '64px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 48 }}>
-      <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--linen)', opacity: 0.5 }}>
-        Techniques · Initial Edition
+    <div style={{ background: 'var(--linen)', padding: '64px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 48 }}>
+      <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.6 }}>
+        Techniques
       </p>
 
       <div style={{ position: 'relative', width: '100%', height: CARD_H + 40, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -118,6 +118,7 @@ export default function TechniqueCarousel() {
                   position: 'absolute', inset: 0,
                   backfaceVisibility: 'hidden',
                   background: 'var(--linen)',
+                  border: '1px solid var(--sand)',
                   display: 'flex', flexDirection: 'column',
                   overflow: 'hidden',
                 }}>
@@ -173,13 +174,13 @@ export default function TechniqueCarousel() {
       <div style={{ display: 'flex', gap: 16 }}>
         <button
           onClick={() => go(-1)}
-          style={{ width: 40, height: 40, borderRadius: '50%', border: '1px solid rgba(247,244,238,0.3)', background: 'transparent', color: 'var(--linen)', fontSize: 16, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          style={{ width: 40, height: 40, borderRadius: '50%', border: '1px solid var(--sand)', background: 'transparent', color: 'var(--ink)', fontSize: 16, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           ←
         </button>
         <button
           onClick={() => go(1)}
-          style={{ width: 40, height: 40, borderRadius: '50%', border: '1px solid rgba(247,244,238,0.3)', background: 'transparent', color: 'var(--linen)', fontSize: 16, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          style={{ width: 40, height: 40, borderRadius: '50%', border: '1px solid var(--sand)', background: 'transparent', color: 'var(--ink)', fontSize: 16, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
           →
         </button>
@@ -191,7 +192,7 @@ export default function TechniqueCarousel() {
           <div
             key={i}
             onClick={() => { setFlipped(false); setActive(i); }}
-            style={{ width: i === active ? 20 : 6, height: 6, borderRadius: 3, background: 'var(--linen)', opacity: i === active ? 0.9 : 0.25, cursor: 'pointer', transition: 'all 0.3s ease' }}
+            style={{ width: i === active ? 20 : 6, height: 6, borderRadius: 3, background: 'var(--ink)', opacity: i === active ? 0.9 : 0.25, cursor: 'pointer', transition: 'all 0.3s ease' }}
           />
         ))}
       </div>
