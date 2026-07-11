@@ -106,18 +106,22 @@ export default function Home() {
         </div>
 
         {/* Bottom: Generation Next full width */}
-        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '52px 48px 40px' }}>
-          <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 28 }} />
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 16 }}>
-            Evolving the Craft
-          </p>
-          <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(30px, 3.2vw, 48px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--linen)', marginBottom: 20 }}>
-            Generation <em style={{ fontStyle: 'italic', color: 'var(--sand)' }}>Next</em>
-          </h2>
-          <p style={{ fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 340, marginBottom: 36 }}>
-            Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
-          </p>
-          <NewsletterModal />
+        <div style={{ background: 'var(--ink)', display: 'grid', gridTemplateColumns: '1fr 1fr', alignItems: 'center', padding: '52px 48px 40px', gap: 48 }}>
+          <div>
+            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 28 }} />
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 16 }}>
+              Evolving the Craft
+            </p>
+            <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(30px, 3.2vw, 48px)', fontWeight: 300, lineHeight: 1.15, color: 'var(--linen)' }}>
+              Generation <em style={{ fontStyle: 'italic', color: 'var(--sand)' }}>Next</em>
+            </h2>
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+            <p style={{ fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 340 }}>
+              Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
+            </p>
+            <NewsletterModal />
+          </div>
         </div>
 
       </section>
