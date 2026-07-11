@@ -45,7 +45,7 @@ export default function HeroGallery() {
   });
 
   return (
-    <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 30, height: '66vh', minHeight: 400, alignItems: 'end' }}>
+    <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 60, height: '66vh', minHeight: 400, alignItems: 'end' }}>
       {/* Main panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
         <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '66vh', height: '70vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
