@@ -109,7 +109,7 @@ export default function Home() {
         <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '48px 48px', gap: 28 }}>
           <div>
             <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16 }} />
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 20, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
               Evolving the Craft
             </p>
           </div>
