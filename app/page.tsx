@@ -38,7 +38,7 @@ export default function Home() {
           <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden' }}>
             <img src="/values-1.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom' }} />
           </div>
-          <div className="values-cell" style={{ gridColumn: 2, gridRow: 1, padding: '36px 32px', display: 'grid', alignContent: 'end' }}>
+          <div className="values-cell" style={{ gridColumn: 2, gridRow: 1, padding: '36px 32px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>01</p>
             <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Direct<br />Alliance</h3>
             <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We bypass traditional supply chains entirely, working directly with the artisans, workshops, and families where each object is crafted.</p>
@@ -47,7 +47,7 @@ export default function Home() {
           <div className="values-img" style={{ gridColumn: 4, gridRow: 1, overflow: 'hidden' }}>
             <img src="/values-2.jpg" alt="" style={imgFill} />
           </div>
-          <div className="values-cell" style={{ gridColumn: 5, gridRow: 1, padding: '36px 32px', display: 'grid', alignContent: 'end' }}>
+          <div className="values-cell" style={{ gridColumn: 5, gridRow: 1, padding: '36px 32px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>02</p>
             <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Absolute<br />Equity</h3>
             <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We honor the autonomy of the makers to set their own pricing, ensuring direct, fair compensation that respects the true value of their craft.</p>
@@ -59,7 +59,7 @@ export default function Home() {
           <div className="values-img" style={{ gridColumn: 3, gridRow: 2, overflow: 'hidden' }}>
             <img src="/values-3.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom' }} />
           </div>
-          <div className="values-cell" style={{ gridColumn: 4, gridRow: 2, padding: '36px 32px', display: 'grid', alignContent: 'end' }}>
+          <div className="values-cell" style={{ gridColumn: 4, gridRow: 2, padding: '36px 32px' }}>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>03</p>
             <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Culture<br />Preserved</h3>
             <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By protecting generational techniques at risk of disappearing, we bring time-honored crafts into contemporary spaces to keep local heritage vibrant and self-sustaining.</p>
