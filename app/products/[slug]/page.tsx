@@ -42,16 +42,18 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {/* Main: carousel left, details right */}
-      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1.15fr 1fr', gap: 64, alignItems: 'start' }}>
+      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh', alignItems: 'center' }}>
 
-        {/* Carousel */}
-        <ProductCarousel
-          slides={product.slides}
-          containerStyle={{ height: undefined, minHeight: undefined, aspectRatio: '3/4' }}
-        />
+        {/* Carousel — centered in left half */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '0 32px' }}>
+          <ProductCarousel
+            slides={product.slides}
+            containerStyle={{ height: '78vh', minHeight: undefined, width: 'auto', aspectRatio: '3/4', flex: 'none' }}
+          />
+        </div>
 
         {/* Details */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, padding: '8px 0' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, padding: '8px 32px 8px 0' }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
             {product.num}
           </p>
