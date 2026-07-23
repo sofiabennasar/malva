@@ -1,5 +1,4 @@
 import Link from "next/link";
-import GridCarousel from "@/app/components/GridCarousel";
 import { products } from "@/lib/products";
 
 export default function Products() {
@@ -30,7 +29,13 @@ export default function Products() {
             href={`/products/${p.slug}`}
             style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', border: '1px solid var(--sand)', background: 'var(--linen)' }}
           >
-            <GridCarousel slides={p.slides} />
+            <div style={{ aspectRatio: '3/4', overflow: 'hidden', background: 'var(--bone)' }}>
+              <img
+                src={p.slides[0].src}
+                alt={p.name}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.slides[0].objectPosition ?? 'center', display: 'block' }}
+              />
+            </div>
             <div style={{ padding: '14px 16px 18px', display: 'flex', flexDirection: 'column', gap: 4 }}>
               <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', margin: 0 }}>
                 {p.num}
