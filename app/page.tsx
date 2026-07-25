@@ -11,21 +11,20 @@ export default function Home() {
       <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '20px 72px 72px' }}>
         <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', flexDirection: 'column', padding: '60px 60px 0' }}>
 
+          <div className="home-hero-logo" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '28px 32px 28px 0', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6, marginBottom: 16 }}>
+            <span style={{ fontSize: 33 }}>estudio</span>
+            <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
+          </div>
+
           <HeroGallery />
 
-          <div className="home-hero-bar" style={{ display: 'grid', gridTemplateColumns: '1fr 650px', minHeight: 150, marginTop: 16 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '28px 32px 28px 0', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6 }}>
-              <span style={{ fontSize: 33 }}>estudio</span>
-              <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
-            </div>
-            <div className="home-hero-bar-right" style={{ padding: '28px 0 28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 12, alignItems: 'flex-end', width: '100%' }}>
-              <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right', textTransform: 'uppercase' }}>
-                Raw Textures. Modern Spaces.
-              </h1>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', textAlign: 'right' }}>
-                Objects with origin. We travel directly to remote artisan communities across Argentina to secure singular, handmade pieces for curated environments, ensuring absolute transparency and integrity in every texture.
-              </p>
-            </div>
+          <div className="home-hero-bar-right" style={{ padding: '28px 32px 28px 0', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 12, alignItems: 'flex-end', width: '100%', marginTop: 16 }}>
+            <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right', textTransform: 'uppercase' }}>
+              Raw Textures. Modern Spaces.
+            </h1>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', textAlign: 'right' }}>
+              Objects with origin. We travel directly to remote artisan communities across Argentina to secure singular, handmade pieces for curated environments, ensuring absolute transparency and integrity in every texture.
+            </p>
           </div>
         </div>
       </section>
