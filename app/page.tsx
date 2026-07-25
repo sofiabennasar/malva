@@ -106,19 +106,17 @@ export default function Home() {
         </div>
 
         {/* Bottom: Evolving the Craft full width */}
-        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '48px 48px', gap: 16 }}>
+        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '48px 48px', gap: 32, alignItems: 'center', textAlign: 'center' }}>
           <div>
-            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16 }} />
+            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16, margin: '0 auto 16px' }} />
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 20, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
               Evolving the Craft
             </p>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 48 }}>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', flex: 1 }}>
-              Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
-            </p>
-            <NewsletterModal />
-          </div>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 600 }}>
+            Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
+          </p>
+          <NewsletterModal />
         </div>
 
       </section>
