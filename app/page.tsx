@@ -67,7 +67,7 @@ export default function Home() {
           <div className="values-cell" style={{ gridColumn: 5, gridRow: 2, padding: '36px 32px', display: 'grid', alignContent: 'end' }}>
             <Link
               href="/thejournal"
-              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer' }}
+              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content', whiteSpace: 'nowrap' }}
             >
               The Journal
             </Link>

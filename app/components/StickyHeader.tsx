@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 const links = [
@@ -10,7 +10,14 @@ const links = [
 ];
 
 export default function StickyHeader() {
+  const [visible, setVisible] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 80);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <>
@@ -20,6 +27,8 @@ export default function StickyHeader() {
         background: 'var(--linen)', padding: '18px 48px',
         display: 'flex', alignItems: 'center', justifyContent: 'space-between',
         borderBottom: '1px solid var(--bone)',
+        transform: visible ? 'translateY(0)' : 'translateY(-100%)',
+        transition: 'transform 0.35s ease',
       }}>
         <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, fontSize: 22, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 1 }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span>
