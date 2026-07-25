@@ -78,12 +78,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {/* Inquire */}
-          <Link
-            href={`/contact?category=${product.categorySlug}&product=${encodeURIComponent(product.name)}`}
-            style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content' }}
-          >
-            Inquire
-          </Link>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <Link
+              href={`/contact?category=${product.categorySlug}&product=${encodeURIComponent(product.name)}`}
+              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content' }}
+            >
+              Inquire
+            </Link>
+          </div>
 
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.4, marginTop: 40 }}>
             Argentina · 2026
