@@ -79,8 +79,8 @@ export default function Home() {
       {/* ── Making in Progress + Generation Next ────────── */}
       <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'flex', flexDirection: 'column', gap: 16 }} id="journal">
 
-        {/* Top: 3 photos + text/button side by side */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+        {/* Top: 3 photos, then text and button below */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
           <div className="making-photos" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
             <div style={{ minHeight: 500, overflow: 'hidden' }}>
               <img src="/product-1.jpg" alt="" style={imgFill} />
@@ -92,7 +92,7 @@ export default function Home() {
               <img src="/product-3.jpg" alt="" style={imgFill} />
             </div>
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, justifyContent: 'flex-end', paddingBottom: 24, height: '100%', boxSizing: 'border-box' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'center', textAlign: 'center', maxWidth: 600, margin: '0 auto' }}>
             <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
               Our initial editions are currently in development. We are in a discovery phase, studying the distinct structural qualities of native fibers, clay, and traditional craft. These inaugural collections are being refined for contemporary environments and will be available soon.
             </p>
