@@ -28,7 +28,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     <div className="pg" style={{ background: 'var(--linen)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
 
       {/* Header */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 64px', alignItems: 'center' }}>
+      <div className="hdr" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 64px', alignItems: 'center', gap: 16 }}>
         <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6 }}>
           <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
           <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
@@ -42,18 +42,18 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {/* Main: carousel left, details right */}
-      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh', alignItems: 'center' }}>
+      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh', alignItems: 'center', gap: 16 }}>
 
         {/* Carousel — centered in left half */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', padding: '0 32px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', minHeight: 300 }}>
           <ProductCarousel
             slides={product.slides}
-            containerStyle={{ height: '78vh', minHeight: undefined, width: 'auto', aspectRatio: '3/4', flex: 'none' }}
+            containerStyle={{ height: '78vh', minHeight: 300, width: '100%', maxWidth: '100%', aspectRatio: '3/4', flex: 'none' }}
           />
         </div>
 
         {/* Details */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, padding: '8px 32px 8px 0' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 0, padding: '8px 32px 8px 0', width: '100%', minHeight: 'auto' }}>
           <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 10 }}>
             {product.num}
           </p>

@@ -82,4 +82,7 @@ a { color: inherit; text-decoration: none; }
   /* HeroGallery */
   .hero-gallery { grid-template-columns: 1fr !important; height: 50vw !important; min-height: 260px !important; }
   .hero-gallery-secondary { display: none !important; }
+
+  /* Product page carousel on mobile */
+  .card-photo-h { height: 60vw !important; min-height: 280px !important; max-height: 420px !important; }
 }
