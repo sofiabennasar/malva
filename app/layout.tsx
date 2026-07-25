@@ -38,7 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={`${fraunces.variable} ${archivo.variable} ${jetbrainsMono.variable} ${dmSans.variable}`}>
       <body style={{ margin: 0, background: 'var(--linen)', color: 'var(--ink)', fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.6, WebkitFontSmoothing: 'antialiased' }}>
         <StickyHeader />
-        <main>{children}</main>
+        <main style={{ paddingTop: 64 }}>{children}</main>
 
         <footer style={{ background: 'var(--linen)', borderTop: '1px solid var(--sand)', padding: '16px 48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
