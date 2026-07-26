@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const techniques = [
   {
@@ -40,12 +40,20 @@ const techniques = [
   },
 ];
 
-const CARD_W = 400;
-const CARD_H = 600;
-
 export default function TechniqueCarousel() {
   const [active, setActive] = useState(0);
   const [flipped, setFlipped] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const CARD_W = isMobile ? 280 : 400;
+  const CARD_H = isMobile ? 420 : 600;
 
   const count = techniques.length;
 
@@ -70,7 +78,7 @@ export default function TechniqueCarousel() {
   }));
 
   return (
-    <div style={{ background: 'var(--linen)', padding: '64px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 48 }}>
+    <div style={{ background: 'var(--linen)', padding: isMobile ? '40px 16px' : '64px 0', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: isMobile ? 32 : 48 }}>
       <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.6 }}>
         Techniques
       </p>
