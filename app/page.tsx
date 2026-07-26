@@ -9,7 +9,7 @@ export default function Home() {
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '20px 72px 72px' }}>
-        <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', flexDirection: 'column', padding: '60px 60px 0' }}>
+        <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', gap: 60, padding: '60px 60px 0' }}>
 
           <HeroGallery />
 
