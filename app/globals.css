@@ -81,6 +81,10 @@ a { color: inherit; text-decoration: none; }
   .making-photos { grid-template-columns: repeat(3, 1fr) !important; }
   .making-photos > div { min-height: 200px !important; }
 
+  /* Evolving the Craft button */
+  .making-section > div:last-child button { width: 100% !important; }
+  .making-section > div:last-child button:first-of-type { width: auto !important; }
+
   /* Footer */
   .footer-grid { grid-template-columns: 1fr !important; gap: 24px !important; padding: 36px 16px 28px !important; }
   .footer-bottom-row { padding-top: 16px !important; margin-top: 8px !important; }
