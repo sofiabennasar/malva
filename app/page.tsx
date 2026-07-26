@@ -9,11 +9,11 @@ export default function Home() {
     <>
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '20px 72px 72px' }}>
-        <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', gap: 60, padding: '60px 60px 0' }}>
+        <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', flexDirection: 'row', gap: 60, padding: '60px 60px 0', alignItems: 'flex-end' }}>
 
           <HeroGallery />
 
-          <div className="home-hero-bar" style={{ display: 'grid', gridTemplateColumns: '1fr 650px', minHeight: 150, marginTop: 16 }}>
+          <div className="home-hero-bar" style={{ display: 'grid', gridTemplateColumns: '1fr 650px', minHeight: 150, marginTop: 16, flexShrink: 0 }}>
             <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '28px 32px 28px 0', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6 }}>
               <span style={{ fontSize: 33 }}>estudio</span>
               <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
