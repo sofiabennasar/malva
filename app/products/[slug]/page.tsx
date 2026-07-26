@@ -78,7 +78,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {/* Inquire */}
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
             <Link
               href={`/contact?category=${product.categorySlug}&product=${encodeURIComponent(product.name)}`}
               style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content' }}
