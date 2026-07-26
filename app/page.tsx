@@ -93,7 +93,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 20, flex: 1 }}>
-            <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
+            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
               Our initial editions are currently in development. We are in a discovery phase, studying the distinct structural qualities of native fibers, clay, and traditional craft. These inaugural collections are being refined for contemporary environments and will be available soon.
             </p>
             <Link
