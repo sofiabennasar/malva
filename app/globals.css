@@ -68,14 +68,16 @@ a { color: inherit; text-decoration: none; }
     flex-direction: column !important;
   }
   .values-grid > div { grid-column: auto !important; grid-row: auto !important; }
-  .values-cell { padding: 24px 16px !important; }
+  .values-cell { padding: 24px 16px !important; display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
+  .values-cell a { width: 100% !important; }
   .values-section { padding: 0 16px 16px !important; }
   .values-empty { display: none !important; }
   .values-img { min-height: 260px !important; position: relative !important; }
 
   /* Homepage making section */
   .making-section { padding: 0 16px 16px !important; }
-  .making-section > div:first-child { flex-direction: column !important; gap: 32px !important; }
+  .making-section > div:first-child { flex-direction: column !important; gap: 32px !important; align-items: center !important; text-align: center !important; }
+  .making-section > div:first-child a { width: 100% !important; }
   .making-photos { grid-template-columns: repeat(3, 1fr) !important; }
   .making-photos > div { min-height: 200px !important; }
 
