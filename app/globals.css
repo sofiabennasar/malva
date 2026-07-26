@@ -74,7 +74,8 @@ a { color: inherit; text-decoration: none; }
   .values-img { min-height: 260px !important; position: relative !important; }
 
   /* Homepage making section */
-  .making-section { padding: 0 16px 16px !important; grid-template-columns: 1fr !important; }
+  .making-section { padding: 0 16px 16px !important; }
+  .making-section > div:first-child { flex-direction: column !important; gap: 32px !important; }
   .making-photos { grid-template-columns: repeat(3, 1fr) !important; }
   .making-photos > div { min-height: 200px !important; }
 
