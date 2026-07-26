@@ -54,7 +54,7 @@ a { color: inherit; text-decoration: none; }
 
   /* Homepage hero section */
   .home-hero-section { padding: 16px !important; }
-  .home-hero-card { padding: 0 !important; border: none !important; display: flex !important; flex-direction: column !important; }
+  .home-hero-card { padding: 0 !important; border: none !important; display: flex !important; flex-direction: column !important; gap: 32px !important; }
   .home-hero-bar { display: contents !important; }
   .home-hero-bar > div:first-child { padding: 0 !important; text-align: center !important; margin-bottom: 16px !important; order: 1 !important; }
   .home-hero-bar-right { align-items: center !important; padding: 0 16px !important; margin-top: 0 !important; order: 3 !important; }
