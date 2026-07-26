@@ -77,10 +77,10 @@ export default function Home() {
       </section>
 
       {/* ── Making in Progress + Generation Next ────────── */}
-      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'flex', flexDirection: 'column', gap: 16 }} id="journal">
+      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'flex', flexDirection: 'row', gap: 16 }} id="journal">
 
         {/* Top: 3 photos, then text and button below */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 32, flex: 1 }}>
           <div className="making-photos" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6 }}>
             <div style={{ minHeight: 500, overflow: 'hidden' }}>
               <img src="/product-1.jpg" alt="" style={imgFill} />
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
 
         {/* Bottom: Evolving the Craft full width */}
-        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '48px 48px', gap: 32, alignItems: 'center', textAlign: 'center' }}>
+        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '48px 48px', gap: 32, alignItems: 'center', textAlign: 'center', flex: 1 }}>
           <div>
             <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16, margin: '0 auto 16px' }} />
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 20, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
