@@ -83,7 +83,7 @@ export default function TechniqueCarousel() {
         Techniques
       </p>
 
-      <div style={{ position: 'relative', width: '100%', height: CARD_H + 40, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ position: 'relative', width: '100%', height: CARD_H + 40, display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
 
         {/* Cards */}
         {visible.map(({ offset, idx }) => {
