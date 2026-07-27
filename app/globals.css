@@ -95,4 +95,8 @@ a { color: inherit; text-decoration: none; }
 
   /* Product page carousel on mobile */
   .card-photo-h { height: 60vw !important; min-height: 280px !important; max-height: 420px !important; }
+
+  /* Products gallery page */
+  .products-header { padding: 28px 16px !important; }
+  .products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
 }
