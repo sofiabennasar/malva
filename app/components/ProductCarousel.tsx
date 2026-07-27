@@ -9,10 +9,12 @@ export default function ProductCarousel({ slides, containerStyle, isPortrait }: 
 
   const goTo = (i: number) => setCurrent((i + slides.length) % slides.length);
 
-  const portraitStyle = isPortrait ? { aspectRatio: '9/16' } : { aspectRatio: '3/4' };
+  const baseStyle = isPortrait
+    ? { aspectRatio: '9/16', overflow: 'hidden', background: 'var(--bone)', position: 'relative' as const }
+    : { height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative' as const, aspectRatio: '3/4' };
 
   return (
-    <div className="card-photo-h" style={{ height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative', ...portraitStyle, ...containerStyle }}>
+    <div className="card-photo-h" style={{ ...baseStyle, ...containerStyle }}>
       {slides.map((slide, i) => (
         <img
           key={i}
