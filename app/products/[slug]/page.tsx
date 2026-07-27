@@ -48,7 +48,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', minHeight: 300 }}>
           <ProductCarousel
             slides={product.slides}
-            containerStyle={{ height: '78vh', minHeight: 300, width: '100%', maxWidth: '100%', aspectRatio: '3/4', flex: 'none' }}
+            isPortrait={product.portraitMode}
+            containerStyle={{ height: '78vh', minHeight: 300, width: '100%', maxWidth: '100%', aspectRatio: product.portraitMode ? '2/3' : '3/4', flex: 'none' }}
           />
         </div>
 

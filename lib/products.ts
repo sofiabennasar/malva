@@ -10,6 +10,7 @@ export type Product = {
   size: string;
   technique: string;
   slides: Slide[];
+  portraitMode?: boolean;
 };
 
 export const products: Product[] = [
@@ -280,6 +281,7 @@ export const products: Product[] = [
     slides: [
       { src: '/bag-3.jpg', alt: 'Bag 003' },
     ],
+    portraitMode: true,
   },
   {
     slug: 'bag-004',
@@ -293,6 +295,7 @@ export const products: Product[] = [
     slides: [
       { src: '/bag-4.jpg', alt: 'Bag 004' },
     ],
+    portraitMode: true,
   },
   {
     slug: 'pillow-001',
@@ -350,6 +353,7 @@ export const products: Product[] = [
     slides: [
       { src: '/scarf-1.jpg', alt: 'Scarf 001' },
     ],
+    portraitMode: true,
   },
   {
     slug: 'scarf-002',
@@ -363,6 +367,7 @@ export const products: Product[] = [
     slides: [
       { src: '/scarf-2.jpg', alt: 'Scarf 002' },
     ],
+    portraitMode: true,
   },
   {
     slug: 'scarf-003',
@@ -376,6 +381,7 @@ export const products: Product[] = [
     slides: [
       { src: '/scarf-3.jpg', alt: 'Scarf 003' },
     ],
+    portraitMode: true,
   },
   {
     slug: 'tabla-001',
