@@ -42,7 +42,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {/* Main: carousel left, details right */}
-      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh', alignItems: 'center', gap: 16 }}>
+      <div className="two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh', alignItems: 'flex-start', gap: 16 }}>
 
         {/* Carousel — centered in left half */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', width: '100%', minHeight: 300 }}>
