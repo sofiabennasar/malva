@@ -145,8 +145,8 @@ function ContactForm() {
           </div>
           <div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 12 }}>Instagram</p>
-            <a href="https://www.instagram.com/estudiomalva.ar" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
-              @estudiomalva.ar
+            <a href="https://www.instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
+              @estudio.malva
             </a>
           </div>
         </div>
