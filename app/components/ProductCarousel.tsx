@@ -9,7 +9,7 @@ export default function ProductCarousel({ slides, containerStyle, isPortrait }: 
 
   const goTo = (i: number) => setCurrent((i + slides.length) % slides.length);
 
-  const portraitStyle = isPortrait ? { aspectRatio: '2/3' } : { aspectRatio: '3/4' };
+  const portraitStyle = isPortrait ? { aspectRatio: '9/16' } : { aspectRatio: '3/4' };
 
   return (
     <div className="card-photo-h" style={{ height: '75vh', minHeight: 600, overflow: 'hidden', background: 'var(--bone)', position: 'relative', ...portraitStyle, ...containerStyle }}>
