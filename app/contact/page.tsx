@@ -93,7 +93,7 @@ function ContactForm() {
                   >
                     <option value="">Select a category</option>
                     <option value="baskets">Baskets</option>
-                    <option value="fiber">Fiber + Textile</option>
+                    <option value="fabric-textiles">Fabric + Textiles</option>
                     <option value="ceramics">Ceramics</option>
                     <option value="wood">Wood</option>
                     <option value="other">Something else</option>
