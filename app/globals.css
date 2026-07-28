@@ -19,7 +19,7 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 768px) {
   /* Hero gallery responsive */
-  .hero-gallery { justify-content: center !important; }
+  .hero-gallery { justify-content: center !important; margin-top: 24px !important; margin-bottom: 24px !important; }
   .hero-gallery > div { width: 90vw !important; height: 50vh !important; }
 
   /* Page outer wrapper */
