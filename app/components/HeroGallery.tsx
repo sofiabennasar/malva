@@ -49,8 +49,8 @@ export default function HeroGallery() {
     <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 0, height: '66vh', minHeight: 400, alignItems: 'end', width: '100%' }}>
       {/* Full-width panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden', width: '100%' }}>
-        <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', right: 0, width: '150vw', height: '112.5vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translateY(-50%) rotate(-90deg)' }} />
-        <img src="/hero-3.jpg" alt="" style={{ position: 'absolute', top: '50%', right: 0, width: '150vw', height: '112.5vw', objectFit: 'cover', objectPosition: 'center 60%', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translateY(-50%) rotate(-90deg)' }} />
+        <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', right: 0, width: '112.5vw', height: '150vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translateY(-50%) rotate(-90deg)' }} />
+        <img src="/hero-3.jpg" alt="" style={{ position: 'absolute', top: '50%', right: 0, width: '112.5vw', height: '150vw', objectFit: 'cover', objectPosition: 'center 60%', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translateY(-50%) rotate(-90deg)' }} />
       </div>
     </div>
   );
