@@ -46,16 +46,11 @@ export default function HeroGallery() {
   });
 
   return (
-    <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: 60, height: '66vh', minHeight: 400, alignItems: 'end', width: '100%' }}>
-      {/* Main panel */}
+    <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 0, height: '66vh', minHeight: 400, alignItems: 'end', width: '100%' }}>
+      {/* Full-width panel */}
       <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden', width: '100%' }}>
-        <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '66vh', height: '70vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
-        <img src="/hero-3.jpg" alt="" style={{ ...rotatedSlide(1), objectFit: 'cover', objectPosition: 'center 60%' }} />
-      </div>
-      {/* Secondary panel */}
-      <div className="hero-gallery-secondary" style={{ height: '75%', background: 'var(--bone)', position: 'relative', overflow: 'hidden', width: '100%' }}>
-        <img src="/hero-2.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease' }} />
-        <img src="/hero-4b.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top left', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease' }} />
+        <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '100vw', height: '80vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
+        <img src="/hero-3.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '100vw', height: '80vw', objectFit: 'cover', objectPosition: 'center 60%', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
       </div>
     </div>
   );
