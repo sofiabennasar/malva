@@ -18,6 +18,10 @@ img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
 
 @media (max-width: 768px) {
+  /* Hero gallery responsive */
+  .hero-gallery { justify-content: center !important; }
+  .hero-gallery > div { width: 90vw !important; height: 50vh !important; }
+
   /* Page outer wrapper */
   .pg { padding: 16px !important; gap: 16px !important; }
 
