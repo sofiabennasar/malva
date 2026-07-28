@@ -46,11 +46,11 @@ export default function HeroGallery() {
   });
 
   return (
-    <div className="hero-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 0, height: '66vh', minHeight: 400, alignItems: 'end', width: '100%' }}>
-      {/* Full-width panel */}
-      <div style={{ height: '100%', background: 'var(--sand)', position: 'relative', overflow: 'hidden', width: '100%' }}>
-        <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', right: 0, width: '90vw', height: '112.5vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translateY(-50%) rotate(-90deg)' }} />
-        <img src="/hero-3.jpg" alt="" style={{ position: 'absolute', top: '50%', right: 0, width: '90vw', height: '112.5vw', objectFit: 'cover', objectPosition: 'center 60%', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translateY(-50%) rotate(-90deg)' }} />
+    <div className="hero-gallery" style={{ display: 'flex', justifyContent: 'flex-end', height: '66vh', minHeight: 400, width: '100%', alignItems: 'center' }}>
+      {/* 4:3 image container (66vh height, 88vw width for 4:3 ratio) */}
+      <div style={{ height: '66vh', width: '88vw', background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
+        <img src="/hero-1.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '66vh', height: '88vw', objectFit: 'cover', objectPosition: 'center 65%', display: 'block', opacity: active === 0 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
+        <img src="/hero-3.jpg" alt="" style={{ position: 'absolute', top: '50%', left: '50%', width: '66vh', height: '88vw', objectFit: 'cover', objectPosition: 'center 60%', display: 'block', opacity: active === 1 ? 1 : 0, transition: 'opacity 1.4s ease', transform: 'translate(-50%, -50%) rotate(-90deg)' }} />
       </div>
     </div>
   );
