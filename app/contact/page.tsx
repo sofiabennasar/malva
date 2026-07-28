@@ -26,7 +26,7 @@ function ContactForm() {
   const [message, setMessage] = useState('');
 
   return (
-    <div className="pg" style={{ background: 'var(--moss)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
+    <div className="pg" style={{ background: 'var(--linen)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
 
       {/* Header */}
       <div className="hdr" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 52px', alignItems: 'center' }}>
