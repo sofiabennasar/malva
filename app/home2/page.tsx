@@ -85,8 +85,8 @@ export default function Home2() {
               </div>
             </div>
 
-            {/* Column 3 - offset by 566px */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 566 }}>
+            {/* Column 3 - offset by 283px */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 283 }}>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--ink)', margin: 0 }}>
