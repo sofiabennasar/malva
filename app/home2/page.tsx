@@ -72,7 +72,7 @@ export default function Home2() {
                 Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
               </p>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 110 }} />
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 150 }} />
             </div>
 
             {/* Column 3 - RIGHT */}
