@@ -6,8 +6,8 @@ export default function Home2() {
   return (
     <>
       {/* ── Header ──────────────────────────────────────── */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: 'white' }}>
-        <div style={{ width: 280, fontFamily: 'var(--font-fraunces)', fontSize: 22, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end' }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: 'white', zIndex: 1000 }}>
+        <div style={{ width: 254, fontFamily: 'var(--font-fraunces)', fontSize: 20, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end' }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </div>
         <nav style={{ display: 'flex', gap: 50, alignItems: 'flex-end' }}>
@@ -27,7 +27,7 @@ export default function Home2() {
       </header>
 
       {/* ── Hero ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '80px 60px 60px' }}>
+      <section style={{ background: 'white', padding: '120px 60px 60px', marginTop: 60 }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 80, alignItems: 'flex-end', minHeight: 700 }}>
             {/* Left text - positioned lower */}
