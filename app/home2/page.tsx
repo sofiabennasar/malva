@@ -6,11 +6,11 @@ export default function Home2() {
   return (
     <>
       {/* ── Header ──────────────────────────────────────── */}
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 60px 32px 60px', background: 'white' }}>
+      <header style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', padding: '16px 60px 32px 60px', background: 'white', gap: 80 }}>
         <div style={{ width: 508, fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em' }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </div>
-        <nav style={{ display: 'flex', gap: 50 }}>
+        <nav style={{ display: 'flex', gap: 50, alignItems: 'center' }}>
           <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 22, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Collections
           </Link>
