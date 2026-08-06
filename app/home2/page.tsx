@@ -50,12 +50,12 @@ export default function Home2() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
 
             {/* Spanning text across columns 1-2 */}
-            <p style={{ gridColumn: 'span 2', fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+            <p style={{ gridColumn: '1 / span 2', gridRow: 1, fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
               Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
             </p>
 
-            {/* Column 1 - offset to align top of image 1 with middle of column 3 image 1 */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 424 }}>
+            {/* Column 1 - LEFT */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 1, gridRow: 2 }}>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
@@ -68,8 +68,8 @@ export default function Home2() {
               </p>
             </div>
 
-            {/* Column 2 - offset by 150px */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 150 }}>
+            {/* Column 2 - MIDDLE */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 2, gridRow: 2 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
                   [SEE COLLECTION]
@@ -79,8 +79,8 @@ export default function Home2() {
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
             </div>
 
-            {/* Column 3 - offset by 141px */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 141 }}>
+            {/* Column 3 - RIGHT */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 3, gridRow: 2 }}>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--ink)', margin: 0 }}>
