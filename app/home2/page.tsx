@@ -77,12 +77,6 @@ export default function Home2() {
                 <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               </div>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
-                  [COMING SOON]
-                </p>
-                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-              </div>
             </div>
 
             {/* Column 3 - offset by 141px */}
