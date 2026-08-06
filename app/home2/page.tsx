@@ -80,7 +80,7 @@ export default function Home2() {
             </div>
 
             {/* Column 3 - RIGHT */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 3, gridRow: 1 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 3, gridRow: 2 }}>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--ink)', margin: 0 }}>
