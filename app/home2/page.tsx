@@ -45,7 +45,7 @@ export default function Home2() {
       </section>
 
       {/* ── Body ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '60px 60px' }}>
+      <section style={{ background: 'white', padding: '30px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
 
