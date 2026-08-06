@@ -24,17 +24,17 @@ export default function Home2() {
       </header>
 
       {/* ── Hero ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '60px 60px' }}>
+      <section style={{ background: 'white', padding: '80px 60px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 60, alignItems: 'start' }}>
-            {/* Left text */}
-            <div style={{ paddingTop: 20 }}>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--ink)', marginBottom: 0 }}>
-                We source singular, handmade objects directly from artisan communities across Argentina. Each piece is selected for its authenticity and craftsmanship, creating thoughtful collections with transparent sourcing and cultural integrity.
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 80, alignItems: 'flex-end', minHeight: 700 }}>
+            {/* Left text - positioned lower */}
+            <div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0 }}>
+                We source singular, handmade objects directly from artisan communities across Argentina. Each piece is selected for its origin, materiality, and craftsmanship, creating thoughtful collections with transparent sourcing and cultural integrity.
               </p>
             </div>
             {/* Right large image */}
-            <div style={{ height: 600, overflow: 'hidden' }}>
+            <div style={{ height: 650, overflow: 'hidden' }}>
               <img src="/values-1.jpg" alt="Featured textiles" style={imgFill} />
             </div>
           </div>
