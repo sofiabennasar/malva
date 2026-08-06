@@ -87,7 +87,7 @@ export default function Home2() {
                 </p>
                 <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               </div>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 75 }} />
             </div>
 
           </div>
