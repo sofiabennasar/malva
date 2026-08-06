@@ -45,12 +45,12 @@ export default function Home2() {
       </section>
 
       {/* ── Body ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '15px 60px' }}>
+      <section style={{ background: 'white', padding: '8px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
 
             {/* Column 1 - LEFT */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 55, gridColumn: 1, gridRow: 2 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 27, gridColumn: 1, gridRow: 2 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
                   [SEE COLLECTION]
