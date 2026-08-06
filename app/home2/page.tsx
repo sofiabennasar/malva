@@ -47,65 +47,53 @@ export default function Home2() {
       {/* ── Body ────────────────────────────────────────── */}
       <section style={{ background: 'white', padding: '60px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, gridAutoRows: 'auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40 }}>
 
-            {/* Text 1 - spans columns 1-2 */}
-            <div style={{ gridColumn: '1 / 3', marginBottom: 20 }}>
+            {/* Column 1 */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0 }}>
                 Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
               </p>
-            </div>
-
-            {/* Column 1 - Image 1 */}
-            <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-
-            {/* Column 2 - Button + Image 1 */}
-            <div style={{ gridColumn: 2, display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
-                [SEE COLLECTION]
-              </p>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-            </div>
-
-            {/* Column 3 - Image 1 */}
-            <div style={{ gridColumn: 3, width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-
-            {/* Column 1 - Button + Image 2 */}
-            <div style={{ gridColumn: 1, display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
-                [THE JOURNAL]
-              </p>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-            </div>
-
-            {/* Column 2 - Image 2 */}
-            <div style={{ gridColumn: 2, width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-
-            {/* Column 3 - Text + Image 2 */}
-            <div style={{ gridColumn: 3, display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--ink)', margin: 0 }}>
-                Raw textures. Modern spaces.
-              </p>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-            </div>
-
-            {/* Text 2 - spans columns 1-2 */}
-            <div style={{ gridColumn: '1 / 3', marginTop: 20, marginBottom: 20 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
+                  [THE JOURNAL]
+                </p>
+                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              </div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0 }}>
                 Discover a new generation of artisans transforming recycled plastic through time-honored techniques and redefining the possibilities of traditional design.
               </p>
             </div>
 
-            {/* Column 2 - Button + Image 3 */}
-            <div style={{ gridColumn: 2, display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
-                [COMING SOON]
-              </p>
+            {/* Column 2 - offset by 300px */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 300 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
+                  [SEE COLLECTION]
+                </p>
+                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              </div>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
+                  [COMING SOON]
+                </p>
+                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              </div>
             </div>
 
-            {/* Column 3 - Image 3 */}
-            <div style={{ gridColumn: 3, width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+            {/* Column 3 - offset by 566px */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 566 }}>
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--ink)', margin: 0 }}>
+                  Raw textures. Modern spaces.
+                </p>
+                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              </div>
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+            </div>
 
           </div>
         </div>
