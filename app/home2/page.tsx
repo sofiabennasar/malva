@@ -11,16 +11,16 @@ export default function Home2() {
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </div>
         <nav style={{ display: 'flex', gap: 50, alignItems: 'center' }}>
-          <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 22, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Collections
           </Link>
-          <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 22, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             The Journal
           </Link>
-          <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 22, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Care & Maintenance
           </Link>
-          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 22, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Contact
           </Link>
         </nav>
