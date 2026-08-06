@@ -7,7 +7,9 @@ export default function Home2() {
     <>
       {/* ── Header ──────────────────────────────────────── */}
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '32px 60px', borderBottom: '1px solid var(--sand)', background: 'white' }}>
-        <img src="/logo.png" alt="estudio malva" style={{ width: 254, height: 'auto', display: 'block' }} />
+        <div style={{ fontFamily: 'var(--font-fraunces)', fontSize: 20, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em' }}>
+          estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
+        </div>
         <nav style={{ display: 'flex', gap: 40 }}>
           <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: 'var(--ink)', textDecoration: 'none', letterSpacing: '0.05em' }}>
             Collections
