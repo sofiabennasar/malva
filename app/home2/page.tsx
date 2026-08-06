@@ -41,7 +41,7 @@ export default function Home2() {
               </p>
             </div>
             {/* Right large image */}
-            <div style={{ height: 650, overflow: 'hidden' }}>
+            <div style={{ width: 885, height: 662, overflow: 'hidden' }}>
               <img src="/values-1.jpg" alt="Featured textiles" style={imgFill} />
             </div>
           </div>
