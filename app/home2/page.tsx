@@ -24,111 +24,129 @@ export default function Home2() {
       </header>
 
       {/* ── Hero ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '80px 60px' }}>
+      <section style={{ background: 'white', padding: '60px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: 60, alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.3fr', gap: 60, alignItems: 'start' }}>
             {/* Left text */}
-            <div style={{ paddingTop: 40 }}>
+            <div style={{ paddingTop: 20 }}>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--ink)', marginBottom: 0 }}>
                 We source singular, handmade objects directly from artisan communities across Argentina. Each piece is selected for its authenticity and craftsmanship, creating thoughtful collections with transparent sourcing and cultural integrity.
               </p>
             </div>
             {/* Right large image */}
-            <div style={{ height: 500, overflow: 'hidden' }}>
+            <div style={{ height: 600, overflow: 'hidden' }}>
               <img src="/values-1.jpg" alt="Featured textiles" style={imgFill} />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Intro + Collections Grid ────────────────────── */}
-      <section style={{ background: 'var(--linen)', padding: '80px 60px' }} id="collections">
-        <div style={{ maxWidth: 1400, margin: '0 auto', marginBottom: 80 }}>
+      {/* ── Intro ──────────────────────────────────────── */}
+      <section style={{ background: 'var(--linen)', padding: '60px 60px 40px' }} id="collections">
+        <div style={{ maxWidth: 1400, margin: '0 auto', marginBottom: 40 }}>
           <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.9, color: 'var(--slate)', maxWidth: 800 }}>
             Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
           </p>
         </div>
+      </section>
 
-        {/* Asymmetric collection grid */}
+      {/* ── Three Column Masonry Layout (NOT ALIGNED) ───── */}
+      <section style={{ background: 'var(--linen)', padding: '0 60px 80px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr 0.9fr', gap: 40, gridTemplateRows: 'auto auto auto' }}>
-            {/* Left column - tall image */}
-            <div style={{ gridColumn: 1, gridRow: '1 / 3' }}>
-              <div style={{ height: 650, overflow: 'hidden', marginBottom: 20 }}>
-                <img src="/product-1.jpg" alt="Woven basket detail" style={imgFill} />
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40 }}>
+
+            {/* Column 1 */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              <div style={{ height: 480, overflow: 'hidden' }}>
+                <img src="/product-1.jpg" alt="Woven detail" style={imgFill} />
               </div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 12 }}>
-                [THE JOURNAL]
-              </p>
+              <div>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 12 }}>
+                  [THE JOURNAL]
+                </p>
+              </div>
+              <div style={{ height: 350, overflow: 'hidden' }}>
+                <img src="/values-2.jpg" alt="Textile" style={imgFill} />
+              </div>
+              <div>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--slate)' }}>
+                  Exploring textile traditions passed down through generations.
+                </p>
+              </div>
             </div>
 
-            {/* Center - images stacked */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {/* Column 2 */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingTop: 100 }}>
+              <div style={{ height: 420, overflow: 'hidden' }}>
+                <img src="/basket-2.jpg" alt="Basket" style={imgFill} />
+              </div>
               <div>
-                <div style={{ height: 400, overflow: 'hidden', marginBottom: 16 }}>
-                  <img src="/values-2.jpg" alt="Textile detail" style={imgFill} />
-                </div>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 12 }}>
                   [SEE COLLECTION]
                 </p>
               </div>
+              <div style={{ height: 380, overflow: 'hidden' }}>
+                <img src="/product-2.jpg" alt="Ceramic" style={imgFill} />
+              </div>
               <div>
-                <div style={{ height: 300, overflow: 'hidden', marginBottom: 16 }}>
-                  <img src="/product-2.jpg" alt="Ceramic bowl" style={imgFill} />
-                </div>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--slate)' }}>
+                  Handcrafted ceramics and vessels blending ancestral methods with modern form.
+                </p>
               </div>
             </div>
 
-            {/* Right - smaller images */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20, gridRow: '1 / 3' }}>
-              <div style={{ height: 280, overflow: 'hidden' }}>
-                <img src="/values-3.jpg" alt="Textile texture" style={imgFill} />
+            {/* Column 3 */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 24, paddingTop: 40 }}>
+              <div style={{ height: 500, overflow: 'hidden' }}>
+                <img src="/values-3.jpg" alt="Detail" style={imgFill} />
               </div>
-              <div style={{ height: 280, overflow: 'hidden' }}>
-                <img src="/product-3.jpg" alt="Handmade detail" style={imgFill} />
+              <div>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--slate)', marginBottom: 16 }}>
+                  Raw textures. Modern spaces.
+                </p>
               </div>
-            </div>
-
-            {/* Bottom right - tagline */}
-            <div style={{ gridColumn: '2 / 4', paddingTop: 20 }}>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.8, color: 'var(--ink)', maxWidth: 700 }}>
-                Raw textures. Modern spaces.
-              </p>
+              <div style={{ height: 320, overflow: 'hidden' }}>
+                <img src="/product-3.jpg" alt="Product" style={imgFill} />
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* More images section */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginTop: 80 }}>
+      {/* ── Three Principles ────────────────────────────── */}
+      <section style={{ background: 'white', padding: '80px 60px', borderTop: '1px solid var(--sand)' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 80 }}>
             <div>
-              <div style={{ height: 300, overflow: 'hidden', marginBottom: 16 }}>
-                <img src="/basket-2.jpg" alt="Basket weaving" style={imgFill} />
+              <div style={{ height: 350, overflow: 'hidden', marginBottom: 20 }}>
+                <img src="/brushed-1.jpg" alt="Direct Alliance" style={imgFill} />
               </div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 12 }}>
                 Direct Alliance
               </p>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--slate)' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>
                 We work directly with the artisans, workshops, and families where each object is crafted.
               </p>
             </div>
             <div>
-              <div style={{ height: 300, overflow: 'hidden', marginBottom: 16 }}>
-                <img src="/brushed-1.jpg" alt="Fair exchange" style={imgFill} />
+              <div style={{ height: 350, overflow: 'hidden', marginBottom: 20 }}>
+                <img src="/bag-1.jpg" alt="Fair Exchange" style={imgFill} />
               </div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 12 }}>
                 Fair Exchange
               </p>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--slate)' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>
                 Makers set the value of their own work, ensuring direct and equitable compensation.
               </p>
             </div>
             <div>
-              <div style={{ height: 300, overflow: 'hidden', marginBottom: 16 }}>
-                <img src="/bag-1.jpg" alt="Living craft" style={imgFill} />
+              <div style={{ height: 350, overflow: 'hidden', marginBottom: 20 }}>
+                <img src="/basket-1.jpg" alt="Living Craft" style={imgFill} />
               </div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 12 }}>
                 Living Craft
               </p>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.7, color: 'var(--slate)' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>
                 We support techniques and knowledge at risk of disappearing, bringing heritage into contemporary spaces.
               </p>
             </div>
@@ -136,78 +154,54 @@ export default function Home2() {
         </div>
       </section>
 
-      {/* ── More Collections ────────────────────────────── */}
-      <section style={{ background: 'white', padding: '80px 60px', borderTop: '1px solid var(--sand)' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 60, marginBottom: 80 }}>
-            <div>
-              <div style={{ height: 400, overflow: 'hidden', marginBottom: 24 }}>
-                <img src="/basket-1.jpg" alt="Collection" style={imgFill} />
-              </div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
-                [SEE COLLECTION]
-              </p>
-            </div>
-            <div>
-              <div style={{ height: 400, overflow: 'hidden', marginBottom: 24 }}>
-                <img src="/bag-1b.jpg" alt="Collection" style={imgFill} />
-              </div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
-                [COMING SOON]
-              </p>
-            </div>
-          </div>
-
-          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--slate)', maxWidth: 800 }}>
-            Discover a new generation of artisans transforming recycled plastic through time-honored techniques and redefining the possibilities of traditional design.
-          </p>
-        </div>
-      </section>
-
-      {/* ── Journal ─────────────────────────────────────── */}
+      {/* ── Journal Section ─────────────────────────────── */}
       <section style={{ background: 'var(--linen)', padding: '80px 60px', borderTop: '1px solid var(--sand)' }} id="journal">
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr 0.9fr', gap: 40, alignItems: 'start' }}>
-            {/* Left - medium image */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 80 }}>
             <div>
-              <div style={{ height: 450, overflow: 'hidden', marginBottom: 16 }}>
-                <img src="/brushed-1b.jpg" alt="Textile close-up" style={imgFill} />
+              <div style={{ height: 480, overflow: 'hidden', marginBottom: 20 }}>
+                <img src="/brushed-1b.jpg" alt="Article" style={imgFill} />
               </div>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
+                Feature
+              </p>
               <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 16, fontWeight: 300, lineHeight: 1.3, color: 'var(--ink)' }}>
                 Weaving Heritage
               </h3>
             </div>
-
-            {/* Center - article */}
             <div>
-              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 16 }}>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 16 }}>
                 The Journal
               </p>
-              <div style={{ height: 380, overflow: 'hidden', marginBottom: 24 }}>
-                <img src="/basket-3.jpg" alt="Article feature" style={imgFill} />
+              <div style={{ height: 420, overflow: 'hidden', marginBottom: 24 }}>
+                <img src="/basket-3.jpg" alt="Article" style={imgFill} />
               </div>
-              <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 24, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 16 }}>
+              <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 16 }}>
                 The Clay Makers
               </h2>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--slate)', marginBottom: 24 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, lineHeight: 1.8, color: 'var(--slate)', marginBottom: 20 }}>
                 Meet the artisans shaping our ceramic collections and their transformative creative process.
               </p>
               <Link
                 href="/thejournal"
-                style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink)', textDecoration: 'none' }}
+                style={{ fontFamily: 'var(--font-archivo)', fontSize: 10, fontWeight: 500, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--ink)', textDecoration: 'none' }}
               >
                 Read more →
               </Link>
             </div>
-
-            {/* Right - small images stacked */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-              <div style={{ height: 320, overflow: 'hidden' }}>
+            <div>
+              <div style={{ height: 380, overflow: 'hidden', marginBottom: 20 }}>
                 <img src="/bag-2.jpg" alt="Article" style={imgFill} />
               </div>
-              <div style={{ height: 320, overflow: 'hidden' }}>
-                <img src="/basket-4.jpg" alt="Article" style={imgFill} />
-              </div>
+              <p style={{ fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', marginBottom: 8 }}>
+                Feature
+              </p>
+              <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 16, fontWeight: 300, lineHeight: 1.3, color: 'var(--ink)', marginBottom: 12 }}>
+                Sustainable Craft
+              </h3>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, lineHeight: 1.6, color: 'var(--slate)' }}>
+                How tradition and innovation intersect in contemporary design.
+              </p>
             </div>
           </div>
         </div>
