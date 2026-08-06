@@ -42,7 +42,7 @@ export default function Home2() {
       </section>
 
       {/* ── Intro ──────────────────────────────────────── */}
-      <section style={{ background: 'var(--linen)', padding: '60px 60px 40px' }} id="collections">
+      <section style={{ background: '#FFFFFF', padding: '60px 60px 40px' }} id="collections">
         <div style={{ maxWidth: 1400, margin: '0 auto', marginBottom: 40 }}>
           <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.9, color: 'var(--slate)', maxWidth: 800 }}>
             Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
@@ -51,7 +51,7 @@ export default function Home2() {
       </section>
 
       {/* ── Three Column Masonry Layout (NOT ALIGNED) ───── */}
-      <section style={{ background: 'var(--linen)', padding: '0 60px 80px' }}>
+      <section style={{ background: '#FFFFFF', padding: '0 60px 80px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40 }}>
 
@@ -155,7 +155,7 @@ export default function Home2() {
       </section>
 
       {/* ── Journal Section ─────────────────────────────── */}
-      <section style={{ background: 'var(--linen)', padding: '80px 60px', borderTop: '1px solid var(--sand)' }} id="journal">
+      <section style={{ background: '#FFFFFF', padding: '80px 60px', borderTop: '1px solid var(--sand)' }} id="journal">
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 80 }}>
             <div>
