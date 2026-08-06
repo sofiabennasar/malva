@@ -33,7 +33,7 @@ export default function Home2() {
       {/* ── Hero ────────────────────────────────────────── */}
       <section style={{ background: 'white', padding: '120px 60px 60px', marginTop: 60 }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 80, alignItems: 'flex-end', minHeight: 700 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 80, alignItems: 'start' }}>
             {/* Left text - positioned lower */}
             <div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0 }}>
