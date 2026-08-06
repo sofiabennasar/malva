@@ -68,8 +68,8 @@ export default function Home2() {
               </p>
             </div>
 
-            {/* Column 2 - offset by 300px */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 300 }}>
+            {/* Column 2 - offset by 150px */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 150 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
                   [SEE COLLECTION]
