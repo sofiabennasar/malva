@@ -47,13 +47,15 @@ export default function Home2() {
       {/* ── Body ────────────────────────────────────────── */}
       <section style={{ background: 'white', padding: '60px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
+
+            {/* Spanning text across columns 1-2 */}
+            <p style={{ gridColumn: 'span 2', fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+              Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
+            </p>
 
             {/* Column 1 */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0 }}>
-                Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
-              </p>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
