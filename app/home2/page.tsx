@@ -39,7 +39,7 @@ export default function Home2() {
             </p>
           </div>
           <div style={{ width: 885, height: 662, overflow: 'hidden', flexShrink: 0 }}>
-            <img src="/pillow-1c.jpg" alt="Featured textiles" style={imgFill} />
+            <img src="/hero.jpg" alt="Featured textiles" style={imgFill} />
           </div>
         </div>
       </section>
