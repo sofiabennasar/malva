@@ -51,6 +51,12 @@ export default function Home2() {
 
             {/* Column 1 - LEFT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 222, gridColumn: 1, gridRow: 2 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
+                  [SEE COLLECTION]
+                </p>
+                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              </div>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
@@ -68,12 +74,7 @@ export default function Home2() {
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                 Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
               </p>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
-                  [SEE COLLECTION]
-                </p>
-                <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-              </div>
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
             </div>
 
