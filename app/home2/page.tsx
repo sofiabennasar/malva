@@ -71,7 +71,7 @@ export default function Home2() {
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 200 }}>
                 Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
               </p>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 110 }} />
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
             </div>
 
