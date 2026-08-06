@@ -31,7 +31,7 @@ export default function Home2() {
       </header>
 
       {/* ── Hero ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '60px 60px', marginTop: 15 }}>
+      <section style={{ background: 'white', padding: '60px 60px', marginTop: 40 }}>
         <div style={{ display: 'flex', gap: 80, alignItems: 'flex-end' }}>
           <div style={{ flex: 1 }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0 }}>
