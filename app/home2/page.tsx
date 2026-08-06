@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { useState } from "react";
 
 const imgFill: React.CSSProperties = { width: '100%', height: '100%', objectFit: 'cover', display: 'block' };
 
 export default function Home2() {
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   return (
     <>
       {/* ── Header ──────────────────────────────────────── */}
@@ -11,17 +13,17 @@ export default function Home2() {
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </div>
         <nav style={{ display: 'flex', gap: 50, alignItems: 'flex-end' }}>
-          <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
-            Collections
+          <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }} onMouseEnter={() => setHoveredNav('collections')} onMouseLeave={() => setHoveredNav(null)}>
+            {hoveredNav === 'collections' ? '[Collections]' : 'Collections'}
           </Link>
-          <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
-            The Journal
+          <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }} onMouseEnter={() => setHoveredNav('journal')} onMouseLeave={() => setHoveredNav(null)}>
+            {hoveredNav === 'journal' ? '[The Journal]' : 'The Journal'}
           </Link>
-          <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
-            Care & Maintenance
+          <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }} onMouseEnter={() => setHoveredNav('care')} onMouseLeave={() => setHoveredNav(null)}>
+            {hoveredNav === 'care' ? '[Care & Maintenance]' : 'Care & Maintenance'}
           </Link>
-          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
-            Contact
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }} onMouseEnter={() => setHoveredNav('contact')} onMouseLeave={() => setHoveredNav(null)}>
+            {hoveredNav === 'contact' ? '[Contact]' : 'Contact'}
           </Link>
         </nav>
       </header>
