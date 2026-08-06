@@ -50,7 +50,7 @@ export default function Home2() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
 
             {/* Column 1 - LEFT */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 111, gridColumn: 1, gridRow: 2 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 55, gridColumn: 1, gridRow: 2 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
                   [SEE COLLECTION]
