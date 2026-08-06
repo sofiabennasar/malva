@@ -81,8 +81,8 @@ export default function Home2() {
             {/* Column 3 - RIGHT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 3, gridRow: 2 }}>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 225 }}>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 113 }}>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                   [THE JOURNAL]
                 </p>
                 <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
