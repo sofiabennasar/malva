@@ -54,8 +54,8 @@ export default function Home2() {
               Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
             </p>
 
-            {/* Column 1 */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+            {/* Column 1 - offset to align top of image 1 with middle of column 3 image 1 */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 424 }}>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0 }}>
