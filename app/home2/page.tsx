@@ -149,7 +149,7 @@ export default function Home2() {
       </section>
 
       {/* ── Footer ──────────────────────────────────────── */}
-      <footer style={{ background: '#ffffff', padding: '60px 60px 40px 60px', borderTop: '1px solid #f0f0f0' }}>
+      <footer style={{ background: '#ffffff', padding: '150px 60px 40px 60px', borderTop: '1px solid #f0f0f0' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Three-Column Layout */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 40 }}>
