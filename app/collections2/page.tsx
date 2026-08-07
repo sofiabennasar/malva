@@ -62,13 +62,13 @@ export default function Collections2() {
 
           {/* Row 2 */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-2-1.jpg" alt="Collection 2-1" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-2-2.jpg" alt="Collection 2-2" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-2-3.jpg" alt="Collection 2-3" style={imgFill} />
             </div>
           </div>
