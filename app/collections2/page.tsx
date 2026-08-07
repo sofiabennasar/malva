@@ -1,0 +1,93 @@
+'use client';
+
+import Link from "next/link";
+import { useState } from "react";
+
+const imgFill: React.CSSProperties = { width: '100%', height: '100%', objectFit: 'cover', display: 'block' };
+
+export default function Collections2() {
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+  return (
+    <div style={{ background: '#ffffff', minHeight: '100vh' }}>
+      {/* ── Header ──────────────────────────────────────── */}
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000 }}>
+        <div style={{ width: 508, fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end' }}>
+          estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
+        </div>
+        <nav style={{ display: 'flex', gap: 50, alignItems: 'flex-end' }}>
+          <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'collections' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('collections')} onMouseLeave={() => setHoveredNav(null)}>
+            Collections
+          </Link>
+          <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'journal' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('journal')} onMouseLeave={() => setHoveredNav(null)}>
+            The Journal
+          </Link>
+          <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'care' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('care')} onMouseLeave={() => setHoveredNav(null)}>
+            Care & Maintenance
+          </Link>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'contact' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('contact')} onMouseLeave={() => setHoveredNav(null)}>
+            Contact
+          </Link>
+        </nav>
+      </header>
+
+      {/* ── Intro Section ──────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: '60px 60px', marginTop: 50 }}>
+        <div style={{ marginLeft: '33.33%', maxWidth: '66.67%' }}>
+          <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 20px 0', letterSpacing: '0.02em' }}>
+            INITIAL EDITION
+          </h1>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+            A collection of one-of-a-kind samples developed to explore the materials, techniques, and creative possibilities of the artisans we work with. Together, these pieces mark the beginning of the collections to come.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Collections Grid ──────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: '60px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          {/* Rows will be added here */}
+        </div>
+      </section>
+
+      {/* ── Footer ──────────────────────────────────────── */}
+      <footer style={{ background: '#ffffff', padding: '150px 60px 30px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          {/* Three-Column Layout */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 20 }}>
+
+            {/* Left Column - Contact */}
+            <div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                <a href="mailto:sales@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
+                  sales@estudiomalva.com
+                </a>
+              </p>
+            </div>
+
+            {/* Middle Column - Made in Argentina */}
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                Made in Argentina
+              </p>
+            </div>
+
+            {/* Right Column - Social */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+                @estudio.malva
+              </a>
+            </div>
+
+          </div>
+
+          {/* Bottom Copyright */}
+          <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 12, textAlign: 'center' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: 0, opacity: 0.7 }}>
+              © 2026 estudio malva. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
