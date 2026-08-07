@@ -52,16 +52,16 @@ export default function Home2() {
             {/* Column 1 - LEFT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 110, gridColumn: 1, gridRow: 2 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 110 }}>
-                <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', textTransform: 'uppercase', margin: 0, textAlign: 'center' }}>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
                   [SEE COLLECTION]
                 </p>
                 <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
               </div>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0, marginTop: 107, textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 107, textAlign: 'center' }}>
                 Raw textures. Modern spaces.
               </p>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 107 }} />
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0, marginTop: 190 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 190 }}>
                 Discover a new generation of artisans transforming recycled plastic through time-honored techniques and redefining the possibilities of traditional design.
               </p>
             </div>
@@ -73,7 +73,7 @@ export default function Home2() {
               </p>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 110 }} />
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 150 }} />
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0, marginTop: 135, textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 135, textAlign: 'center' }}>
                 [COMING SOON]
               </p>
             </div>
