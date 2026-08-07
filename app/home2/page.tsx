@@ -8,7 +8,7 @@ const imgFill: React.CSSProperties = { width: '100%', height: '100%', objectFit:
 export default function Home2() {
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   return (
-    <>
+    <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       {/* ── Header ──────────────────────────────────────── */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000 }}>
         <div style={{ width: 508, fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end' }}>
@@ -147,6 +147,6 @@ export default function Home2() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
