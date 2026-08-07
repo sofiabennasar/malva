@@ -157,8 +157,8 @@ export default function Home2() {
             {/* Left Column - Contact */}
             <div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
-                <a href="mailto:hello@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
-                  hello@estudiomalva.com
+                <a href="mailto:sales@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
+                  sales@estudiomalva.com
                 </a>
               </p>
             </div>
