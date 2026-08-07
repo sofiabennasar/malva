@@ -149,10 +149,10 @@ export default function Home2() {
       </section>
 
       {/* ── Footer ──────────────────────────────────────── */}
-      <footer style={{ background: '#ffffff', padding: '120px 60px 60px 60px', borderTop: '1px solid #f0f0f0' }}>
+      <footer style={{ background: '#ffffff', padding: '60px 60px 40px 60px', borderTop: '1px solid #f0f0f0' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Three-Column Layout */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 80, marginBottom: 80 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 40 }}>
 
             {/* Left Column - Contact */}
             <div>
@@ -180,7 +180,7 @@ export default function Home2() {
           </div>
 
           {/* Bottom Copyright */}
-          <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 40, textAlign: 'center' }}>
+          <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 20, textAlign: 'center' }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: 0, opacity: 0.7 }}>
               © 2026 estudio malva. All rights reserved.
             </p>
