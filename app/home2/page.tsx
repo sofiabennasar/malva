@@ -172,8 +172,8 @@ export default function Home2() {
 
             {/* Right Column - Social */}
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
-                Instagram
+              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+                @estudio.malva
               </a>
             </div>
 
