@@ -61,7 +61,7 @@ export default function Home2() {
                 Raw textures. Modern spaces.
               </p>
               <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden', marginTop: 107 }} />
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'var(--ink)', margin: 0, marginTop: 190 }}>
                 Discover a new generation of artisans transforming recycled plastic through time-honored techniques and redefining the possibilities of traditional design.
               </p>
             </div>
