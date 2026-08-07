@@ -10,7 +10,7 @@ export default function Home2() {
   return (
     <>
       {/* ── Header ──────────────────────────────────────── */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: 'white', zIndex: 1000 }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000 }}>
         <div style={{ width: 508, fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end' }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </div>
@@ -31,7 +31,7 @@ export default function Home2() {
       </header>
 
       {/* ── Hero ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '60px 60px', marginTop: 50 }}>
+      <section style={{ background: '#ffffff', padding: '60px 60px', marginTop: 50 }}>
         <div style={{ display: 'flex', gap: 80, alignItems: 'flex-end' }}>
           <div style={{ flex: 1 }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0 }}>
@@ -45,7 +45,7 @@ export default function Home2() {
       </section>
 
       {/* ── Body ────────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '8px 60px' }}>
+      <section style={{ background: '#ffffff', padding: '8px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
 
@@ -95,13 +95,13 @@ export default function Home2() {
       </section>
 
       {/* ── Values ──────────────────────────────────────── */}
-      <section style={{ background: 'white', padding: '8px 60px', marginTop: 120 }}>
+      <section style={{ background: '#ffffff', padding: '8px 60px', marginTop: 120 }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
 
             {/* Column 1 - Direct Alliance */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0 }}>
+              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-1.jpg" alt="Direct Alliance" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -116,7 +116,7 @@ export default function Home2() {
 
             {/* Column 2 - Fair Exchange */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0 }}>
+              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-2.jpg" alt="Fair Exchange" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -131,7 +131,7 @@ export default function Home2() {
 
             {/* Column 3 - Living Craft */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0 }}>
+              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-3.jpg" alt="Living Craft" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
