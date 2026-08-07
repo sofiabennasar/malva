@@ -84,14 +84,16 @@ export default function Collections2() {
           </div>
 
           {/* Row 4 */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+          <div style={{ display: 'flex', gap: 0, alignItems: 'flex-start', marginBottom: 40 }}>
+            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-4-1.jpg" alt="Collection 4-1" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+            <div style={{ width: 20 }} />
+            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-4-2.jpg" alt="Collection 4-2" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+            <div style={{ width: 163 }} />
+            <div style={{ width: 485, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-4-3.jpg" alt="Collection 4-3" style={imgFill} />
             </div>
           </div>
