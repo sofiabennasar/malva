@@ -46,7 +46,7 @@ export default function Collections2() {
       <section style={{ background: '#ffffff', padding: '60px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Row 1 */}
-          <div style={{ display: 'flex', gap: 0, alignItems: 'flex-start', marginBottom: 40 }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 40 }}>
             <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-1-1.jpg" alt="Collection 1-1" style={imgFill} />
             </div>
@@ -54,7 +54,7 @@ export default function Collections2() {
             <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-1-2.jpg" alt="Collection 1-2" style={imgFill} />
             </div>
-            <div style={{ width: 163 }} />
+            <div style={{ flex: 1 }} />
             <div style={{ width: 485, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
               <img src="/c-1-3.jpg" alt="Collection 1-3" style={imgFill} />
             </div>
