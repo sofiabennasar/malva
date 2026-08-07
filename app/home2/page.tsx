@@ -93,6 +93,54 @@ export default function Home2() {
           </div>
         </div>
       </section>
+
+      {/* ── Values ──────────────────────────────────────── */}
+      <section style={{ background: 'white', padding: '8px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 380px)', gap: 40, justifyContent: 'space-between' }}>
+
+            {/* Column 1 - Direct Alliance */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
+                  Direct Alliance
+                </h3>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                  We work directly with the artisans, workshops, and families behind every object, creating transparent relationships beyond traditional supply chains.
+                </p>
+              </div>
+            </div>
+
+            {/* Column 2 - Fair Exchange */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
+                  Fair Exchange
+                </h3>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                  Makers set the value of their own work, ensuring direct and equitable compensation that honors their skill, time, and craftsmanship.
+                </p>
+              </div>
+            </div>
+
+            {/* Column 3 - Living Craft */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
+                  Living Craft
+                </h3>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                  We support techniques and knowledge at risk of disappearing, bringing traditional craft into contemporary spaces so it can continue to evolve and remain part of everyday life.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
     </>
   );
 }
