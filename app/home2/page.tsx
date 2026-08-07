@@ -55,14 +55,14 @@ export default function Home2() {
                 <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
                   [SEE COLLECTION]
                 </p>
-                <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                   <img src="/1-1.jpg" alt="Collection" style={imgFill} />
                 </div>
               </div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 107, textAlign: 'center' }}>
                 Raw textures. Modern spaces.
               </p>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 107 }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 107 }}>
                 <img src="/1-2.jpg" alt="Raw textures" style={imgFill} />
               </div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 190 }}>
@@ -75,10 +75,10 @@ export default function Home2() {
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 200 }}>
                 Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
               </p>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 110 }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 110 }}>
                 <img src="/2-1.jpg" alt="First editions" style={imgFill} />
               </div>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 150 }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 150 }}>
                 <img src="/2-2.jpg" alt="Craft collection" style={imgFill} />
               </div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: 135, textAlign: 'center' }}>
@@ -88,18 +88,18 @@ export default function Home2() {
 
             {/* Column 3 - RIGHT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: 0, gridColumn: 3, gridRow: 2 }}>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/3-1.jpg" alt="Column 3 image 1" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 133, marginTop: 132 }}>
                 <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
                   [THE JOURNAL]
                 </p>
-                <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                   <img src="/3-2.jpg" alt="Journal" style={imgFill} />
                 </div>
               </div>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 75 }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: 75 }}>
                 <img src="/3-3.jpg" alt="Column 3 image 3" style={imgFill} />
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function Home2() {
 
             {/* Column 1 - Direct Alliance */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-1.jpg" alt="Direct Alliance" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -130,7 +130,7 @@ export default function Home2() {
 
             {/* Column 2 - Fair Exchange */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-2.jpg" alt="Fair Exchange" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -145,7 +145,7 @@ export default function Home2() {
 
             {/* Column 3 - Living Craft */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 366, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-3.jpg" alt="Living Craft" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
