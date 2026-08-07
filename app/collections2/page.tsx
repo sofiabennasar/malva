@@ -138,6 +138,17 @@ export default function Collections2() {
               <img src="/c-7-3.jpg" alt="Collection 7-3" style={imgFill} />
             </div>
           </div>
+
+          {/* Row 8 */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', marginBottom: 40 }}>
+            <div style={{ width: 298, height: 447, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <img src="/c-8-1.jpg" alt="Collection 8-1" style={imgFill} />
+            </div>
+            <div style={{ width: 20 }} />
+            <div style={{ width: 298, height: 447, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <img src="/c-8-2.jpg" alt="Collection 8-2" style={imgFill} />
+            </div>
+          </div>
         </div>
       </section>
 
