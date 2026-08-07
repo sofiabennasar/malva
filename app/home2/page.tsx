@@ -101,7 +101,9 @@ export default function Home2() {
 
             {/* Column 1 - Direct Alliance */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0 }}>
+                <img src="/v-1.jpg" alt="Direct Alliance" style={imgFill} />
+              </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
                   Direct Alliance
@@ -114,7 +116,9 @@ export default function Home2() {
 
             {/* Column 2 - Fair Exchange */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0 }}>
+                <img src="/v-2.jpg" alt="Fair Exchange" style={imgFill} />
+              </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
                   Fair Exchange
@@ -127,7 +131,9 @@ export default function Home2() {
 
             {/* Column 3 - Living Craft */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 566, background: '#ddd', overflow: 'hidden' }} />
+              <div style={{ width: 380, height: 566, overflow: 'hidden', flexShrink: 0 }}>
+                <img src="/v-3.jpg" alt="Living Craft" style={imgFill} />
+              </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
                   Living Craft
