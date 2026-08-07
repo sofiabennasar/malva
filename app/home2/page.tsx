@@ -156,50 +156,25 @@ export default function Home2() {
 
             {/* Left Column - Contact */}
             <div>
-              <h4 style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 20px 0', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Contact
-              </h4>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginBottom: 16 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                 <a href="mailto:hello@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
                   hello@estudiomalva.com
                 </a>
               </p>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
-                Buenos Aires, Argentina
+            </div>
+
+            {/* Middle Column - Made in Argentina */}
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                Made in Argentina
               </p>
             </div>
 
-            {/* Middle Column - Navigation */}
-            <div>
-              <h4 style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 20px 0', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Navigate
-              </h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
-                  Collections
-                </Link>
-                <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
-                  The Journal
-                </Link>
-                <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
-                  Care & Maintenance
-                </Link>
-              </div>
-            </div>
-
             {/* Right Column - Social */}
-            <div>
-              <h4 style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 20px 0', fontWeight: 400, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Follow
-              </h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
-                  Instagram
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
-                  Facebook
-                </a>
-              </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+                Instagram
+              </a>
             </div>
 
           </div>
