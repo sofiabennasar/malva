@@ -221,37 +221,41 @@ export default function Collections2() {
           <div style={{ background: '#ffffff', width: '88%', maxWidth: 1200, height: 'auto', maxHeight: '85vh', overflow: 'hidden', borderRadius: 0, display: 'flex' }} onClick={(e) => e.stopPropagation()}>
 
             {/* Left Column */}
-            <div style={{ flex: 0, width: 240, padding: '50px 40px', background: '#ffffff', display: 'flex', flexDirection: 'column', gap: 24, overflowY: 'auto' }}>
-              <h2 style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, fontWeight: 600, color: 'var(--ink)', margin: 0, letterSpacing: '0.03em', textTransform: 'uppercase' }}>
-                {selectedProduct.name}
-              </h2>
+            <div style={{ flex: 0, width: 280, padding: '50px 40px', background: '#ffffff', display: 'flex', flexDirection: 'column', gap: 18, overflowY: 'auto', justifyContent: 'space-between' }}>
+              <div>
+                <h2 style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: 0 }}>
+                  PRODUCT
+                </h2>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 600, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Material</p>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, lineHeight: 1.5 }}>{selectedProduct.material}</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 22 }}>
+                  <div>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>Material</p>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0', lineHeight: 1.4 }}>{selectedProduct.material}</p>
+                  </div>
+
+                  <div>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>Size</p>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0', lineHeight: 1.4 }}>{selectedProduct.size}</p>
+                  </div>
+
+                  <div>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>Description</p>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0', lineHeight: 1.4 }}>{selectedProduct.description}</p>
+                  </div>
+
+                  <div>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>Made by</p>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0' }}>{selectedProduct.madeBy}</p>
+                  </div>
+
+                  <div>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>Made in</p>
+                    <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0' }}>{selectedProduct.madeIn}</p>
+                  </div>
+                </div>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 600, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Size</p>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, lineHeight: 1.5 }}>{selectedProduct.size}</p>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 600, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Description</p>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, lineHeight: 1.5 }}>{selectedProduct.description}</p>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 600, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made by</p>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>{selectedProduct.madeBy}</p>
-              </div>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 600, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made in</p>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0 }}>{selectedProduct.madeIn}</p>
-              </div>
-
-              <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: 'none', padding: '12px 0', cursor: 'pointer', marginTop: 'auto', textAlign: 'left', textDecoration: 'none', letterSpacing: '0.05em' }} onClick={() => window.location.href = '/contact'}>
+              <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: 'none', padding: 0, cursor: 'pointer', textAlign: 'left', textDecoration: 'none', letterSpacing: 0, marginTop: 20 }} onClick={() => window.location.href = '/contact'}>
                 [INQUIRE]
               </button>
             </div>
@@ -262,7 +266,7 @@ export default function Collections2() {
             </div>
 
             {/* Right Column */}
-            <div style={{ flex: 0, width: 240, padding: '50px 40px', background: '#ffffff', display: 'flex', flexDirection: 'column', gap: 16, overflowY: 'auto' }}>
+            <div style={{ flex: 0, width: 280, padding: '50px 40px', background: '#ffffff', display: 'flex', flexDirection: 'column', gap: 16, overflowY: 'auto' }}>
               <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 11, fontWeight: 600, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                 Care
               </h3>
