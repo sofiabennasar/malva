@@ -257,15 +257,18 @@ export default function Collections2() {
             </button>
 
             {/* Modal Content */}
-            <div style={{ display: 'flex', gap: 60, padding: '60px', height: '100%' }}>
+            <div style={{ display: 'flex', gap: 40, padding: '60px', height: '100%' }}>
 
               {/* Left Column - Product Info */}
-              <div style={{ flex: 0, width: 350, display: 'flex', flexDirection: 'column', gap: 24 }}>
+              <div style={{ flex: 0, width: 280, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between' }}>
                 <div>
-                  <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                    {selectedProduct.name}
+                  <h2 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                    PRODUCT
                   </h2>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 28 }}>
+                  <h3 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: '12px 0 0 0', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                    {selectedProduct.name}
+                  </h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: 32 }}>
                     <div>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Material</p>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.material}</p>
@@ -287,30 +290,35 @@ export default function Collections2() {
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made in</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made In</p>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeIn}</p>
                     </div>
                   </div>
                 </div>
 
-                <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: '1px solid var(--ink)', padding: '12px 20px', cursor: 'pointer', textAlign: 'center', marginTop: 'auto', textTransform: 'uppercase', letterSpacing: '0.05em' }} onClick={() => window.location.href = '/contact'}>
-                  INQUIRE
+                <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: '1px solid var(--ink)', padding: '12px 20px', cursor: 'pointer', textAlign: 'center', textTransform: 'uppercase', letterSpacing: '0.05em' }} onClick={() => window.location.href = '/contact'}>
+                  [INQUIRE]
                 </button>
               </div>
 
-              {/* Center Column - Image */}
-              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f5f5f5', padding: '20px' }}>
-                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '400px', maxHeight: '400px', objectFit: 'contain' }} />
-              </div>
+              {/* Center/Right - Image and Care */}
+              <div style={{ flex: 1, display: 'flex', gap: 40, alignItems: 'flex-start' }}>
+                {/* Image */}
+                <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#e8e8e8' }}>
+                  <div style={{ width: 330, height: 428, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <img src={selectedProduct.image} alt={selectedProduct.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                </div>
 
-              {/* Right Column - Care Instructions */}
-              <div style={{ flex: 0, width: 350, display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                  Care Instructions
-                </h3>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '20px 0 0 0', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
-                  {selectedProduct.care}
-                </p>
+                {/* Right Column - Care Instructions */}
+                <div style={{ flex: 0, width: 280, display: 'flex', flexDirection: 'column' }}>
+                  <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                    Care
+                  </h3>
+                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '20px 0 0 0', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
+                    {selectedProduct.care}
+                  </p>
+                </div>
               </div>
 
             </div>
