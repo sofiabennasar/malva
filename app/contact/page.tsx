@@ -42,7 +42,7 @@ function ContactForm() {
           <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Collections
           </Link>
-          <Link href="/journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Journal
           </Link>
           <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
