@@ -1,7 +1,7 @@
 'use client';
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 const inputStyle: React.CSSProperties = {
@@ -10,7 +10,7 @@ const inputStyle: React.CSSProperties = {
   padding: '8px 0', outline: 'none', width: '100%',
 };
 
-export default function Contact() {
+function ContactForm() {
   const params = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -171,5 +171,13 @@ export default function Contact() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function Contact() {
+  return (
+    <Suspense>
+      <ContactForm />
+    </Suspense>
   );
 }
