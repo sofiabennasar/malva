@@ -262,12 +262,9 @@ export default function Collections2() {
               {/* Left Column - Product Info */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between', minWidth: 0 }}>
                 <div>
-                  <h2 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
-                    PRODUCT
-                  </h2>
-                  <h3 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: '12px 0 0 0', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     {selectedProduct.name}
-                  </h3>
+                  </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: 32 }}>
                     <div>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Material</p>
