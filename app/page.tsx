@@ -8,6 +8,8 @@ const imgFill: React.CSSProperties = { width: '100%', height: '100%', objectFit:
 export default function Home() {
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [showNewsletter, setShowNewsletter] = useState(false);
+  const [newsletterForm, setNewsletterForm] = useState({ name: '', email: '' });
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -15,6 +17,20 @@ export default function Home() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setShowNewsletter(false);
+    };
+    if (showNewsletter) window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [showNewsletter]);
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setShowNewsletter(false);
+    setNewsletterForm({ name: '', email: '' });
+  };
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       {/* ── Header ──────────────────────────────────────── */}
@@ -57,9 +73,9 @@ export default function Home() {
             {/* Column 1 - LEFT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: isMobile ? 0 : 110, gridColumn: isMobile ? undefined : 1, gridRow: isMobile ? undefined : 2 }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 20 : 110 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center', textDecoration: 'none' }}>
                   [SEE COLLECTION]
-                </p>
+                </Link>
                 <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                   <img src="/1-1.jpg" alt="Collection" style={imgFill} />
                 </div>
@@ -86,9 +102,9 @@ export default function Home() {
               <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 150 }}>
                 <img src="/2-2.jpg" alt="Craft collection" style={imgFill} />
               </div>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 135, textAlign: 'center' }}>
+              <button onClick={() => setShowNewsletter(true)} style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 135, textAlign: 'center', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
                 [COMING SOON]
-              </p>
+              </button>
             </div>
 
             {/* Column 3 - RIGHT */}
@@ -97,9 +113,9 @@ export default function Home() {
                 <img src="/3-1.jpg" alt="Column 3 image 1" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 20 : 133, marginTop: isMobile ? 0 : 132 }}>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center', textDecoration: 'none' }}>
                   [THE JOURNAL]
-                </p>
+                </Link>
                 <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                   <img src="/3-2.jpg" alt="Journal" style={imgFill} />
                 </div>
@@ -206,6 +222,48 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {/* ── Newsletter Modal ──────────────────────────────────────── */}
+      {showNewsletter && (
+        <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2000 }} onClick={() => setShowNewsletter(false)}>
+          <div style={{ background: '#ffffff', padding: '60px', maxWidth: 500, width: isMobile ? '90%' : '100%', position: 'relative', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }} onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowNewsletter(false)} style={{ position: 'absolute', top: 20, right: 20, background: 'none', border: 'none', fontSize: 24, cursor: 'pointer', color: 'var(--ink)', padding: 0, width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              ×
+            </button>
+            <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 32, fontWeight: 300, color: 'var(--ink)', margin: '0 0 30px 0', letterSpacing: '0.02em' }}>
+              Be the first to know!
+            </h2>
+            <form onSubmit={handleNewsletterSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0 }}>Name</label>
+                <input
+                  type="text"
+                  required
+                  style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', background: 'transparent', border: 'none', borderBottom: '1px solid #ccc', padding: '8px 0', outline: 'none', width: '100%' }}
+                  value={newsletterForm.name}
+                  onChange={(e) => setNewsletterForm({ ...newsletterForm, name: e.target.value })}
+                />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0 }}>Email</label>
+                <input
+                  type="email"
+                  required
+                  style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', background: 'transparent', border: 'none', borderBottom: '1px solid #ccc', padding: '8px 0', outline: 'none', width: '100%' }}
+                  value={newsletterForm.email}
+                  onChange={(e) => setNewsletterForm({ ...newsletterForm, email: e.target.value })}
+                />
+              </div>
+              <button
+                type="submit"
+                style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '12px 24px', background: 'var(--ink)', color: '#ffffff', border: 'none', cursor: 'pointer', alignSelf: 'flex-start' }}
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
