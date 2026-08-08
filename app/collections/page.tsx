@@ -260,7 +260,7 @@ export default function Collections2() {
             <div style={{ display: 'flex', gap: 40, padding: '60px', height: '100%' }}>
 
               {/* Left Column - Product Info */}
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between', minWidth: 0 }}>
+              <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between', minWidth: 0 }}>
                 <div>
                   <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     {selectedProduct.name}
@@ -295,12 +295,12 @@ export default function Collections2() {
               </div>
 
               {/* Center Column - Image */}
-              <div style={{ flex: 1.2, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
+              <div style={{ flex: 1.44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
                 <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
               </div>
 
               {/* Right Column - Care Instructions */}
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 32 }}>
+              <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 0 }}>
                   <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
                     Care & Maintenance
                   </p>
