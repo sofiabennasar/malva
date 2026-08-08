@@ -295,12 +295,12 @@ export default function Collections2() {
               </div>
 
               {/* Center Column - Image */}
-              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#e8e8e8', minWidth: 0 }}>
+              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
                 <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }} />
               </div>
 
               {/* Right Column - Care Instructions */}
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 70 }}>
                   <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                     Care
                   </p>
