@@ -46,7 +46,7 @@ export default function Contact() {
             Journal
           </Link>
           <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
-            Contact<span style={{ color: 'var(--clay)' }}>•</span>
+            Contact
           </Link>
         </nav>
       </header>
