@@ -300,7 +300,7 @@ export default function Collections2() {
               </div>
 
               {/* Right Column - Care Instructions */}
-              <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 70 }}>
+              <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 45 }}>
                   <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
                     Care & Maintenance
                   </p>
