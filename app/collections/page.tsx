@@ -18,7 +18,7 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 'c-1-1', name: 'BASKET 001', material: 'Carandillo Palm Fiber', size: '17" x 13" x 13"', description: 'A handwoven basket from Argentina featuring natural palm fiber', madeBy: 'Artisan Collective', madeIn: 'Argentina', care: 'Dust with soft brush. Keep away from moisture.', image: '/c-1-1.jpg' },
+  { id: 'c-1-1', name: 'BASKET 001', material: 'Carandillo Palm Fiber', size: '17" x 13" x 13"', description: 'A structured basket woven from wild-harvested carandillo palm fiber using a flat interlocking technique. The dense weave forms a sculptural silhouette, while a contrasting geometric band emphasizes the natural variation and texture of the material.', madeBy: 'Sofia', madeIn: 'Misiones, Argentina', care: 'Use a soft, dry cloth to remove dust from the weave. Do not submerge or soak natural-fiber baskets in water.\n\nKeep away from direct sunlight, which may fade natural tones and weaken the fibers over time. Avoid humid or damp environments, including bathrooms and basements, to prevent mold and mildew.\n\nStore in a well-ventilated space at a stable temperature. To preserve the shape, avoid placing heavy objects on top.', image: '/c-1-1.jpg' },
   { id: 'c-1-2', name: 'TEXTILE 001', material: 'Recycled Plastic', size: '48" x 72"', description: 'Contemporary textile woven from sustainably sourced recycled materials', madeBy: 'Weaving Studio', madeIn: 'Argentina', care: 'Gentle hand wash. Air dry completely.', image: '/c-1-2.jpg' },
   { id: 'c-1-3', name: 'VESSEL 001', material: 'Clay', size: '12" H x 10" W', description: 'Hand-thrown ceramic vessel with natural glazing', madeBy: 'Ceramics Workshop', madeIn: 'Argentina', care: 'Wash by hand. Not dishwasher safe.', image: '/c-1-3.jpg' },
   { id: 'c-2-1', name: 'BASKET 002', material: 'Palm Fiber', size: '15" x 11" x 11"', description: 'Woven palm fiber basket', madeBy: 'Artisan Collective', madeIn: 'Argentina', care: 'Keep dry and dust regularly.', image: '/c-2-1.jpg' },
@@ -262,38 +262,38 @@ export default function Collections2() {
               {/* Left Column - Product Info */}
               <div style={{ flex: 0, width: 350, display: 'flex', flexDirection: 'column', gap: 24 }}>
                 <div>
-                  <h2 style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     {selectedProduct.name}
                   </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 20, marginTop: 28 }}>
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase' }}>Material</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '6px 0 0 0', lineHeight: 1.5 }}>{selectedProduct.material}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Material</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.material}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase' }}>Size</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '6px 0 0 0', lineHeight: 1.5 }}>{selectedProduct.size}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Size</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.size}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase' }}>Description</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '6px 0 0 0', lineHeight: 1.5 }}>{selectedProduct.description}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Description</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.description}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase' }}>Made by</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '6px 0 0 0' }}>{selectedProduct.madeBy}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made by</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeBy}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase' }}>Made in</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '6px 0 0 0' }}>{selectedProduct.madeIn}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made in</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeIn}</p>
                     </div>
                   </div>
                 </div>
 
-                <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: '1px solid var(--ink)', padding: '12px 20px', cursor: 'pointer', textAlign: 'center', marginTop: 'auto', textTransform: 'uppercase', letterSpacing: '0.05em' }} onClick={() => window.location.href = '/contact'}>
+                <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: '1px solid var(--ink)', padding: '12px 20px', cursor: 'pointer', textAlign: 'center', marginTop: 'auto', textTransform: 'uppercase', letterSpacing: '0.05em' }} onClick={() => window.location.href = '/contact'}>
                   INQUIRE
                 </button>
               </div>
@@ -305,10 +305,10 @@ export default function Collections2() {
 
               {/* Right Column - Care Instructions */}
               <div style={{ flex: 0, width: 350, display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                   Care Instructions
                 </h3>
-                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '20px 0 0 0', lineHeight: 1.6 }}>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '20px 0 0 0', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
                   {selectedProduct.care}
                 </p>
               </div>
