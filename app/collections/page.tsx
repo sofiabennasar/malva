@@ -283,7 +283,7 @@ export default function Collections2() {
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = '/contact'}>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = `/contact?product=${encodeURIComponent(selectedProduct.name)}`}>
                         [Inquire]
                       </p>
                     </div>

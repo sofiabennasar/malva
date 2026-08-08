@@ -1,7 +1,8 @@
 'use client';
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 const inputStyle: React.CSSProperties = {
   fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)',
@@ -10,9 +11,17 @@ const inputStyle: React.CSSProperties = {
 };
 
 export default function Contact() {
+  const params = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', product: '', message: '' });
+
+  useEffect(() => {
+    const productParam = params.get('product');
+    if (productParam) {
+      setFormData(prev => ({ ...prev, product: decodeURIComponent(productParam) }));
+    }
+  }, [params]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -93,6 +102,16 @@ export default function Contact() {
                   style={inputStyle}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Product</label>
+                <input
+                  type="text"
+                  style={inputStyle}
+                  value={formData.product}
+                  onChange={(e) => setFormData({ ...formData, product: e.target.value })}
                 />
               </div>
 
