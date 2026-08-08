@@ -285,12 +285,14 @@ export default function Collections2() {
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Made by</p>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeBy}, {selectedProduct.madeIn}</p>
                     </div>
+
+                    <div>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = '/contact'}>
+                        Inquire
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <button style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', background: 'transparent', border: '1px solid var(--ink)', padding: '12px 20px', cursor: 'pointer', textAlign: 'center', textTransform: 'uppercase', letterSpacing: '0.05em' }} onClick={() => window.location.href = '/contact'}>
-                  [INQUIRE]
-                </button>
               </div>
 
               {/* Center Column - Image */}
