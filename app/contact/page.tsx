@@ -15,6 +15,15 @@ function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', product: '', message: '' });
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const productParam = params.get('product');
@@ -34,18 +43,18 @@ function ContactForm() {
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       {/* Header */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 60px', background: '#ffffff', zIndex: 1000, borderBottom: '1px solid #f0f0f0' }}>
-        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontSize: 32, fontWeight: 300, color: 'var(--ink)', textDecoration: 'none', letterSpacing: '0.02em' }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 20px 12px 20px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
+        <Link href="/" style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start', textDecoration: 'none' }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </Link>
-        <nav style={{ display: 'flex', gap: 40, alignItems: 'center' }}>
-          <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+        <nav style={{ display: 'flex', gap: isMobile ? 16 : 50, alignItems: 'flex-end', flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-end', width: isMobile ? '100%' : 'auto' }}>
+          <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'collections' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('collections')} onMouseLeave={() => setHoveredNav(null)}>
             Collections
           </Link>
-          <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'journal' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('journal')} onMouseLeave={() => setHoveredNav(null)}>
             Journal
           </Link>
-          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'contact' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('contact')} onMouseLeave={() => setHoveredNav(null)}>
             Contact
           </Link>
         </nav>
