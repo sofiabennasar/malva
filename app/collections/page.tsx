@@ -299,8 +299,8 @@ export default function Collections2() {
               </div>
 
               {/* Center Column - Image */}
-              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f5f5f5' }}>
-                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#f5f5f5', padding: '20px' }}>
+                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '600px', maxHeight: '600px', objectFit: 'contain' }} />
               </div>
 
               {/* Right Column - Care Instructions */}
