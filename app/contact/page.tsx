@@ -1,165 +1,122 @@
 'use client';
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useState, Suspense } from "react";
+import { useState } from "react";
 
 const inputStyle: React.CSSProperties = {
   fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)',
-  background: 'transparent', border: 'none', borderBottom: '1px solid var(--sand)',
-  padding: '10px 0', outline: 'none', width: '100%',
-};
-const labelStyle: React.CSSProperties = {
-  fontFamily: 'var(--font-mono)', fontSize: 9, letterSpacing: '0.14em',
-  textTransform: 'uppercase', color: 'var(--slate)',
+  background: 'transparent', border: 'none', borderBottom: '1px solid #ccc',
+  padding: '8px 0', outline: 'none', width: '100%',
 };
 
-function ContactForm() {
-  const params = useSearchParams();
-  const [category, setCategory] = useState(params.get('category') ?? '');
-  const [product, setProduct] = useState(params.get('product')?.replace(/\+/g, ' ') ?? '');
+export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSending(true);
+    // Form submission logic here
+    setSending(false);
+    setSubmitted(true);
+  };
 
   return (
-    <div className="pg" style={{ background: 'var(--linen)', padding: 72, display: 'flex', flexDirection: 'column', gap: 24 }}>
-
+    <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       {/* Header */}
-      <div className="hdr" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', padding: '36px 52px', alignItems: 'center' }}>
-        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', lineHeight: 0.6, color: 'var(--ink)' }}>
-          <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
-          <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 60px', background: '#ffffff', zIndex: 1000, borderBottom: '1px solid #f0f0f0' }}>
+        <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontSize: 32, fontWeight: 300, color: 'var(--ink)', textDecoration: 'none', letterSpacing: '0.02em' }}>
+          estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </Link>
-        <Link href="/" className="hdr-back" style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', gap: 8, fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--slate)', opacity: 0.7 }}>
-          ← Home
-        </Link>
-      </div>
+        <nav style={{ display: 'flex', gap: 40, alignItems: 'center' }}>
+          <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+            Collections
+          </Link>
+          <Link href="/journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+            Journal
+          </Link>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+            Contact<span style={{ color: 'var(--clay)' }}>•</span>
+          </Link>
+        </nav>
+      </header>
 
-      {/* Contact card */}
-      <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '70vh' }}>
+      {/* Main Content */}
+      <div style={{ display: 'flex', paddingTop: 80, minHeight: '100vh' }}>
+        {/* Left: Image */}
+        <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5' }}>
+          <img
+            src="/contact-hero.jpg"
+            alt="Fibers"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
+        </div>
 
-        {/* Form side */}
-        <div className="contact-side" style={{ padding: '72px 64px', display: 'flex', flexDirection: 'column' }}>
-          <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(32px, 4vw, 56px)', fontWeight: 300, lineHeight: 1.1, color: 'var(--ink)', marginBottom: 48 }}>
-            Get in<br />touch.
-          </h1>
-
-          {submitted ? (
-            <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 18, color: 'var(--moss)' }}>
-              Thank you — we'll be in touch soon.
+        {/* Right: Contact Info & Form */}
+        <div style={{ flex: 1, padding: '60px', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
+          {/* Contact Info */}
+          <div style={{ marginBottom: 60 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 8px 0', fontWeight: 400 }}>
+              @estudio.malva
             </p>
+            <a href="mailto:sales@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', display: 'block' }}>
+              sales@estudiomalva.com
+            </a>
+          </div>
+
+          {/* Form */}
+          {submitted ? (
+            <div style={{ padding: '40px', border: '1px solid #e0e0e0', textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'var(--ink)', margin: 0 }}>
+                Thank you for reaching out. We'll be in touch soon.
+              </p>
+            </div>
           ) : (
-            <form
-              style={{ display: 'flex', flexDirection: 'column', gap: 16, flex: 1 }}
-              onSubmit={async (e) => {
-                e.preventDefault();
-                setSending(true);
-                await fetch('/api/contact', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/json' },
-                  body: JSON.stringify({ firstName, lastName, email, category, product, message }),
-                });
-                setSending(false);
-                setSubmitted(true);
-              }}
-            >
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <label style={labelStyle}>First name</label>
-                  <input type="text" placeholder="Sofia" required style={inputStyle} value={firstName} onChange={e => setFirstName(e.target.value)} />
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <label style={labelStyle}>Last name</label>
-                  <input type="text" placeholder="Bennasar" required style={inputStyle} value={lastName} onChange={e => setLastName(e.target.value)} />
-                </div>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 24, border: '1px solid #e0e0e0', padding: '40px', minHeight: 320, justifyContent: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Name</label>
+                <input
+                  type="text"
+                  required
+                  style={inputStyle}
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                />
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <label style={labelStyle}>Email</label>
-                <input type="email" placeholder="you@email.com" required style={inputStyle} value={email} onChange={e => setEmail(e.target.value)} />
-              </div>
-
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <label style={labelStyle}>Category</label>
-                  <select
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
-                    style={{ ...inputStyle, appearance: 'none', cursor: 'pointer', color: category ? 'var(--ink)' : 'var(--sand)' } as React.CSSProperties}
-                  >
-                    <option value="">Select a category</option>
-                    <option value="baskets">Baskets</option>
-                    <option value="fabric-textiles">Fabric + Textiles</option>
-                    <option value="ceramics">Ceramics</option>
-                    <option value="wood">Wood</option>
-                    <option value="other">Something else</option>
-                  </select>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <label style={labelStyle}>Product</label>
-                  <input
-                    type="text"
-                    placeholder="e.g. Throw 001"
-                    value={product}
-                    onChange={(e) => setProduct(e.target.value)}
-                    style={inputStyle}
-                  />
-                </div>
+                <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Email</label>
+                <input
+                  type="email"
+                  required
+                  style={inputStyle}
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                />
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-                <label style={labelStyle}>Message</label>
+                <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Message</label>
                 <textarea
-                  placeholder="Tell us what you're looking for..."
-                  style={{ ...inputStyle, resize: 'none', height: 100 }}
-                  value={message}
-                  onChange={e => setMessage(e.target.value)}
+                  required
+                  style={{ ...inputStyle, resize: 'none', height: 100, borderBottom: '1px solid #ccc' }}
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={sending}
-                style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', background: 'var(--ink)', color: 'var(--linen)', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: 'flex-start', marginTop: 8, opacity: sending ? 0.6 : 1 }}
+                style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '12px 24px', background: 'var(--ink)', color: '#ffffff', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: 'flex-start', opacity: sending ? 0.7 : 1 }}
               >
-                {sending ? 'Sending...' : 'Send message'}
+                {sending ? 'Sending...' : 'Send'}
               </button>
             </form>
           )}
         </div>
-
-        {/* Info side */}
-        <div className="contact-side" style={{ background: 'var(--ink)', padding: '72px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 48 }}>
-          <p style={{ fontFamily: 'var(--font-dm-sans)', fontStyle: 'italic', fontSize: 'clamp(20px, 2vw, 28px)', fontWeight: 300, color: 'var(--linen)', lineHeight: 1.3, marginBottom: 'auto' }}>
-            We source directly.<br /><span style={{ color: 'var(--clay)' }}>No middlemen, no compromise.</span>
-          </p>
-          <div>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 12 }}>Email</p>
-            <a href="mailto:sales@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
-              sales@estudiomalva.com
-            </a>
-          </div>
-          <div>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)', marginBottom: 12 }}>Instagram</p>
-            <a href="https://www.instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'rgba(247,244,238,0.75)', lineHeight: 1.8 }}>
-              @estudio.malva
-            </a>
-          </div>
-        </div>
-
       </div>
     </div>
-  );
-}
-
-export default function Contact() {
-  return (
-    <Suspense>
-      <ContactForm />
-    </Suspense>
   );
 }
