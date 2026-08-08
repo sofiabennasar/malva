@@ -277,8 +277,7 @@ export default function Collections2() {
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Description</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.description}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, lineHeight: 1.6 }}>{selectedProduct.description}</p>
                     </div>
 
                     <div>
