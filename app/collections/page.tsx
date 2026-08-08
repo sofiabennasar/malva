@@ -310,6 +310,46 @@ export default function Collections2() {
           </div>
         </div>
       )}
+
+      {/* ── Footer ──────────────────────────────────────── */}
+      <footer style={{ background: '#ffffff', padding: '150px 60px 30px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          {/* Three-Column Layout */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 20 }}>
+
+            {/* Left Column - Contact */}
+            <div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                <a href="mailto:sales@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
+                  sales@estudiomalva.com
+                </a>
+              </p>
+            </div>
+
+            {/* Middle Column - Made in Argentina */}
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                Made in Argentina
+              </p>
+            </div>
+
+            {/* Right Column - Social */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+                @estudio.malva
+              </a>
+            </div>
+
+          </div>
+
+          {/* Bottom Copyright */}
+          <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 12, textAlign: 'center' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: 0, opacity: 0.7 }}>
+              © 2026 estudio malva. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

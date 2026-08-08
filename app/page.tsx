@@ -183,6 +183,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Footer ──────────────────────────────────────── */}
+      <footer style={{ background: '#ffffff', padding: isMobile ? '80px 20px 30px 20px' : '150px 60px 30px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          {/* Three-Column Layout */}
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 1fr)', gap: isMobile ? 20 : 40, marginBottom: 20, flexDirection: isMobile ? 'column' : undefined, alignItems: isMobile ? 'center' : undefined, textAlign: isMobile ? 'center' : undefined }}>
+
+            {/* Left Column - Contact */}
+            <div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                <a href="mailto:sales@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
+                  sales@estudiomalva.com
+                </a>
+              </p>
+            </div>
+
+            {/* Middle Column - Made in Argentina */}
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'center', alignItems: 'flex-start' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 13 : 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                Made in Argentina
+              </p>
+            </div>
+
+            {/* Right Column - Social */}
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-end' }}>
+              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+                @estudio.malva
+              </a>
+            </div>
+
+          </div>
+
+          {/* Bottom Copyright */}
+          <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 12, textAlign: 'center' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: 0, opacity: 0.7 }}>
+              © 2026 estudio malva. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+
       {/* ── Newsletter Modal ──────────────────────────────────────── */}
       {showNewsletter && (
         <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2000 }} onClick={() => setShowNewsletter(false)}>
