@@ -87,7 +87,7 @@ export default function Collections2() {
           <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 20px 0', letterSpacing: '0.02em' }}>
             INITIAL EDITION
           </h1>
-          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
             A collection of one-of-a-kind samples developed to explore the materials, techniques, and creative possibilities of the artisans we work with. Together, these pieces mark the beginning of the collections to come.
           </p>
         </div>
@@ -267,26 +267,26 @@ export default function Collections2() {
                   </h2>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: 32 }}>
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Material</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.material}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Material</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.material}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Size</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.size}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>Size</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.size}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, lineHeight: 1.6 }}>{selectedProduct.description}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, lineHeight: 1.6 }}>{selectedProduct.description}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'capitalize', letterSpacing: '0.02em' }}>Made by {selectedProduct.madeBy}</p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeIn}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'capitalize', letterSpacing: '0.02em' }}>Made by {selectedProduct.madeBy}</p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeIn}</p>
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = '/contact'}>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = '/contact'}>
                         [Inquire]
                       </p>
                     </div>
@@ -295,16 +295,16 @@ export default function Collections2() {
               </div>
 
               {/* Center Column - Image */}
-              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
-                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }} />
+              <div style={{ flex: 1.2, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
+                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
               </div>
 
               {/* Right Column - Care Instructions */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 40 }}>
-                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                     Care
                   </p>
-                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
+                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
                     {selectedProduct.care}
                   </p>
               </div>
@@ -322,7 +322,7 @@ export default function Collections2() {
 
             {/* Left Column - Contact */}
             <div>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                 <a href="mailto:sales@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
                   sales@estudiomalva.com
                 </a>
@@ -331,14 +331,14 @@ export default function Collections2() {
 
             {/* Middle Column - Made in Argentina */}
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
                 Made in Argentina
               </p>
             </div>
 
             {/* Right Column - Social */}
             <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
                 @estudio.malva
               </a>
             </div>
