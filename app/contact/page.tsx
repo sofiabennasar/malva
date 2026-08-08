@@ -43,7 +43,10 @@ export default function Contact() {
             Collections
           </Link>
           <Link href="/journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
-            Journal
+            The Journal
+          </Link>
+          <Link href="#care" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
+            Care & Maintenance
           </Link>
           <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none' }}>
             Contact
