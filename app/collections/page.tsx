@@ -301,10 +301,10 @@ export default function Collections2() {
 
               {/* Right Column - Care Instructions */}
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
-                  <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
+                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                     Care
-                  </h3>
-                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '20px 0 0 0', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
+                  </p>
+                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
                     {selectedProduct.care}
                   </p>
               </div>
