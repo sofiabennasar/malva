@@ -65,7 +65,7 @@ function ContactForm() {
         {/* Left: Image */}
         <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5' }}>
           <img
-            src="/contact-hero.jpg"
+            src="/contact.jpg"
             alt="Fibers"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
           />
