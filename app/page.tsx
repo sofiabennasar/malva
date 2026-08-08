@@ -1,125 +1,211 @@
+'use client';
+
 import Link from "next/link";
-import HeroGallery from "./components/HeroGallery";
-import NewsletterModal from "./components/NewsletterModal";
+import { useState, useEffect } from "react";
 
 const imgFill: React.CSSProperties = { width: '100%', height: '100%', objectFit: 'cover', display: 'block' };
 
 export default function Home() {
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   return (
-    <>
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="home-hero-section" style={{ background: 'var(--linen)', padding: '20px 72px 72px' }}>
-        <div className="home-hero-card" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'flex', flexDirection: 'column', padding: '60px 60px 0' }}>
+    <div style={{ background: '#ffffff', minHeight: '100vh' }}>
+      {/* ── Header ──────────────────────────────────────── */}
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 20px 12px 20px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
+        <div style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start' }}>
+          estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
+        </div>
+        <nav style={{ display: 'flex', gap: isMobile ? 16 : 50, alignItems: 'flex-end', flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-end', width: isMobile ? '100%' : 'auto' }}>
+          <Link href="#collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'collections' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('collections')} onMouseLeave={() => setHoveredNav(null)}>
+            Collections
+          </Link>
+          <Link href="#journal" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'journal' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('journal')} onMouseLeave={() => setHoveredNav(null)}>
+            Journal
+          </Link>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'contact' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('contact')} onMouseLeave={() => setHoveredNav(null)}>
+            Contact
+          </Link>
+        </nav>
+      </header>
 
-          <HeroGallery />
+      {/* ── Hero ────────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: isMobile ? '40px 20px' : '60px 60px', marginTop: isMobile ? 100 : 50 }}>
+        <div style={{ display: 'flex', gap: 80, alignItems: 'flex-end', flexDirection: isMobile ? 'column' : 'row' }}>
+          <div style={{ flex: 1 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0 }}>
+              We source singular, handmade objects directly from artisan communities across Argentina. Each piece is selected for its origin, materiality, and craftsmanship, creating thoughtful collections with transparent sourcing and cultural integrity.
+            </p>
+          </div>
+          <div style={{ width: 885, height: 662, overflow: 'hidden', flexShrink: 0 }}>
+            <img src="/hero-1.jpg" alt="Featured textiles" style={imgFill} />
+          </div>
+        </div>
+      </section>
 
-          <div className="home-hero-bar" style={{ display: 'grid', gridTemplateColumns: '1fr 650px', minHeight: 150, marginTop: 16 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '28px 32px 28px 0', fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6 }}>
-              <span style={{ fontSize: 33 }}>estudio</span>
-              <span style={{ fontSize: 33 }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
-            </div>
-            <div className="home-hero-bar-right" style={{ padding: '28px 0 28px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', gap: 12, alignItems: 'flex-end', width: '100%' }}>
-              <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(17px, 1.6vw, 24px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', textAlign: 'right', textTransform: 'uppercase' }}>
-                Raw Textures. Modern Spaces.
-              </h1>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--slate)', textAlign: 'right' }}>
-                Objects with origin. We travel directly to remote artisan communities across Argentina to secure singular, handmade pieces for curated environments, ensuring absolute transparency and integrity in every texture.
+      {/* ── Body ────────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: isMobile ? '8px 20px' : '8px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 380px)', gap: isMobile ? 30 : 40, justifyContent: isMobile ? undefined : 'space-between', flexDirection: isMobile ? 'column' : undefined }}>
+
+            {/* Column 1 - LEFT */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: isMobile ? 0 : 110, gridColumn: isMobile ? undefined : 1, gridRow: isMobile ? undefined : 2 }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 20 : 110 }}>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                  [SEE COLLECTION]
+                </p>
+                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                  <img src="/1-1.jpg" alt="Collection" style={imgFill} />
+                </div>
+              </div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 107, textAlign: 'center' }}>
+                Raw textures. Modern spaces.
+              </p>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 107 }}>
+                <img src="/1-2.jpg" alt="Raw textures" style={imgFill} />
+              </div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 190 }}>
+                Discover a new generation of artisans transforming recycled plastic through time-honored techniques and redefining the possibilities of traditional design.
               </p>
             </div>
+
+            {/* Column 2 - MIDDLE */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: isMobile ? 0 : 0, gridColumn: isMobile ? undefined : 2, gridRow: isMobile ? undefined : 2 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 0 : 200 }}>
+                Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
+              </p>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 110 }}>
+                <img src="/2-1.jpg" alt="First editions" style={imgFill} />
+              </div>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 150 }}>
+                <img src="/2-2.jpg" alt="Craft collection" style={imgFill} />
+              </div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 135, textAlign: 'center' }}>
+                [COMING SOON]
+              </p>
+            </div>
+
+            {/* Column 3 - RIGHT */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: isMobile ? 0 : 0, gridColumn: isMobile ? undefined : 3, gridRow: isMobile ? undefined : 2 }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <img src="/3-1.jpg" alt="Column 3 image 1" style={imgFill} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 20 : 133, marginTop: isMobile ? 0 : 132 }}>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                  [THE JOURNAL]
+                </p>
+                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                  <img src="/3-2.jpg" alt="Journal" style={imgFill} />
+                </div>
+              </div>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 75 }}>
+                <img src="/3-3.jpg" alt="Column 3 image 3" style={imgFill} />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* ── Values ───────────────────────────────────────── */}
-      <section className="values-section" style={{ background: 'var(--linen)', padding: '0 72px 72px' }} id="story">
-        <div className="values-grid" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gridTemplateRows: 'repeat(2, 260px)' }}>
+      {/* ── Values ──────────────────────────────────────── */}
+      <section style={{ background: '#ffffff', padding: isMobile ? '8px 20px' : '8px 60px', marginTop: isMobile ? 80 : 120 }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 380px)', gap: isMobile ? 30 : 40, justifyContent: isMobile ? undefined : 'space-between', flexDirection: isMobile ? 'column' : undefined }}>
 
-          {/* Row 1 */}
-          <div className="values-img" style={{ gridColumn: 1, gridRow: 1, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/values-1.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom', transform: 'scale(0.85)' }} />
-          </div>
-          <div className="values-cell" style={{ gridColumn: 2, gridRow: 1, padding: '36px 32px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>01</p>
-            <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Direct<br />Alliance</h3>
-            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We bypass traditional supply chains entirely, working directly with the artisans, workshops, and families where each object is crafted.</p>
-          </div>
-          <div className="values-empty" style={{ gridColumn: 3, gridRow: 1 }} />
-          <div className="values-img" style={{ gridColumn: 4, gridRow: 1, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/values-2.jpg" alt="" style={{ ...imgFill, transform: 'scale(0.85)' }} />
-          </div>
-          <div className="values-cell" style={{ gridColumn: 5, gridRow: 1, padding: '36px 32px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>02</p>
-            <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Absolute<br />Equity</h3>
-            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>We honor the autonomy of the makers to set their own pricing, ensuring direct, fair compensation that respects the true value of their craft.</p>
-          </div>
+            {/* Column 1 - Direct Alliance */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <img src="/v-1.jpg" alt="Direct Alliance" style={imgFill} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
+                  Direct Alliance
+                </h3>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                  We work directly with the artisans, workshops, and families behind every object, creating transparent relationships beyond traditional supply chains.
+                </p>
+              </div>
+            </div>
 
-          {/* Row 2 */}
-          <div className="values-empty" style={{ gridColumn: 1, gridRow: 2 }} />
-          <div className="values-empty" style={{ gridColumn: 2, gridRow: 2 }} />
-          <div className="values-img" style={{ gridColumn: 3, gridRow: 2, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img src="/values-3.jpg" alt="" style={{ ...imgFill, objectPosition: 'left bottom', transform: 'scale(0.85)' }} />
-          </div>
-          <div className="values-cell" style={{ gridColumn: 4, gridRow: 2, padding: '36px 32px' }}>
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.12em', color: 'var(--clay)', marginBottom: 16 }}>03</p>
-            <h3 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 22, fontWeight: 300, lineHeight: 1.2, color: 'var(--ink)', marginBottom: 14 }}>Culture<br />Preserved</h3>
-            <p style={{ fontSize: 12, lineHeight: 1.8, color: 'var(--slate)' }}>By protecting generational techniques at risk of disappearing, we bring time-honored crafts into contemporary spaces to keep local heritage vibrant and self-sustaining.</p>
-          </div>
-          <div className="values-cell" style={{ gridColumn: 5, gridRow: 2, padding: '36px 32px', display: 'grid', alignContent: 'end' }}>
-            <Link
-              href="/thejournal"
-              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content', whiteSpace: 'nowrap' }}
-            >
-              The Journal
-            </Link>
-          </div>
+            {/* Column 2 - Fair Exchange */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+              <div style={{ width: '100%', height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <img src="/v-2.jpg" alt="Fair Exchange" style={imgFill} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
+                  Fair Exchange
+                </h3>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                  Makers set the value of their own work, ensuring direct and equitable compensation that honors their skill, time, and craftsmanship.
+                </p>
+              </div>
+            </div>
 
+            {/* Column 3 - Living Craft */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
+              <div style={{ width: '100%', height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <img src="/v-3.jpg" alt="Living Craft" style={imgFill} />
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, fontWeight: 400 }}>
+                  Living Craft
+                </h3>
+                <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                  We support techniques and knowledge at risk of disappearing, bringing traditional craft into contemporary spaces so it can continue to evolve and remain part of everyday life.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
-      {/* ── Making in Progress + Generation Next ────────── */}
-      <section className="making-section" style={{ background: 'var(--linen)', padding: '0 72px 72px', display: 'flex', flexDirection: 'column', gap: 16 }} id="journal">
+      {/* ── Footer ──────────────────────────────────────── */}
+      <footer style={{ background: '#ffffff', padding: isMobile ? '80px 20px 30px 20px' : '150px 60px 30px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          {/* Three-Column Layout */}
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 1fr)', gap: isMobile ? 20 : 40, marginBottom: 20, flexDirection: isMobile ? 'column' : undefined, alignItems: isMobile ? 'center' : undefined, textAlign: isMobile ? 'center' : undefined }}>
 
-        {/* Top: 3 photos on left, text and button on right */}
-        <div style={{ display: 'flex', flexDirection: 'row', gap: 60, alignItems: 'flex-end' }}>
-          <div className="making-photos" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, flex: 1 }}>
-            <div style={{ minHeight: 500, overflow: 'hidden' }}>
-              <img src="/product-1.jpg" alt="" style={imgFill} />
+            {/* Left Column - Contact */}
+            <div>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                <a href="mailto:sales@estudiomalva.com" style={{ color: 'var(--ink)', textDecoration: 'none', borderBottom: '1px solid var(--ink)' }}>
+                  sales@estudiomalva.com
+                </a>
+              </p>
             </div>
-            <div style={{ minHeight: 500, overflow: 'hidden' }}>
-              <img src="/product-2.jpg" alt="" style={imgFill} />
+
+            {/* Middle Column - Made in Argentina */}
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'center', alignItems: 'flex-start' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 13 : 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+                Made in Argentina
+              </p>
             </div>
-            <div style={{ minHeight: 500, overflow: 'hidden' }}>
-              <img src="/product-3.jpg" alt="" style={imgFill} />
+
+            {/* Right Column - Social */}
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-end' }}>
+              <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+                @estudio.malva
+              </a>
             </div>
+
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20, flex: 1 }}>
-            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 15, color: 'var(--ink)', lineHeight: 1.65 }}>
-              Our initial editions are currently in development. We are in a discovery phase, studying the distinct structural qualities of native fibers, clay, and traditional craft. These inaugural collections are being refined for contemporary environments and will be available soon.
+
+          {/* Bottom Copyright */}
+          <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 12, textAlign: 'center' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: 0, opacity: 0.7 }}>
+              © 2026 estudio malva. All rights reserved.
             </p>
-            <Link
-              href="/products"
-              style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', width: 'fit-content', whiteSpace: 'nowrap' }}
-            >
-              See collection
-            </Link>
           </div>
         </div>
-
-        {/* Bottom: Evolving the Craft full width */}
-        <div style={{ background: 'var(--ink)', display: 'flex', flexDirection: 'column', padding: '48px 48px', gap: 32, alignItems: 'center', textAlign: 'center' }}>
-          <div>
-            <div style={{ width: 36, height: 2, background: 'var(--clay)', marginBottom: 16, margin: '0 auto 16px' }} />
-            <p style={{ fontFamily: 'var(--font-mono)', fontSize: 20, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--clay)' }}>
-              Evolving the Craft
-            </p>
-          </div>
-          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.8, color: 'rgba(247,244,238,0.55)', maxWidth: 600 }}>
-            Discover the innovative creations of a new generation of artisans, blending time-honored heritage with recycled plastic to rewrite the rules of traditional design.
-          </p>
-          <NewsletterModal />
-        </div>
-
-      </section>
-    </>
+      </footer>
+    </div>
   );
 }
