@@ -260,7 +260,7 @@ export default function Collections2() {
             <div style={{ display: 'flex', gap: 40, padding: '60px', height: '100%' }}>
 
               {/* Left Column - Product Info */}
-              <div style={{ flex: 0, width: 280, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between' }}>
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between', minWidth: 0 }}>
                 <div>
                   <h2 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                     PRODUCT
@@ -301,24 +301,19 @@ export default function Collections2() {
                 </button>
               </div>
 
-              {/* Center/Right - Image and Care */}
-              <div style={{ flex: 1, display: 'flex', gap: 40, alignItems: 'flex-start' }}>
-                {/* Image */}
-                <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#e8e8e8' }}>
-                  <div style={{ width: 330, height: 428, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src={selectedProduct.image} alt={selectedProduct.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  </div>
-                </div>
+              {/* Center Column - Image */}
+              <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#e8e8e8', minWidth: 0 }}>
+                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+              </div>
 
-                {/* Right Column - Care Instructions */}
-                <div style={{ flex: 0, width: 280, display: 'flex', flexDirection: 'column' }}>
+              {/* Right Column - Care Instructions */}
+              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
                   <h3 style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: 0, textTransform: 'uppercase', letterSpacing: '0.02em' }}>
                     Care
                   </h3>
                   <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, fontWeight: 400, color: 'var(--ink)', margin: '20px 0 0 0', lineHeight: 1.8, whiteSpace: 'pre-wrap' }}>
                     {selectedProduct.care}
                   </p>
-                </div>
               </div>
 
             </div>
