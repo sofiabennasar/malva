@@ -81,10 +81,10 @@ export default function Collections2() {
       {/* ── Intro Section ──────────────────────────────────────── */}
       <section style={{ background: '#ffffff', padding: '60px 60px', marginTop: 50 }}>
         <div style={{ marginLeft: '33.33%', maxWidth: '66.67%' }}>
-          <h1 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 20px 0', letterSpacing: '0.02em' }}>
+          <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 20px 0', letterSpacing: '0.02em' }}>
             INITIAL EDITION
           </h1>
-          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
             A collection of one-of-a-kind samples developed to explore the materials, techniques, and creative possibilities of the artisans we work with. Together, these pieces mark the beginning of the collections to come.
           </p>
         </div>
