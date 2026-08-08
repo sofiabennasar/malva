@@ -85,13 +85,13 @@ function ContactForm() {
 
           {/* Form */}
           {submitted ? (
-            <div style={{ padding: '40px', border: '1px solid #e0e0e0', textAlign: 'center' }}>
+            <div style={{ padding: '40px', textAlign: 'center' }}>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, color: 'var(--ink)', margin: 0 }}>
                 Thank you for reaching out. We'll be in touch soon.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 24, border: '1px solid #e0e0e0', padding: '40px', minHeight: 320, justifyContent: 'center' }}>
+            <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 24, padding: '40px', minHeight: 320, justifyContent: 'center' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
                 <label style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Name</label>
                 <input
@@ -137,9 +137,9 @@ function ContactForm() {
               <button
                 type="submit"
                 disabled={sending}
-                style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '12px 24px', background: 'var(--ink)', color: '#ffffff', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: 'flex-start', opacity: sending ? 0.7 : 1 }}
+                style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', background: 'none', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: 'flex-start', padding: 0, opacity: sending ? 0.7 : 1, textDecoration: 'none' }}
               >
-                {sending ? 'Sending...' : 'Send'}
+                {sending ? '[SENDING]' : '[SEND]'}
               </button>
             </form>
           )}
