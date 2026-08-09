@@ -55,7 +55,7 @@ export default function Home() {
         @keyframes scrollFadeUp {
           from {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(80px);
           }
           to {
             opacity: 1;
@@ -64,10 +64,10 @@ export default function Home() {
         }
         [data-scroll-animate] {
           opacity: 0;
-          transform: translateY(40px);
+          transform: translateY(80px);
         }
         [data-scroll-animate].animate-in {
-          animation: scrollFadeUp 0.8s ease-out forwards;
+          animation: scrollFadeUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
         }
       `}</style>
       {/* ── Header ──────────────────────────────────────── */}
