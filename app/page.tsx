@@ -52,10 +52,10 @@ export default function Home() {
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       <style>{`
-        @keyframes scrollFadeUp {
+        @keyframes scrollSlideUp {
           from {
             opacity: 0;
-            transform: translateY(80px);
+            transform: translateY(200px);
           }
           to {
             opacity: 1;
@@ -64,10 +64,10 @@ export default function Home() {
         }
         [data-scroll-animate] {
           opacity: 0;
-          transform: translateY(80px);
+          transform: translateY(200px);
         }
         [data-scroll-animate].animate-in {
-          animation: scrollFadeUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation: scrollSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
         }
       `}</style>
       {/* ── Header ──────────────────────────────────────── */}
