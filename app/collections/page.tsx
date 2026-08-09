@@ -58,8 +58,44 @@ export default function Collections2() {
     if (selectedProduct) window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, [selectedProduct]);
+
+  useEffect(() => {
+    const images = document.querySelectorAll('[data-scroll-animate]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    images.forEach((img) => observer.observe(img));
+    return () => observer.disconnect();
+  }, []);
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
+      <style>{`
+        @keyframes scrollSlideUp {
+          from {
+            opacity: 0;
+            transform: translateY(200px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        [data-scroll-animate] {
+          opacity: 0;
+          transform: translateY(200px);
+        }
+        [data-scroll-animate].animate-in {
+          animation: scrollSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+      `}</style>
       {/* ── Header ──────────────────────────────────────── */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000 }}>
         <Link href="/" style={{ width: 508, fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', textDecoration: 'none' }}>
@@ -95,129 +131,129 @@ export default function Collections2() {
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Row 1 */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[0])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[0])}>
               <img src="/c-1-1.jpg" alt="Collection 1-1" style={imgFill} />
             </div>
             <div style={{ width: 20 }} />
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[1])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[1])}>
               <img src="/c-1-2.jpg" alt="Collection 1-2" style={imgFill} />
             </div>
             <div style={{ flex: 1 }} />
-            <div style={{ width: 485, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[2])}>
+            <div data-scroll-animate style={{ width: 485, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[2])}>
               <img src="/c-1-3.jpg" alt="Collection 1-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 2 */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[3])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[3])}>
               <img src="/c-2-1.jpg" alt="Collection 2-1" style={imgFill} />
             </div>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[4])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[4])}>
               <img src="/c-2-2.jpg" alt="Collection 2-2" style={imgFill} />
             </div>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[5])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[5])}>
               <img src="/c-2-3.jpg" alt="Collection 2-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 3 */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 595, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[6])}>
+            <div data-scroll-animate style={{ width: 595, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[6])}>
               <img src="/c-3-1.jpg" alt="Collection 3-1" style={imgFill} />
             </div>
-            <div style={{ width: 595, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[7])}>
+            <div data-scroll-animate style={{ width: 595, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[7])}>
               <img src="/c-3-2.jpg" alt="Collection 3-2" style={imgFill} />
             </div>
           </div>
 
           {/* Row 4 */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[8])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[8])}>
               <img src="/c-4-1.jpg" alt="Collection 4-1" style={imgFill} />
             </div>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[9])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[9])}>
               <img src="/c-4-2.jpg" alt="Collection 4-2" style={imgFill} />
             </div>
-            <div style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[10])}>
+            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[10])}>
               <img src="/c-4-3.jpg" alt="Collection 4-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 5 */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 501, height: 612, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[11])}>
+            <div data-scroll-animate style={{ width: 501, height: 612, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[11])}>
               <img src="/c-5-1.jpg" alt="Collection 5-1" style={imgFill} />
             </div>
             <div style={{ flex: 1 }} />
-            <div style={{ width: 328, height: 612, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[12])}>
+            <div data-scroll-animate style={{ width: 328, height: 612, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[12])}>
               <img src="/c-5-2.jpg" alt="Collection 5-2" style={imgFill} />
             </div>
             <div style={{ width: 37 }} />
-            <div style={{ width: 328, height: 612, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[13])}>
+            <div data-scroll-animate style={{ width: 328, height: 612, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[13])}>
               <img src="/c-5-3.jpg" alt="Collection 5-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 6 */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 328, height: 498, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[14])}>
+            <div data-scroll-animate style={{ width: 328, height: 498, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[14])}>
               <img src="/c-6-1.jpg" alt="Collection 6-1" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 498, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[15])}>
+            <div data-scroll-animate style={{ width: 328, height: 498, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[15])}>
               <img src="/c-6-2.jpg" alt="Collection 6-2" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 498, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[16])}>
+            <div data-scroll-animate style={{ width: 328, height: 498, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[16])}>
               <img src="/c-6-3.jpg" alt="Collection 6-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 7 */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[17])}>
+            <div data-scroll-animate style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[17])}>
               <img src="/c-7-1.jpg" alt="Collection 7-1" style={imgFill} />
             </div>
             <div style={{ width: 20 }} />
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[18])}>
+            <div data-scroll-animate style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[18])}>
               <img src="/c-7-2.jpg" alt="Collection 7-2" style={imgFill} />
             </div>
             <div style={{ flex: 1 }} />
-            <div style={{ width: 520, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[19])}>
+            <div data-scroll-animate style={{ width: 520, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[19])}>
               <img src="/c-7-3.jpg" alt="Collection 7-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 8 */}
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 298, height: 447, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[20])}>
+            <div data-scroll-animate style={{ width: 298, height: 447, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[20])}>
               <img src="/c-8-1.jpg" alt="Collection 8-1" style={imgFill} />
             </div>
             <div style={{ width: 20 }} />
-            <div style={{ width: 298, height: 447, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[21])}>
+            <div data-scroll-animate style={{ width: 298, height: 447, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[21])}>
               <img src="/c-8-2.jpg" alt="Collection 8-2" style={imgFill} />
             </div>
           </div>
 
           {/* Row 9 */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[22])}>
+            <div data-scroll-animate style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[22])}>
               <img src="/c-9-1.jpg" alt="Collection 9-1" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[23])}>
+            <div data-scroll-animate style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[23])}>
               <img src="/c-9-2.jpg" alt="Collection 9-2" style={imgFill} />
             </div>
-            <div style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[24])}>
+            <div data-scroll-animate style={{ width: 328, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[24])}>
               <img src="/c-9-3.jpg" alt="Collection 9-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 10 */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div style={{ width: 311, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[25])}>
+            <div data-scroll-animate style={{ width: 311, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[25])}>
               <img src="/c-10-1.jpg" alt="Collection 10-1" style={imgFill} />
             </div>
             <div style={{ width: 329 }} />
-            <div style={{ width: 591, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[26])}>
+            <div data-scroll-animate style={{ width: 591, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer' }} onClick={() => setSelectedProduct(products[26])}>
               <img src="/c-10-2.jpg" alt="Collection 10-2" style={imgFill} />
             </div>
           </div>
