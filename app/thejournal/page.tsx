@@ -106,7 +106,7 @@ export default function Journal() {
               <img
                 src="/journal-artisan-1.jpg"
                 alt="Artisan at loom"
-                style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: 500, objectFit: 'cover', display: 'block' }}
               />
             </div>
 
