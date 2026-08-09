@@ -1,70 +1,153 @@
+'use client';
+
 import Link from "next/link";
-import TechniqueCarousel from "@/app/components/TechniqueCarousel";
+import { useState, useEffect } from "react";
 
-export const metadata = {
-  title: "Our Story — Estudio Malva",
-};
+export default function Journal() {
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-export default function TheJournal() {
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
-    <div className="pg" style={{ background: 'var(--linen)', padding: 28, display: 'flex', flexDirection: 'column', gap: 16 }}>
+    <div style={{ background: '#ffffff', minHeight: '100vh' }}>
+      <style>{`
+        @keyframes scrollSlideUp {
+          from {
+            opacity: 0;
+            transform: translateY(200px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        [data-scroll-animate] {
+          opacity: 0;
+          transform: translateY(200px);
+        }
+        [data-scroll-animate].animate-in {
+          animation: scrollSlideUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+          animation-delay: var(--delay, 0s);
+        }
+      `}</style>
 
-      {/* ── Card 1: Text left, image right ───────────── */}
-      <div className="two-col" style={{ background: 'var(--linen)', display: 'grid', gridTemplateColumns: '1fr 1fr', minHeight: '80vh' }}>
-        <div className="journal-text-pad" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '52px 64px' }}>
-          <Link href="/" style={{ fontFamily: 'var(--font-fraunces)', fontWeight: 300, letterSpacing: '0.02em', color: 'var(--ink)', lineHeight: 0.6 }}>
-            <span style={{ fontSize: 33, display: 'block' }}>estudio</span>
-            <span style={{ fontSize: 33, display: 'block' }}>malva<span style={{ color: 'var(--clay)', fontSize: '1.4em', lineHeight: 1 }}>.</span></span>
+      {/* Header */}
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 20px 12px 20px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
+        <Link href="/" style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start', textDecoration: 'none' }}>
+          estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
+        </Link>
+        <nav style={{ display: 'flex', gap: isMobile ? 16 : 50, alignItems: 'flex-end', flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-end', width: isMobile ? '100%' : 'auto' }}>
+          <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'collections' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('collections')} onMouseLeave={() => setHoveredNav(null)}>
+            Collections
           </Link>
+          <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'journal' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('journal')} onMouseLeave={() => setHoveredNav(null)}>
+            Journal
+          </Link>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1, borderBottom: hoveredNav === 'contact' ? '3px solid #a95c43' : 'none', paddingBottom: 2 }} onMouseEnter={() => setHoveredNav('contact')} onMouseLeave={() => setHoveredNav(null)}>
+            Contact
+          </Link>
+        </nav>
+      </header>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 28 }}>
-            <div style={{ width: 32, height: 1, background: 'var(--clay)', marginBottom: 4 }} />
-            <p style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 'clamp(22px, 2.4vw, 34px)', fontWeight: 300, lineHeight: 1.25, color: 'var(--ink)', marginBottom: 8 }}>
-              We source handmade objects directly from artisan communities across Argentina.
-            </p>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--slate)' }}>
+      {/* Hero Section */}
+      <section style={{ display: 'flex', alignItems: 'stretch', minHeight: '100vh', marginTop: 50 }}>
+        {/* Left: Text */}
+        <div style={{ flex: 1, padding: '60px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: '#ffffff' }}>
+          <div style={{ maxWidth: 600 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: '0 0 24px 0' }}>
               Founded by Mora and Sofia, two Argentinian creatives building a direct bridge between Buenos Aires and Los Angeles, we work closely with independent makers to uncover exceptional materials, traditional techniques, and timeless forms.
             </p>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 14, lineHeight: 1.9, color: 'var(--slate)' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
               The result is a curated collection of pieces that honor their origins while feeling at home in contemporary spaces.
             </p>
           </div>
-
         </div>
 
-        <div className="journal-img" style={{ background: 'var(--sand)', position: 'relative', overflow: 'hidden' }}>
-          <img src="/story-1.jpg" alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        {/* Right: Image */}
+        <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5' }}>
+          <img
+            src="/journal-hero.jpg"
+            alt="Studio workspace"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+          />
         </div>
-      </div>
+      </section>
 
-      {/* ── Card 2: Tagline ──────────────────────────── */}
-      <div className="journal-tagline" style={{ background: 'var(--ink)', padding: '24px 64px', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-        <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 'clamp(8px, 1.25vw, 18px)', fontWeight: 300, letterSpacing: '0.08em', textTransform: 'uppercase', lineHeight: 1.1, margin: 0 }}>
-          <span style={{ color: 'var(--linen)' }}>Made in </span><span style={{ color: 'var(--clay)' }}>Argentina</span>
-        </p>
-      </div>
+      {/* Content Section with Images and Text */}
+      <section style={{ background: '#ffffff', padding: '80px 60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+          {/* Images Row */}
+          <div style={{ display: 'flex', gap: 60, marginBottom: 60, alignItems: 'flex-start' }}>
+            {/* Left Image */}
+            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0s' } as React.CSSProperties}>
+              <img
+                src="/journal-artisan-1.jpg"
+                alt="Artisan at loom"
+                style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
 
-      {/* ── Technique Carousel ───────────────────────── */}
-      <TechniqueCarousel />
+            {/* Spacer */}
+            <div style={{ flex: 0.3 }} />
 
-      {/* ── Card 3: Photo + CTA ──────────────────────── */}
-      <div className="two-col" style={{ background: 'var(--linen)', border: '1px solid var(--sand)', display: 'grid', gridTemplateColumns: '2fr 1fr', minHeight: 360 }}>
-        <div style={{ background: 'var(--linen)', position: 'relative', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <img src="/story-2.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', transform: 'scale(0.9)' }} />
+            {/* Right Image */}
+            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0.1s' } as React.CSSProperties}>
+              <img
+                src="/journal-artisan-2.jpg"
+                alt="Dyed fibers"
+                style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+          </div>
+
+          {/* Text */}
+          <div style={{ maxWidth: 900 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+              By creating direct opportunities for artisans and bringing their work to new audiences, we help strengthen the local economies that sustain these practices. These techniques are part of Argentina's living cultural story, and sharing them beyond their place of origin allows that knowledge to remain visible, valued, and in motion.
+            </p>
+          </div>
         </div>
-        <div className="journal-cta-pad" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', padding: '48px 48px', gap: 16 }}>
-          <p style={{ fontFamily: 'var(--font-mono)', fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--slate)', marginBottom: 8 }}>
-            Explore
+      </section>
+
+      {/* Footer */}
+      <footer style={{ background: '#ffffff', borderTop: '1px solid #f0f0f0', padding: '60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 60, marginBottom: 40 }}>
+          {/* Left Column - Contact */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0, marginBottom: 8 }}>Email</p>
+            <a href="mailto:sales@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+              sales@estudiomalva.com
+            </a>
+          </div>
+
+          {/* Middle Column - Location */}
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
+              Made in Argentina
+            </p>
+          </div>
+
+          {/* Right Column - Social */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
+              @estudio.malva
+            </a>
+          </div>
+        </div>
+
+        {/* Bottom Copyright */}
+        <div style={{ borderTop: '1px solid #f0f0f0', paddingTop: 12, textAlign: 'center' }}>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: 0, opacity: 0.7 }}>
+            © 2026 estudio malva. All rights reserved.
           </p>
-          <Link
-            href="/products"
-            style={{ display: 'inline-block', fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 500, letterSpacing: '0.06em', textTransform: 'uppercase', padding: '14px 32px', border: '1px solid var(--ink)', color: 'var(--ink)', background: 'transparent', cursor: 'pointer', whiteSpace: 'nowrap', width: 'fit-content' }}
-          >
-            See Collection
-          </Link>
         </div>
-      </div>
-
+      </footer>
     </div>
   );
 }
