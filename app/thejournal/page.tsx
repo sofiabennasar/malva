@@ -14,6 +14,23 @@ export default function Journal() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
+  useEffect(() => {
+    const images = document.querySelectorAll('[data-scroll-animate]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    images.forEach((img) => observer.observe(img));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       <style>{`
