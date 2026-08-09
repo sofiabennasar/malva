@@ -125,7 +125,7 @@ export default function Journal() {
               <img
                 src="/journal-artisan-3.jpg"
                 alt="Artisan work"
-                style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: 500, objectFit: 'cover', display: 'block' }}
               />
             </div>
 
@@ -134,7 +134,7 @@ export default function Journal() {
               <img
                 src="/journal-artisan-2.jpg"
                 alt="Dyed fibers"
-                style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: 500, objectFit: 'cover', display: 'block' }}
               />
             </div>
           </div>
