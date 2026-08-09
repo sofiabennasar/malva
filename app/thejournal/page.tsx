@@ -118,9 +118,19 @@ export default function Journal() {
             </div>
           </div>
 
-          {/* Second Row: Right Image */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <div data-scroll-animate style={{ width: '50%', '--delay': '0.1s' } as React.CSSProperties}>
+          {/* Second Row: Two Images */}
+          <div style={{ display: 'flex', gap: 60, alignItems: 'flex-start' }}>
+            {/* Left Image */}
+            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0.1s' } as React.CSSProperties}>
+              <img
+                src="/journal-artisan-3.jpg"
+                alt="Artisan work"
+                style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+
+            {/* Right Image */}
+            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0.2s' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-2.jpg"
                 alt="Dyed fibers"
