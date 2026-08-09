@@ -31,8 +31,45 @@ export default function Home() {
     setShowNewsletter(false);
     setNewsletterForm({ name: '', email: '' });
   };
+
+  useEffect(() => {
+    const images = document.querySelectorAll('[data-scroll-animate]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    images.forEach((img) => observer.observe(img));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
+      <style>{`
+        @keyframes scrollFadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        [data-scroll-animate] {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        [data-scroll-animate].animate-in {
+          animation: scrollFadeUp 0.8s ease-out forwards;
+        }
+      `}</style>
       {/* ── Header ──────────────────────────────────────── */}
       <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 20px 12px 20px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
         <Link href="/" style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start', textDecoration: 'none' }}>
@@ -59,7 +96,7 @@ export default function Home() {
               We source singular, handmade objects directly from artisan communities across Argentina. Each piece is selected for its origin, materiality, and craftsmanship, creating thoughtful collections with transparent sourcing and cultural integrity.
             </p>
           </div>
-          <div style={{ width: 885, height: 662, overflow: 'hidden', flexShrink: 0 }}>
+          <div style={{ width: 885, height: 662, overflow: 'hidden', flexShrink: 0 }} data-scroll-animate>
             <img src="/hero-1.jpg" alt="Featured textiles" style={imgFill} />
           </div>
         </div>
@@ -76,7 +113,7 @@ export default function Home() {
                 <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center', textDecoration: 'none' }}>
                   [SEE COLLECTION]
                 </Link>
-                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
                   <img src="/1-1.jpg" alt="Collection" style={imgFill} />
                 </div>
               </div>
@@ -116,7 +153,7 @@ export default function Home() {
                 <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center', textDecoration: 'none' }}>
                   [THE JOURNAL]
                 </Link>
-                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
                   <img src="/3-2.jpg" alt="Journal" style={imgFill} />
                 </div>
               </div>
@@ -151,7 +188,7 @@ export default function Home() {
 
             {/* Column 2 - Fair Exchange */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: '100%', height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: '100%', height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
                 <img src="/v-2.jpg" alt="Fair Exchange" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -166,7 +203,7 @@ export default function Home() {
 
             {/* Column 3 - Living Craft */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: '100%', height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: '100%', height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
                 <img src="/v-3.jpg" alt="Living Craft" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
