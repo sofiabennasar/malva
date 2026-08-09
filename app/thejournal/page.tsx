@@ -73,7 +73,7 @@ export default function Journal() {
       </header>
 
       {/* Hero Section */}
-      <section style={{ display: 'flex', alignItems: 'stretch', minHeight: '100vh', marginTop: 50 }}>
+      <section style={{ display: 'flex', alignItems: 'stretch', minHeight: '80vh', marginTop: 50 }}>
         {/* Left: Text */}
         <div style={{ flex: 1, padding: '60px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: '#ffffff' }}>
           <div style={{ maxWidth: 600 }}>
