@@ -99,7 +99,7 @@ export default function Journal() {
       {/* Content Section with Images and Text */}
       <section style={{ background: '#ffffff', padding: '80px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          {/* Images Row */}
+          {/* First Row: Left Image + Text */}
           <div style={{ display: 'flex', gap: 60, marginBottom: 60, alignItems: 'flex-start' }}>
             {/* Left Image */}
             <div data-scroll-animate style={{ flex: 0.5, '--delay': '0s' } as React.CSSProperties}>
@@ -110,24 +110,23 @@ export default function Journal() {
               />
             </div>
 
-            {/* Spacer */}
-            <div style={{ flex: 0.3 }} />
+            {/* Text */}
+            <div style={{ flex: 0.5, display: 'flex', alignItems: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+                By creating direct opportunities for artisans and bringing their work to new audiences, we help strengthen the local economies that sustain these practices. These techniques are part of Argentina's living cultural story, and sharing them beyond their place of origin allows that knowledge to remain visible, valued, and in motion.
+              </p>
+            </div>
+          </div>
 
-            {/* Right Image */}
-            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0.1s' } as React.CSSProperties}>
+          {/* Second Row: Right Image */}
+          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div data-scroll-animate style={{ width: '50%', '--delay': '0.1s' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-2.jpg"
                 alt="Dyed fibers"
                 style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block' }}
               />
             </div>
-          </div>
-
-          {/* Text */}
-          <div style={{ maxWidth: 900 }}>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
-              By creating direct opportunities for artisans and bringing their work to new audiences, we help strengthen the local economies that sustain these practices. These techniques are part of Argentina's living cultural story, and sharing them beyond their place of origin allows that knowledge to remain visible, valued, and in motion.
-            </p>
           </div>
         </div>
       </section>
