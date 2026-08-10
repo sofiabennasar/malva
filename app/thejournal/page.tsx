@@ -55,7 +55,7 @@ export default function Journal() {
       `}</style>
 
       {/* Header */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 20px 12px 20px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 16px 12px 16px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
         <Link href="/" style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start', textDecoration: 'none' }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </Link>
@@ -73,21 +73,21 @@ export default function Journal() {
       </header>
 
       {/* Hero Section */}
-      <section style={{ display: 'flex', alignItems: 'stretch', minHeight: '80vh', marginTop: 50 }}>
+      <section style={{ display: 'flex', alignItems: 'stretch', minHeight: isMobile ? 'auto' : '80vh', marginTop: isMobile ? 100 : 50, flexDirection: isMobile ? 'column' : 'row' }}>
         {/* Left: Text */}
-        <div style={{ flex: 1, padding: '60px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: '#ffffff' }}>
+        <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px 60px', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: '#ffffff' }}>
           <div style={{ maxWidth: 600 }}>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: '0 0 24px 0' }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 16, lineHeight: 1.85, color: 'var(--ink)', margin: '0 0 16px 0' }}>
               Founded by Mora and Sofia, two Argentinian creatives building a direct bridge between Buenos Aires and Los Angeles, we work closely with independent makers to uncover exceptional materials, traditional techniques, and timeless forms.
             </p>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
               The result is a curated collection of pieces that honor their origins while feeling at home in contemporary spaces.
             </p>
           </div>
         </div>
 
         {/* Right: Image */}
-        <div data-scroll-animate style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5', '--delay': '0s' } as React.CSSProperties}>
+        <div data-scroll-animate style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5', height: isMobile ? 300 : 'auto', '--delay': '0s' } as React.CSSProperties}>
           <img
             src="/journal-hero.jpg"
             alt="Studio workspace"
@@ -97,7 +97,7 @@ export default function Journal() {
       </section>
 
       {/* Content Section with Images and Text */}
-      <section style={{ background: '#ffffff', padding: '80px 60px' }}>
+      <section style={{ background: '#ffffff', padding: isMobile ? '30px 16px' : '80px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* First Row: Left Image + Text at 50% width */}
           <div style={{ display: 'flex', marginBottom: 180, alignItems: 'flex-start' }}>
@@ -145,8 +145,8 @@ export default function Journal() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: '#ffffff', padding: '60px' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 60, marginBottom: 40 }}>
+      <footer style={{ background: '#ffffff', padding: isMobile ? '30px 16px' : '60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto', display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : '1fr 1fr 1fr', gap: isMobile ? 20 : 60, marginBottom: 40, flexDirection: isMobile ? 'column' : undefined, textAlign: isMobile ? 'center' : undefined, alignItems: isMobile ? 'center' : undefined }}>
           {/* Left Column - Contact */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0, marginBottom: 8 }}>Email</p>
@@ -156,14 +156,14 @@ export default function Journal() {
           </div>
 
           {/* Middle Column - Location */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'center', alignItems: 'flex-start' }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
               Made in Argentina
             </p>
           </div>
 
           {/* Right Column - Social */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-end' }}>
             <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
               @estudio.malva
             </a>

@@ -102,23 +102,23 @@ export default function Home() {
       </header>
 
       {/* ── Hero ────────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', padding: isMobile ? '40px 20px' : '60px 60px', marginTop: isMobile ? 100 : 50 }}>
-        <div style={{ display: 'flex', gap: 80, alignItems: 'flex-end', flexDirection: isMobile ? 'column' : 'row' }}>
-          <div style={{ flex: 1 }}>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0 }}>
+      <section style={{ background: '#ffffff', padding: isMobile ? '30px 16px' : '60px 60px', marginTop: isMobile ? 100 : 50 }}>
+        <div style={{ display: 'flex', gap: isMobile ? 30 : 80, alignItems: 'flex-end', flexDirection: isMobile ? 'column' : 'row', maxWidth: 1400, margin: '0 auto' }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 15, lineHeight: 1.85, color: 'var(--ink)', marginBottom: 0, margin: 0 }}>
               We source singular, handmade objects directly from artisan communities across Argentina. Each piece is selected for its origin, materiality, and craftsmanship, creating thoughtful collections with transparent sourcing and cultural integrity.
             </p>
           </div>
-          <div style={{ width: 885, height: 662, overflow: 'hidden', flexShrink: 0 }} data-scroll-animate>
+          <div style={{ width: isMobile ? '100%' : 885, height: isMobile ? 300 : 662, overflow: 'hidden', flexShrink: 0, aspectRatio: '4/3' }} data-scroll-animate>
             <img src="/hero-1.jpg" alt="Featured textiles" style={imgFill} />
           </div>
         </div>
       </section>
 
       {/* ── Body ────────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', padding: isMobile ? '8px 20px' : '8px 60px' }}>
+      <section style={{ background: '#ffffff', padding: isMobile ? '20px 16px' : '30px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 380px)', gap: isMobile ? 30 : 40, justifyContent: isMobile ? undefined : 'space-between', flexDirection: isMobile ? 'column' : undefined }}>
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 1fr)', gap: isMobile ? 24 : 40, justifyContent: isMobile ? undefined : 'space-between', flexDirection: isMobile ? 'column' : undefined }}>
 
             {/* Column 1 - LEFT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: isMobile ? 0 : 110, gridColumn: isMobile ? undefined : 1, gridRow: isMobile ? undefined : 2 }}>
@@ -126,14 +126,14 @@ export default function Home() {
                 <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center', textDecoration: 'none' }}>
                   [SEE COLLECTION]
                 </Link>
-                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
+                <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
                   <img src="/1-1.jpg" alt="Collection" style={imgFill} />
                 </div>
               </div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 107, textAlign: 'center' }}>
                 Raw textures. Modern spaces.
               </p>
-              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 107 }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 107 }}>
                 <img src="/1-2.jpg" alt="Raw textures" style={imgFill} />
               </div>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 190 }}>
@@ -146,10 +146,10 @@ export default function Home() {
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 0 : 200 }}>
                 Our first editions are currently in development. We are exploring the structural qualities of native fibers, clay, and traditional craft, refining each collection for contemporary environments.
               </p>
-              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 110 }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 110 }}>
                 <img src="/2-1.jpg" alt="First editions" style={imgFill} />
               </div>
-              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 150 }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 150 }}>
                 <img src="/2-2.jpg" alt="Craft collection" style={imgFill} />
               </div>
               <button onClick={() => setShowNewsletter(true)} style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, marginTop: isMobile ? 20 : 135, textAlign: 'center', background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}>
@@ -159,18 +159,18 @@ export default function Home() {
 
             {/* Column 3 - RIGHT */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40, marginTop: isMobile ? 0 : 0, gridColumn: isMobile ? undefined : 3, gridRow: isMobile ? undefined : 2 }}>
-              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/3-1.jpg" alt="Column 3 image 1" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 20 : 133, marginTop: isMobile ? 0 : 132 }}>
                 <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center', textDecoration: 'none' }}>
                   [THE JOURNAL]
                 </Link>
-                <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
+                <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }} data-scroll-animate>
                   <img src="/3-2.jpg" alt="Journal" style={imgFill} />
                 </div>
               </div>
-              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 75 }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd', marginTop: isMobile ? 20 : 75 }}>
                 <img src="/3-3.jpg" alt="Column 3 image 3" style={imgFill} />
               </div>
             </div>
@@ -180,13 +180,13 @@ export default function Home() {
       </section>
 
       {/* ── Values ──────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', padding: isMobile ? '8px 20px' : '8px 60px', marginTop: isMobile ? 80 : 120 }}>
+      <section style={{ background: '#ffffff', padding: isMobile ? '20px 16px' : '30px 60px', marginTop: isMobile ? 60 : 120 }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 380px)', gap: isMobile ? 30 : 40, justifyContent: isMobile ? undefined : 'space-between', flexDirection: isMobile ? 'column' : undefined }}>
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 1fr)', gap: isMobile ? 24 : 40, justifyContent: isMobile ? undefined : 'space-between', flexDirection: isMobile ? 'column' : undefined }}>
 
             {/* Column 1 - Direct Alliance */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-1.jpg" alt="Direct Alliance" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
@@ -234,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* ── Footer ──────────────────────────────────────── */}
-      <footer style={{ background: '#ffffff', padding: isMobile ? '80px 20px 30px 20px' : '150px 60px 30px 60px' }}>
+      <footer style={{ background: '#ffffff', padding: isMobile ? '40px 16px 20px 16px' : '80px 60px 30px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Three-Column Layout */}
           <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 1fr)', gap: isMobile ? 20 : 40, marginBottom: 20, flexDirection: isMobile ? 'column' : undefined, alignItems: isMobile ? 'center' : undefined, textAlign: isMobile ? 'center' : undefined }}>

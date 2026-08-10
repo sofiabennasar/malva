@@ -56,7 +56,7 @@ function ContactForm() {
   return (
     <div style={{ background: '#ffffff', minHeight: '100vh' }}>
       {/* Header */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 20px 12px 20px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 16px 12px 16px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}
         <Link href="/" style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start', textDecoration: 'none' }}>
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </Link>
@@ -74,9 +74,9 @@ function ContactForm() {
       </header>
 
       {/* Main Content */}
-      <div style={{ display: 'flex', paddingTop: 80, minHeight: '100vh' }}>
+      <div style={{ display: 'flex', paddingTop: isMobile ? 100 : 80, minHeight: '100vh', flexDirection: isMobile ? 'column' : 'row' }}>
         {/* Left: Image */}
-        <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5' }}>
+        <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5', height: isMobile ? 300 : '100%' }}>
           <img
             src="/contact.jpg"
             alt="Fibers"
@@ -85,7 +85,7 @@ function ContactForm() {
         </div>
 
         {/* Right: Contact Info & Form */}
-        <div style={{ flex: 1, padding: '60px', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
+        <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
           {/* Contact Info */}
           <div style={{ marginBottom: 60 }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 8px 0', fontWeight: 400 }}>
@@ -160,8 +160,8 @@ function ContactForm() {
       </div>
 
       {/* Footer */}
-      <footer style={{ background: '#ffffff', borderTop: '1px solid #f0f0f0', padding: '60px' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 60, marginBottom: 40 }}>
+      <footer style={{ background: '#ffffff', borderTop: '1px solid #f0f0f0', padding: isMobile ? '30px 16px' : '60px' }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto', display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : '1fr 1fr 1fr', gap: isMobile ? 20 : 60, marginBottom: 40, flexDirection: isMobile ? 'column' : undefined, textAlign: isMobile ? 'center' : undefined, alignItems: isMobile ? 'center' : undefined }}>
           {/* Left Column - Contact */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 12, color: '#666', textTransform: 'uppercase', letterSpacing: '0.05em', margin: 0, marginBottom: 8 }}>Email</p>
@@ -171,14 +171,14 @@ function ContactForm() {
           </div>
 
           {/* Middle Column - Location */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'center', alignItems: 'flex-start' }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
               Made in Argentina
             </p>
           </div>
 
           {/* Right Column - Social */}
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-end' }}>
             <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
               @estudio.malva
             </a>

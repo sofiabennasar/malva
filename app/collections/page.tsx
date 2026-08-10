@@ -50,6 +50,14 @@ const products: Product[] = [
 export default function Collections2() {
   const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -98,49 +106,49 @@ export default function Collections2() {
         }
       `}</style>
       {/* ── Header ──────────────────────────────────────── */}
-      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000 }}>
-        <Link href="/" style={{ width: 508, fontFamily: 'var(--font-fraunces)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', textDecoration: 'none' }}>
+      <header style={{ position: 'fixed', top: 0, left: 0, right: 0, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: isMobile ? '8px 16px 12px 16px' : '8px 60px 16px 60px', background: '#ffffff', zIndex: 1000, flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 0 }}>
+        <Link href="/" style={{ width: isMobile ? '100%' : 508, fontFamily: 'var(--font-fraunces)', fontSize: isMobile ? 24 : 40, fontWeight: 300, color: 'var(--ink)', letterSpacing: '0.02em', whiteSpace: 'nowrap', lineHeight: 1, display: 'flex', alignItems: 'flex-end', justifyContent: isMobile ? 'center' : 'flex-start', textDecoration: 'none' }}
           estudio malva<span style={{ color: 'var(--clay)', fontSize: '1.3em' }}>.</span>
         </Link>
-        <nav style={{ display: 'flex', gap: 50, alignItems: 'flex-end' }}>
-          <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
+        <nav style={{ display: 'flex', gap: isMobile ? 16 : 50, alignItems: 'flex-end', flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-end', width: isMobile ? '100%' : 'auto' }}>
+          <Link href="/collections" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
             Collections
           </Link>
-          <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
+          <Link href="/thejournal" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
             The Journal
           </Link>
-          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
+          <Link href="/contact" style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 18, fontWeight: 400, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1 }}>
             Contact
           </Link>
         </nav>
       </header>
 
       {/* ── Intro Section ──────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', padding: '60px 60px', marginTop: 50 }}>
-        <div style={{ marginLeft: '33.33%', maxWidth: '66.67%' }}>
-          <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 20px 0', letterSpacing: '0.02em' }}>
+      <section style={{ background: '#ffffff', padding: isMobile ? '20px 16px' : '60px 60px', marginTop: isMobile ? 100 : 50 }}>
+        <div style={{ marginLeft: isMobile ? 0 : '33.33%', maxWidth: '100%', paddingRight: isMobile ? 0 : 0 }}>
+          <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: isMobile ? 32 : 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 16px 0', letterSpacing: '0.02em' }}>
             INITIAL EDITION
           </h1>
-          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 15, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
             A collection of one-of-a-kind samples developed to explore the materials, techniques, and creative possibilities of the artisans we work with. Together, these pieces mark the beginning of the collections to come.
           </p>
         </div>
       </section>
 
       {/* ── Collections Grid ──────────────────────────────────────── */}
-      <section style={{ background: '#ffffff', padding: '60px 60px' }}>
+      <section style={{ background: '#ffffff', padding: isMobile ? '20px 16px' : '40px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Row 1 */}
-          <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: 40 }}>
-            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[0])}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
+            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[0])}>
               <img src="/c-1-1.jpg" alt="Collection 1-1" style={imgFill} />
             </div>
-            <div style={{ width: 20 }} />
-            <div data-scroll-animate style={{ width: 330, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[1])}>
+            {!isMobile && <div style={{ width: 20 }} />}
+            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[1])}>
               <img src="/c-1-2.jpg" alt="Collection 1-2" style={imgFill} />
             </div>
-            <div style={{ flex: 1 }} />
-            <div data-scroll-animate style={{ width: 485, height: 428, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[2])}>
+            {!isMobile && <div style={{ flex: 1 }} />}
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 485, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[2])}>
               <img src="/c-1-3.jpg" alt="Collection 1-3" style={imgFill} />
             </div>
           </div>
