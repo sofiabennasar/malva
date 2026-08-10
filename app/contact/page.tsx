@@ -3,10 +3,6 @@
 import Link from "next/link";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import emailjs from '@emailjs/browser';
-
-// Initialize EmailJS - Replace with your actual credentials
-emailjs.init('YOUR_PUBLIC_KEY');
 
 const inputStyle: React.CSSProperties = {
   fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)',
@@ -41,16 +37,16 @@ function ContactForm() {
     setSending(true);
 
     try {
-      await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-        to_email: 'sales@estudiomalva.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        product: formData.product || 'Not specified',
-        message: formData.message,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
+
+      if (!response.ok) throw new Error('Failed to send');
       setSubmitted(true);
     } catch (error) {
-      console.error('Email send failed:', error);
+      console.error('Error sending form:', error);
       alert('Failed to send message. Please try again.');
     } finally {
       setSending(false);
