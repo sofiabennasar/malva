@@ -145,7 +145,7 @@ export default function Journal() {
       </section>
 
       {/* Footer */}
-      <footer style={{ background: '#ffffff', borderTop: '1px solid #f0f0f0', padding: '60px' }}>
+      <footer style={{ background: '#ffffff', padding: '60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 60, marginBottom: 40 }}>
           {/* Left Column - Contact */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
