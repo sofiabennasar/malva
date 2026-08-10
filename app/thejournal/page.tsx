@@ -99,8 +99,8 @@ export default function Journal() {
       {/* Content Section with Images and Text */}
       <section style={{ background: '#ffffff', padding: '80px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-          {/* First Row: Left Image + Text */}
-          <div style={{ display: 'flex', gap: 60, marginBottom: 180, alignItems: 'flex-start' }}>
+          {/* First Row: Left Image + Text at 50% width */}
+          <div style={{ display: 'flex', marginBottom: 180, alignItems: 'flex-start' }}>
             {/* Left Image */}
             <div data-scroll-animate style={{ '--delay': '0s', aspectRatio: '17 / 24', height: 500, flexShrink: 0 } as React.CSSProperties}>
               <img
@@ -110,8 +110,11 @@ export default function Journal() {
               />
             </div>
 
+            {/* Spacer to push text to 50% of page width */}
+            <div style={{ flex: 1, minWidth: 0 }} />
+
             {/* Text */}
-            <div style={{ flex: 0.5, marginTop: 250 }}>
+            <div style={{ width: '50%', marginTop: 250, paddingLeft: 60 }}>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                 By creating direct opportunities for artisans and bringing their work to new audiences, we help strengthen the local economies that sustain these practices. These techniques are part of Argentina's living cultural story, and sharing them beyond their place of origin allows that knowledge to remain visible, valued, and in motion.
               </p>
