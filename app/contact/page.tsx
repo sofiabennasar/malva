@@ -85,7 +85,7 @@ function ContactForm() {
         </div>
 
         {/* Right: Contact Info & Form */}
-        <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px', display: 'flex', flexDirection: 'column', background: '#ffffff' }}>
+        <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px', display: 'flex', flexDirection: 'column', background: '#ffffff', alignItems: isMobile ? 'center' : 'flex-start', textAlign: isMobile ? 'center' : 'left' }}>
           {/* Contact Info */}
           <div style={{ marginBottom: 60 }}>
             <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 8px 0', fontWeight: 400 }}>
@@ -150,7 +150,7 @@ function ContactForm() {
               <button
                 type="submit"
                 disabled={sending}
-                style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', background: 'none', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: 'flex-start', padding: 0, opacity: sending ? 0.7 : 1, textDecoration: 'none' }}
+                style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', background: 'none', border: 'none', cursor: sending ? 'default' : 'pointer', alignSelf: isMobile ? 'center' : 'flex-start', padding: 0, opacity: sending ? 0.7 : 1, textDecoration: 'none' }}
               >
                 {sending ? '[SENDING]' : '[SEND]'}
               </button>
