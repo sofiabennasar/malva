@@ -308,12 +308,12 @@ export default function Collections2() {
                   </h2>
 
                   {isMobile && (
-                    <div style={{ margin: '40px 0', display: 'flex', alignItems: 'center', justifyContent: 'center', maxHeight: 300 }}>
+                    <div style={{ margin: '60px 0', display: 'flex', alignItems: 'center', justifyContent: 'center', maxHeight: 300 }}>
                       <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
                     </div>
                   )}
 
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: isMobile ? 40 : 32 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: isMobile ? 60 : 32 }}>
                     <div>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: isMobile ? '0' : '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = `/contact?product=${encodeURIComponent(selectedProduct.name)}`}>
                         [Inquire]
