@@ -267,7 +267,7 @@ export default function Home() {
             <button onClick={() => setShowNewsletter(false)} style={{ position: 'absolute', top: 20, right: 20, background: 'none', border: 'none', fontSize: 24, cursor: 'pointer', color: 'var(--ink)', padding: 0, width: 30, height: 30, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               ×
             </button>
-            <h2 style={{ fontFamily: 'var(--font-fraunces)', fontSize: 32, fontWeight: 300, color: 'var(--ink)', margin: '0 0 30px 0', letterSpacing: '0.02em' }}>
+            <h2 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: 32, fontWeight: 300, color: 'var(--ink)', margin: '0 0 30px 0', letterSpacing: '0.02em' }}>
               Be the first to know!
             </h2>
             <form onSubmit={handleNewsletterSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
