@@ -74,7 +74,7 @@ function ContactForm() {
       </header>
 
       {/* Main Content */}
-      <div style={{ display: 'flex', paddingTop: isMobile ? 100 : 80, minHeight: '100vh', flexDirection: isMobile ? 'column' : 'row' }}>
+      <div style={{ display: 'flex', paddingTop: isMobile ? 100 : 80, minHeight: '100vh', flexDirection: isMobile ? 'column' : 'row', height: isMobile ? 'auto' : '100vh' }}>
         {/* Left: Image */}
         <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5', height: isMobile ? 300 : '100%' }}>
           <img
@@ -85,7 +85,7 @@ function ContactForm() {
         </div>
 
         {/* Right: Contact Info & Form */}
-        <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px', display: 'flex', flexDirection: 'column', background: '#ffffff', alignItems: isMobile ? 'center' : 'flex-start', textAlign: isMobile ? 'center' : 'left' }}>
+        <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px', display: 'flex', flexDirection: 'column', background: '#ffffff', alignItems: isMobile ? 'center' : 'flex-start', textAlign: isMobile ? 'center' : 'left', height: isMobile ? 'auto' : '100%', justifyContent: 'center' }}>
           {/* Contact Info */}
           {!isMobile && (
             <div style={{ marginBottom: 60 }}>
