@@ -186,7 +186,7 @@ export default function Home() {
 
             {/* Column 1 - Direct Alliance */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: 40 }}>
-              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
+              <div style={{ width: '100%', maxWidth: isMobile ? '100%' : 380, height: isMobile ? 250 : 565, overflow: 'hidden', flexShrink: 0, background: '#ddd' }}>
                 <img src="/v-1.jpg" alt="Direct Alliance" style={imgFill} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
