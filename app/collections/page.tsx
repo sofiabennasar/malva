@@ -125,7 +125,7 @@ export default function Collections2() {
 
       {/* ── Intro Section ──────────────────────────────────────── */}
       <section style={{ background: '#ffffff', padding: isMobile ? '20px 16px' : '60px 60px', marginTop: isMobile ? 100 : 50 }}>
-        <div style={{ marginLeft: isMobile ? 0 : '33.33%', maxWidth: '100%', paddingRight: isMobile ? 0 : 0 }}>
+        <div style={{ marginLeft: isMobile ? 0 : '33.33%', maxWidth: '100%', paddingRight: isMobile ? 0 : 0, textAlign: isMobile ? 'center' : 'left' }}>
           <h1 style={{ fontFamily: 'var(--font-dm-sans)', fontSize: isMobile ? 32 : 40, fontWeight: 300, color: 'var(--ink)', lineHeight: 1.2, margin: '0 0 16px 0', letterSpacing: '0.02em' }}>
             INITIAL EDITION
           </h1>
@@ -140,11 +140,11 @@ export default function Collections2() {
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Row 1 */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[0])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[0])}>
               <img src="/c-1-1.jpg" alt="Collection 1-1" style={imgFill} />
             </div>
             {!isMobile && <div style={{ width: 20 }} />}
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[1])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[1])}>
               <img src="/c-1-2.jpg" alt="Collection 1-2" style={imgFill} />
             </div>
             {!isMobile && <div style={{ flex: 1 }} />}
@@ -155,36 +155,36 @@ export default function Collections2() {
 
           {/* Row 2 - 3 equal items */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[3])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[3])}>
               <img src="/c-2-1.jpg" alt="Collection 2-1" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[4])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[4])}>
               <img src="/c-2-2.jpg" alt="Collection 2-2" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[5])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[5])}>
               <img src="/c-2-3.jpg" alt="Collection 2-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 3 - 2 equal items */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 595, height: isMobile ? 'auto' : 428, aspectRatio: '1.4', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[6])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 595, height: isMobile ? 'auto' : 428, aspectRatio: '1.4', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[6])}>
               <img src="/c-3-1.jpg" alt="Collection 3-1" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 595, height: isMobile ? 'auto' : 428, aspectRatio: '1.4', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[7])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 595, height: isMobile ? 'auto' : 428, aspectRatio: '1.4', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[7])}>
               <img src="/c-3-2.jpg" alt="Collection 3-2" style={imgFill} />
             </div>
           </div>
 
           {/* Row 4 - 3 equal items */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[8])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[8])}>
               <img src="/c-4-1.jpg" alt="Collection 4-1" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[9])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[9])}>
               <img src="/c-4-2.jpg" alt="Collection 4-2" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[10])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 330, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[10])}>
               <img src="/c-4-3.jpg" alt="Collection 4-3" style={imgFill} />
             </div>
           </div>
@@ -195,35 +195,35 @@ export default function Collections2() {
               <img src="/c-5-1.jpg" alt="Collection 5-1" style={imgFill} />
             </div>
             {!isMobile && <div style={{ flex: 1 }} />}
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 328, height: isMobile ? 'auto' : 612, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[12])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 612, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[12])}>
               <img src="/c-5-2.jpg" alt="Collection 5-2" style={imgFill} />
             </div>
             {!isMobile && <div style={{ width: 37 }} />}
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 328, height: isMobile ? 'auto' : 612, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[13])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 612, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[13])}>
               <img src="/c-5-3.jpg" alt="Collection 5-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 6 - 3 equal items */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 328, height: isMobile ? 'auto' : 498, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[14])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 498, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[14])}>
               <img src="/c-6-1.jpg" alt="Collection 6-1" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 328, height: isMobile ? 'auto' : 498, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[15])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 498, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[15])}>
               <img src="/c-6-2.jpg" alt="Collection 6-2" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 328, height: isMobile ? 'auto' : 498, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[16])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 498, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[16])}>
               <img src="/c-6-3.jpg" alt="Collection 6-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 7 - Asymmetric layout */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 328, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[17])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[17])}>
               <img src="/c-7-1.jpg" alt="Collection 7-1" style={imgFill} />
             </div>
             {!isMobile && <div style={{ width: 20 }} />}
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 328, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[18])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[18])}>
               <img src="/c-7-2.jpg" alt="Collection 7-2" style={imgFill} />
             </div>
             {!isMobile && <div style={{ flex: 1 }} />}
@@ -234,30 +234,30 @@ export default function Collections2() {
 
           {/* Row 8 - 2 items */}
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 298, height: isMobile ? 'auto' : 447, aspectRatio: '2/3', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[20])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 298, height: isMobile ? 'auto' : 447, aspectRatio: '2/3', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[20])}>
               <img src="/c-8-1.jpg" alt="Collection 8-1" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 298, height: isMobile ? 'auto' : 447, aspectRatio: '2/3', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[21])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 298, height: isMobile ? 'auto' : 447, aspectRatio: '2/3', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[21])}>
               <img src="/c-8-2.jpg" alt="Collection 8-2" style={imgFill} />
             </div>
           </div>
 
           {/* Row 9 - 3 equal items */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 328, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[22])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[22])}>
               <img src="/c-9-1.jpg" alt="Collection 9-1" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 328, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[23])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.1s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[23])}>
               <img src="/c-9-2.jpg" alt="Collection 9-2" style={imgFill} />
             </div>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(33.33% - 8px)' : 328, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[24])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 328, height: isMobile ? 'auto' : 428, aspectRatio: '1', overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0.2s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[24])}>
               <img src="/c-9-3.jpg" alt="Collection 9-3" style={imgFill} />
             </div>
           </div>
 
           {/* Row 10 - Asymmetric layout */}
           <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: isMobile ? 20 : 40, flexWrap: isMobile ? 'wrap' : 'nowrap', gap: isMobile ? 12 : 20 }}>
-            <div data-scroll-animate style={{ width: isMobile ? 'calc(50% - 6px)' : 311, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[25])}>
+            <div data-scroll-animate style={{ width: isMobile ? '100%' : 311, height: isMobile ? 'auto' : 428, aspectRatio: isMobile ? '1' : undefined, overflow: 'hidden', flexShrink: 0, background: '#ddd', cursor: 'pointer', '--delay': '0s' } as React.CSSProperties} onClick={() => setSelectedProduct(products[25])}>
               <img src="/c-10-1.jpg" alt="Collection 10-1" style={imgFill} />
             </div>
             {!isMobile && <div style={{ width: 329 }} />}
@@ -356,10 +356,10 @@ export default function Collections2() {
       )}
 
       {/* ── Footer ──────────────────────────────────────── */}
-      <footer style={{ background: '#ffffff', padding: '150px 60px 30px 60px' }}>
+      <footer style={{ background: '#ffffff', padding: isMobile ? '40px 16px 20px 16px' : '150px 60px 30px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* Three-Column Layout */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, marginBottom: 20 }}>
+          <div style={{ display: isMobile ? 'flex' : 'grid', gridTemplateColumns: isMobile ? undefined : 'repeat(3, 1fr)', gap: isMobile ? 20 : 40, marginBottom: 20, flexDirection: isMobile ? 'column' : undefined, alignItems: isMobile ? 'center' : undefined, textAlign: isMobile ? 'center' : undefined }}>
 
             {/* Left Column - Contact */}
             <div>
@@ -371,14 +371,14 @@ export default function Collections2() {
             </div>
 
             {/* Middle Column - Made in Argentina */}
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'center', alignItems: 'flex-start' }}>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, lineHeight: 1.85, color: 'var(--ink)', margin: 0, textAlign: 'center' }}>
                 Made in Argentina
               </p>
             </div>
 
             {/* Right Column - Social */}
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <div style={{ display: 'flex', justifyContent: isMobile ? 'center' : 'flex-end' }}>
               <a href="https://instagram.com/estudio.malva" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', lineHeight: 1.85 }}>
                 @estudio.malva
               </a>
