@@ -100,7 +100,7 @@ export default function Journal() {
       <section style={{ background: '#ffffff', padding: '80px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* First Row: Left Image + Text */}
-          <div style={{ display: 'flex', gap: 60, marginBottom: 60, alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', gap: 60, marginBottom: 180, alignItems: 'flex-start' }}>
             {/* Left Image */}
             <div data-scroll-animate style={{ flex: 0.5, '--delay': '0s' } as React.CSSProperties}>
               <img
