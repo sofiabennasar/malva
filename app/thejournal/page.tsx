@@ -102,11 +102,11 @@ export default function Journal() {
           {/* First Row: Left Image + Text */}
           <div style={{ display: 'flex', gap: 60, marginBottom: 180, alignItems: 'flex-start' }}>
             {/* Left Image */}
-            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0s' } as React.CSSProperties}>
+            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0s', aspectRatio: '17 / 24' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-1.jpg"
                 alt="Artisan at loom"
-                style={{ width: '100%', height: 500, objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
             </div>
 
