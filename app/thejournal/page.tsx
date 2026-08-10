@@ -122,7 +122,7 @@ export default function Journal() {
           </div>
 
           {/* Second Row: Two Images */}
-          <div style={{ display: 'flex', gap: isMobile ? 12 : 60, alignItems: 'flex-start', flexDirection: isMobile ? 'column' : 'row' }}>
+          <div style={{ display: 'flex', gap: isMobile ? 12 : 60, alignItems: isMobile ? 'stretch' : 'flex-start', flexDirection: isMobile ? 'column' : 'row' }}>
             {/* Left Image - 2/3 width */}
             <div data-scroll-animate style={{ flex: isMobile ? undefined : 2, width: isMobile ? '100%' : 'auto', '--delay': '0.1s' } as React.CSSProperties}>
               <img
