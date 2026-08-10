@@ -120,8 +120,8 @@ export default function Journal() {
 
           {/* Second Row: Two Images */}
           <div style={{ display: 'flex', gap: 60, alignItems: 'flex-start' }}>
-            {/* Left Image */}
-            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0.1s' } as React.CSSProperties}>
+            {/* Left Image - 2/3 width */}
+            <div data-scroll-animate style={{ flex: 2, '--delay': '0.1s' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-3.jpg"
                 alt="Artisan work"
@@ -129,8 +129,8 @@ export default function Journal() {
               />
             </div>
 
-            {/* Right Image */}
-            <div data-scroll-animate style={{ flex: 0.5, '--delay': '0.2s' } as React.CSSProperties}>
+            {/* Right Image - 1/3 width */}
+            <div data-scroll-animate style={{ flex: 1, '--delay': '0.2s' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-2.jpg"
                 alt="Dyed fibers"
