@@ -87,14 +87,16 @@ function ContactForm() {
         {/* Right: Contact Info & Form */}
         <div style={{ flex: 1, padding: isMobile ? '30px 16px' : '60px', display: 'flex', flexDirection: 'column', background: '#ffffff', alignItems: isMobile ? 'center' : 'flex-start', textAlign: isMobile ? 'center' : 'left' }}>
           {/* Contact Info */}
-          <div style={{ marginBottom: 60 }}>
-            <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 8px 0', fontWeight: 400 }}>
-              @estudio.malva
-            </p>
-            <a href="mailto:sales@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', display: 'block' }}>
-              sales@estudiomalva.com
-            </a>
-          </div>
+          {!isMobile && (
+            <div style={{ marginBottom: 60 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', margin: '0 0 8px 0', fontWeight: 400 }}>
+                @estudio.malva
+              </p>
+              <a href="mailto:sales@estudiomalva.com" style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, color: 'var(--ink)', textDecoration: 'none', display: 'block' }}>
+                sales@estudiomalva.com
+              </a>
+            </div>
+          )}
 
           {/* Form */}
           {submitted ? (
