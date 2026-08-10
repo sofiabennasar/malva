@@ -100,9 +100,9 @@ export default function Journal() {
       <section style={{ background: '#ffffff', padding: isMobile ? '30px 16px' : '80px 60px' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto' }}>
           {/* First Row: Left Image + Text at 50% width */}
-          <div style={{ display: 'flex', marginBottom: 180, alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', marginBottom: isMobile ? 40 : 180, alignItems: isMobile ? 'stretch' : 'flex-start', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 30 : 0 }}>
             {/* Left Image */}
-            <div data-scroll-animate style={{ '--delay': '0s', aspectRatio: '17 / 24', height: 500, flexShrink: 0 } as React.CSSProperties}>
+            <div data-scroll-animate style={{ '--delay': '0s', aspectRatio: isMobile ? '1' : '17 / 24', height: isMobile ? 300 : 500, flexShrink: 0, width: isMobile ? '100%' : 'auto' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-1.jpg"
                 alt="Artisan at loom"
@@ -111,33 +111,33 @@ export default function Journal() {
             </div>
 
             {/* Spacer to push text to 50% of page width */}
-            <div style={{ flex: 1, minWidth: 0 }} />
+            {!isMobile && <div style={{ flex: 1, minWidth: 0 }} />}
 
             {/* Text */}
-            <div style={{ width: '50%', marginTop: 250, paddingLeft: 60 }}>
-              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
+            <div style={{ width: isMobile ? '100%' : '50%', marginTop: isMobile ? 0 : 250, paddingLeft: isMobile ? 0 : 60 }}>
+              <p style={{ fontFamily: 'var(--font-archivo)', fontSize: isMobile ? 14 : 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                 By creating direct opportunities for artisans and bringing their work to new audiences, we help strengthen the local economies that sustain these practices. These techniques are part of Argentina's living cultural story, and sharing them beyond their place of origin allows that knowledge to remain visible, valued, and in motion.
               </p>
             </div>
           </div>
 
           {/* Second Row: Two Images */}
-          <div style={{ display: 'flex', gap: 60, alignItems: 'flex-start' }}>
+          <div style={{ display: 'flex', gap: isMobile ? 12 : 60, alignItems: 'flex-start', flexDirection: isMobile ? 'column' : 'row' }}>
             {/* Left Image - 2/3 width */}
-            <div data-scroll-animate style={{ flex: 2, '--delay': '0.1s' } as React.CSSProperties}>
+            <div data-scroll-animate style={{ flex: isMobile ? undefined : 2, width: isMobile ? '100%' : 'auto', '--delay': '0.1s' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-3.jpg"
                 alt="Artisan work"
-                style={{ width: '100%', height: 500, objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: isMobile ? 300 : 500, objectFit: 'cover', display: 'block' }}
               />
             </div>
 
             {/* Right Image - 1/3 width */}
-            <div data-scroll-animate style={{ flex: 1, '--delay': '0.2s' } as React.CSSProperties}>
+            <div data-scroll-animate style={{ flex: isMobile ? undefined : 1, width: isMobile ? '100%' : 'auto', '--delay': '0.2s' } as React.CSSProperties}>
               <img
                 src="/journal-artisan-2.jpg"
                 alt="Dyed fibers"
-                style={{ width: '100%', height: 500, objectFit: 'cover', display: 'block' }}
+                style={{ width: '100%', height: isMobile ? 300 : 500, objectFit: 'cover', display: 'block' }}
               />
             </div>
           </div>
