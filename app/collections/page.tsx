@@ -278,11 +278,11 @@ export default function Collections2() {
               onClick={() => setSelectedProduct(null)}
               style={{
                 position: 'absolute',
-                top: 30,
-                right: 30,
+                top: isMobile ? 20 : 30,
+                right: isMobile ? 20 : 30,
                 background: 'none',
                 border: 'none',
-                fontSize: 32,
+                fontSize: isMobile ? 24 : 32,
                 cursor: 'pointer',
                 color: '#000',
                 width: 40,
@@ -298,15 +298,28 @@ export default function Collections2() {
             </button>
 
             {/* Modal Content */}
-            <div style={{ display: 'flex', gap: 40, padding: '60px', height: '100%' }}>
+            <div style={{ display: 'flex', gap: isMobile ? 24 : 40, padding: isMobile ? '40px 20px' : '60px', height: '100%', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'stretch' : undefined, textAlign: isMobile ? 'center' : 'left' }}>
 
               {/* Left Column - Product Info */}
-              <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: 'space-between', minWidth: 0 }}>
+              <div style={{ flex: isMobile ? undefined : 0.9, display: 'flex', flexDirection: 'column', gap: 24, justifyContent: isMobile ? 'flex-start' : 'space-between', minWidth: 0 }}>
                 <div>
-                  <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: 38, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                  <h2 style={{ fontFamily: 'DM Sans, sans-serif', fontSize: isMobile ? 28 : 38, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     {selectedProduct.name}
                   </h2>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: 32 }}>
+
+                  {isMobile && (
+                    <div style={{ margin: '24px 0', display: 'flex', alignItems: 'center', justifyContent: 'center', maxHeight: 300 }}>
+                      <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                    </div>
+                  )}
+
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: isMobile ? 24 : 32 }}>
+                    <div>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = `/contact?product=${encodeURIComponent(selectedProduct.name)}`}>
+                        [Inquire]
+                      </p>
+                    </div>
+
                     <div>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>Material</p>
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.material}</p>
@@ -327,28 +340,35 @@ export default function Collections2() {
                     </div>
 
                     <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '24px 0 0 0', cursor: 'pointer', textDecoration: 'underline', textTransform: 'uppercase', letterSpacing: '0.02em' }} onClick={() => window.location.href = `/contact?product=${encodeURIComponent(selectedProduct.name)}`}>
-                        [Inquire]
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
+                        Care & Maintenance
+                      </p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
+                        {selectedProduct.care}
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Center Column - Image */}
-              <div style={{ flex: 1.44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
-                <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
-              </div>
+              {!isMobile && (
+                <>
+                  {/* Center Column - Image */}
+                  <div style={{ flex: 1.44, display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#ffffff', minWidth: 0 }}>
+                    <img src={selectedProduct.image} alt={selectedProduct.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                  </div>
 
-              {/* Right Column - Care Instructions */}
-              <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 60 }}>
-                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
-                    Care & Maintenance
-                  </p>
-                  <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
-                    {selectedProduct.care}
-                  </p>
-              </div>
+                  {/* Right Column - Care Instructions */}
+                  <div style={{ flex: 0.9, display: 'flex', flexDirection: 'column', minWidth: 0, marginTop: 60 }}>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
+                        Care & Maintenance
+                      </p>
+                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
+                        {selectedProduct.care}
+                      </p>
+                  </div>
+                </>
+              )}
 
             </div>
           </div>
