@@ -111,7 +111,7 @@ export default function Journal() {
             </div>
 
             {/* Text */}
-            <div style={{ flex: 0.5, display: 'flex', alignItems: 'center', marginTop: 250 }}>
+            <div style={{ flex: 0.5, marginTop: 250 }}>
               <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 16, lineHeight: 1.85, color: 'var(--ink)', margin: 0 }}>
                 By creating direct opportunities for artisans and bringing their work to new audiences, we help strengthen the local economies that sustain these practices. These techniques are part of Argentina's living cultural story, and sharing them beyond their place of origin allows that knowledge to remain visible, valued, and in motion.
               </p>
