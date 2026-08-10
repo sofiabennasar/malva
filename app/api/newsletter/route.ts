@@ -1,6 +1,3 @@
-import { GoogleSpreadsheet } from 'google-spreadsheet';
-import { JWT } from 'google-auth-library';
-
 export async function POST(request: Request) {
   try {
     const { name, email } = await request.json();
@@ -12,33 +9,29 @@ export async function POST(request: Request) {
       );
     }
 
-    const serviceAccountEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;
-    const privateKey = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n');
-    const spreadsheetId = process.env.GOOGLE_SPREADSHEET_ID;
+    const basinEndpoint = process.env.BASIN_ENDPOINT;
 
-    if (!serviceAccountEmail || !privateKey || !spreadsheetId) {
-      console.error('Missing Google Sheets credentials');
+    if (!basinEndpoint) {
+      console.error('Missing Basin endpoint');
       return Response.json(
         { error: 'Newsletter service unavailable' },
         { status: 500 }
       );
     }
 
-    const auth = new JWT({
-      email: serviceAccountEmail,
-      key: privateKey,
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    const response = await fetch(basinEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email,
+        signup_date: new Date().toISOString(),
+      }),
     });
 
-    const doc = new GoogleSpreadsheet(spreadsheetId, auth);
-    await doc.loadInfo();
-
-    const sheet = doc.sheetsByIndex[0];
-    await sheet.addRow({
-      Name: name,
-      Email: email,
-      'Signup Date': new Date().toISOString(),
-    });
+    if (!response.ok) {
+      throw new Error('Basin API error');
+    }
 
     return Response.json({ success: true });
   } catch (error) {
