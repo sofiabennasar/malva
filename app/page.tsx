@@ -26,10 +26,23 @@ export default function Home() {
     return () => window.removeEventListener('keydown', handleEsc);
   }, [showNewsletter]);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowNewsletter(false);
-    setNewsletterForm({ name: '', email: '' });
+
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newsletterForm),
+      });
+
+      if (!response.ok) throw new Error('Failed to save');
+      setShowNewsletter(false);
+      setNewsletterForm({ name: '', email: '' });
+    } catch (error) {
+      console.error('Error saving newsletter signup:', error);
+      alert('Failed to save signup. Please try again.');
+    }
   };
 
   useEffect(() => {
