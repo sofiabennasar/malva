@@ -87,7 +87,7 @@ export default function Journal() {
         </div>
 
         {/* Right: Image */}
-        <div style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5' }}>
+        <div data-scroll-animate style={{ flex: 1, overflow: 'hidden', background: '#f5f5f5', '--delay': '0s' } as React.CSSProperties}>
           <img
             src="/journal-hero.jpg"
             alt="Studio workspace"
