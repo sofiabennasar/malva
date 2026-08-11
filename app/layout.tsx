@@ -30,7 +30,22 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Estudio Malva",
-  description: "Objetos hechos a mano, directamente de comunidades artesanas de Argentina.",
+  description: "Singular, handmade objects sourced directly from artisan communities across Argentina.",
+  openGraph: {
+    title: "Estudio Malva",
+    description: "Singular, handmade objects sourced directly from artisan communities across Argentina.",
+    url: "https://estudiomalva.com",
+    siteName: "Estudio Malva",
+    type: "website",
+    images: [
+      {
+        url: "https://estudiomalva.com/og-image.svg",
+        width: 1200,
+        height: 1200,
+        alt: "Estudio Malva",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
