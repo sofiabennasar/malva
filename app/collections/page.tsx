@@ -339,14 +339,16 @@ export default function Collections2() {
                       <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '4px 0 0 0', lineHeight: 1.6 }}>{selectedProduct.madeIn}</p>
                     </div>
 
-                    <div>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
-                        Care & Maintenance
-                      </p>
-                      <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
-                        {selectedProduct.care}
-                      </p>
-                    </div>
+                    {isMobile && (
+                      <div>
+                        <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: 0, letterSpacing: '0.02em' }}>
+                          Care & Maintenance
+                        </p>
+                        <p style={{ fontFamily: 'var(--font-archivo)', fontSize: 13, fontWeight: 400, color: 'var(--ink)', margin: '8px 0 0 0', lineHeight: 1.6, whiteSpace: 'pre-wrap' }}>
+                          {selectedProduct.care}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
